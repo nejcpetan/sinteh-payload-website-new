@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { triggerRevalidation, isPublished } from '@/lib/revalidation'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -97,5 +98,50 @@ export const Pages: CollectionConfig = {
   ],
   versions: {
     drafts: true,
+  },
+  hooks: {
+    afterChange: [
+      async ({ doc, previousDoc, operation }) => {
+        try {
+          // Only trigger revalidation for published pages
+          if (isPublished(doc)) {
+            console.log(`Triggering revalidation for page: ${doc.slug}`)
+
+            // Revalidate the specific page
+            await triggerRevalidation({
+              collection: 'pages',
+              slug: doc.slug,
+            })
+
+            // If slug changed, also revalidate the old slug
+            if (previousDoc && previousDoc.slug !== doc.slug && isPublished(previousDoc)) {
+              await triggerRevalidation({
+                collection: 'pages',
+                slug: previousDoc.slug,
+              })
+            }
+          }
+        } catch (error) {
+          console.error('Error in page afterChange hook:', error)
+        }
+      },
+    ],
+    afterDelete: [
+      async ({ doc }) => {
+        try {
+          if (isPublished(doc)) {
+            console.log(`Triggering revalidation after page deletion: ${doc.slug}`)
+
+            // Revalidate the deleted page to show 404
+            await triggerRevalidation({
+              collection: 'pages',
+              slug: doc.slug,
+            })
+          }
+        } catch (error) {
+          console.error('Error in page afterDelete hook:', error)
+        }
+      },
+    ],
   },
 }

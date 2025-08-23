@@ -10,6 +10,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import config from '@/payload.config'
 import type { Post } from '@/payload-types'
 
+// Enable ISR - revalidate when manually triggered via API
+export const revalidate = false // Use on-demand revalidation only
+
 interface BlogPageProps {
   searchParams: Promise<{
     page?: string

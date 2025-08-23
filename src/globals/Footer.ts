@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload'
+import { triggerRevalidation } from '@/lib/revalidation'
 
 export const Footer: GlobalConfig = {
   slug: 'footer',
@@ -226,4 +227,18 @@ export const Footer: GlobalConfig = {
       },
     },
   ],
+  hooks: {
+    afterChange: [
+      async ({ doc }) => {
+        try {
+          console.log('Triggering revalidation for footer changes')
+          await triggerRevalidation({
+            collection: 'footer',
+          })
+        } catch (error) {
+          console.error('Error in footer afterChange hook:', error)
+        }
+      },
+    ],
+  },
 }

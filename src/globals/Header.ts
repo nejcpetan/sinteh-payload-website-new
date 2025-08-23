@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload'
+import { triggerRevalidation } from '@/lib/revalidation'
 
 export const Header: GlobalConfig = {
   slug: 'header',
@@ -285,4 +286,18 @@ export const Header: GlobalConfig = {
       },
     },
   ],
+  hooks: {
+    afterChange: [
+      async ({ doc }) => {
+        try {
+          console.log('Triggering revalidation for header changes')
+          await triggerRevalidation({
+            collection: 'header',
+          })
+        } catch (error) {
+          console.error('Error in header afterChange hook:', error)
+        }
+      },
+    ],
+  },
 }

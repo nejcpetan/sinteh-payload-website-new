@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload'
+import { triggerRevalidation } from '@/lib/revalidation'
 
 export const SEO: GlobalConfig = {
   slug: 'seo',
@@ -176,4 +177,18 @@ export const SEO: GlobalConfig = {
       },
     },
   ],
+  hooks: {
+    afterChange: [
+      async ({ doc }) => {
+        try {
+          console.log('Triggering revalidation for SEO changes')
+          await triggerRevalidation({
+            collection: 'seo',
+          })
+        } catch (error) {
+          console.error('Error in SEO afterChange hook:', error)
+        }
+      },
+    ],
+  },
 }

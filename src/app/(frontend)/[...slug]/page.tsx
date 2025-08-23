@@ -3,6 +3,9 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { PageTemplate } from '@/components/PageTemplate'
 
+// Enable ISR - revalidate when manually triggered via API
+export const revalidate = false // Use on-demand revalidation only
+
 interface PageProps {
   params: Promise<{
     slug: string[]

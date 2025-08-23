@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { triggerRevalidation, isPublished } from '@/lib/revalidation'
 
 export const Posts: CollectionConfig = {
   slug: 'posts',
@@ -222,10 +223,63 @@ export const Posts: CollectionConfig = {
   },
   hooks: {
     afterChange: [
-      ({ doc, req }) => {
-        // You can add revalidation logic here for Next.js
-        // revalidateTag('posts')
-        console.log(`Post "${doc.title}" was updated`)
+      async ({ doc, previousDoc, operation }) => {
+        try {
+          // Only trigger revalidation for published posts
+          if (isPublished(doc)) {
+            console.log(`Triggering revalidation for post: ${doc.slug}`)
+
+            // Revalidate the specific blog post
+            await triggerRevalidation({
+              collection: 'posts',
+              slug: doc.slug,
+            })
+
+            // If slug changed, also revalidate the old slug
+            if (previousDoc && previousDoc.slug !== doc.slug && isPublished(previousDoc)) {
+              await triggerRevalidation({
+                collection: 'posts',
+                slug: previousDoc.slug,
+              })
+            }
+          }
+
+          // Always revalidate blog listing when posts are created, updated, or status changes
+          if (
+            operation === 'create' ||
+            (previousDoc && previousDoc.status !== doc.status) ||
+            isPublished(doc)
+          ) {
+            console.log('Triggering revalidation for blog listing')
+            await triggerRevalidation({
+              collection: 'posts', // This will trigger blog page revalidation
+            })
+          }
+        } catch (error) {
+          console.error('Error in post afterChange hook:', error)
+        }
+      },
+    ],
+    afterDelete: [
+      async ({ doc }) => {
+        try {
+          if (isPublished(doc)) {
+            console.log(`Triggering revalidation after post deletion: ${doc.slug}`)
+
+            // Revalidate the deleted post to show 404
+            await triggerRevalidation({
+              collection: 'posts',
+              slug: doc.slug,
+            })
+
+            // Revalidate blog listing
+            await triggerRevalidation({
+              collection: 'posts',
+            })
+          }
+        } catch (error) {
+          console.error('Error in post afterDelete hook:', error)
+        }
       },
     ],
   },

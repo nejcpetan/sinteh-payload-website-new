@@ -13,6 +13,9 @@ import type { Post } from '@/payload-types'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import SocialShare from '@/components/SocialShare'
 
+// Enable ISR - revalidate when manually triggered via API
+export const revalidate = false // Use on-demand revalidation only
+
 interface BlogPostPageProps {
   params: Promise<{
     slug: string

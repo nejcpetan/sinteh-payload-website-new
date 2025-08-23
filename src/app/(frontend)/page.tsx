@@ -5,6 +5,9 @@ import { PageTemplate } from '@/components/PageTemplate'
 import config from '@/payload.config'
 import type { Homepage } from '@/payload-types'
 
+// Enable ISR - revalidate when manually triggered via API
+export const revalidate = false // Use on-demand revalidation only
+
 export default async function HomePage() {
   const payloadConfig = await config
   const payload = await getPayload({ config: payloadConfig })

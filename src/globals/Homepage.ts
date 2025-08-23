@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload'
+import { triggerRevalidation } from '@/lib/revalidation'
 
 export const Homepage: GlobalConfig = {
   slug: 'homepage',
@@ -827,4 +828,18 @@ export const Homepage: GlobalConfig = {
       ],
     },
   ],
+  hooks: {
+    afterChange: [
+      async ({ doc }) => {
+        try {
+          console.log('Triggering revalidation for homepage')
+          await triggerRevalidation({
+            collection: 'homepage',
+          })
+        } catch (error) {
+          console.error('Error in homepage afterChange hook:', error)
+        }
+      },
+    ],
+  },
 }
