@@ -47,7 +47,7 @@ export function HeroBlock({
 
       {/* Content container */}
       <div className="relative mx-auto max-w-7xl container-px pt-20 md:pt-28 pb-20">
-        <div className="max-w-3xl rounded-2xl bg-white/90 backdrop-blur-sm border border-gray-200/80 shadow-xl p-6 md:p-8">
+        <div className="max-w-3xl rounded-2xl bg-white/90 backdrop-blur-sm border border-border/60 shadow-xl p-6 md:p-8">
           {/* Main title */}
           <h1 className="mt-3 text-4xl md:text-6xl font-bold tracking-tight leading-tight text-gray-900">
             {title}

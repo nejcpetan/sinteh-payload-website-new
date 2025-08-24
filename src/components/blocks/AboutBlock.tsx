@@ -58,7 +58,7 @@ export function AboutBlock({
                 {badges.map((badge, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 text-xs rounded-full border border-[#e5e9ee] bg-white"
+                    className="px-3 py-1 text-xs rounded-full border border-border/60 bg-white"
                   >
                     {badge.text}
                   </span>
@@ -96,7 +96,7 @@ export function AboutBlock({
 
             {/* compact callout */}
             {calloutText && (
-              <div className="mt-6 rounded-2xl border border-[#e5e9ee] bg-white p-4 shadow-sm">
+              <div className="mt-6 rounded-2xl border border-border/60 bg-white p-4 shadow-sm">
                 <p className="text-sm text-[#0f1720]">{calloutText}</p>
               </div>
             )}

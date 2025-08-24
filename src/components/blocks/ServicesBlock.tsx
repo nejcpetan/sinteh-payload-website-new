@@ -57,7 +57,7 @@ export function ServicesBlock({ badge, title, subtitle, services }: ServicesBloc
           {services.map((service, i) => (
             <Card
               key={i}
-              className="group overflow-hidden bg-white border-[#e5e9ee] shadow-sm hover:shadow-lg transition-all hover:-translate-y-0.5 focus-within:-translate-y-0.5 ring-1 ring-transparent hover:ring-brand/25"
+              className="group overflow-hidden bg-white border-border/60 shadow-sm hover:shadow-lg transition-all hover:-translate-y-0.5 focus-within:-translate-y-0.5 ring-1 ring-transparent hover:ring-brand/25"
             >
               <CardHeader className="pb-2">
                 <CardTitle className="text-[18px] font-semibold tracking-tight">

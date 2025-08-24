@@ -6,7 +6,7 @@
   --brand: #6bc441; /* SINTEH green */
   --brand-600: #4ca12a;
   --surface: #f6f8fa;
-  --border: #e5e9ee;
+  --border: #f8f9fb; /* more subtle, dull gray */
   --muted: #f1f5f9;
   --muted-foreground: #526371;
 }
@@ -94,8 +94,8 @@ body {
   --color-muted-foreground: #64748b;
   
   /* Border and Input */
-  --color-border: #e5e7eb;
-  --color-input: #e5e7eb;
+  --color-border: #f8f9fb;
+  --color-input: #f8f9fb;
   --color-ring: #3b82f6;
   
   /* Destructive */
@@ -122,8 +122,8 @@ body {
   --color-muted: #1e293b;
   --color-muted-foreground: #94a3b8;
   
-  --color-border: #334155;
-  --color-input: #334155;
+  --color-border: #475569;
+  --color-input: #475569;
   
   --color-card: #1e293b;
   --color-card-foreground: #f1f5f9;
@@ -239,4 +239,79 @@ body {
 /* Smooth transitions */
 * {
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Global border softening */
+.border,
+[class*="border-"] {
+  border-color: hsl(var(--border)) !important;
+}
+
+/* Override specific Tailwind border colors */
+.border-slate-200,
+.border-slate-200\/80,
+.border-gray-200,
+.border-gray-200\/80,
+.border-gray-300,
+.border-neutral-200,
+.border-zinc-200 {
+  border-color: rgba(248, 249, 251, 0.5) !important;
+}
+
+/* Make card and container borders even more subtle */
+.border-border\/60 {
+  border-color: rgba(248, 249, 251, 0.3) !important;
+}
+
+.border-border\/30 {
+  border-color: rgba(248, 249, 251, 0.15) !important;
+}
+
+.border-border\/40 {
+  border-color: rgba(248, 249, 251, 0.2) !important;
+}
+
+.border-border\/50 {
+  border-color: rgba(248, 249, 251, 0.25) !important;
+}
+
+/* Soften specific UI component borders */
+.rounded-2xl, .rounded-xl, .rounded-lg, .rounded-full {
+  border-color: rgba(248, 249, 251, 0.5);
+}
+
+/* Override ring colors for focus states */
+.ring-1,
+.ring-2,
+.ring-slate-200,
+.ring-gray-200,
+.focus\:ring-2:focus,
+.focus-visible\:ring-1:focus-visible,
+.focus-visible\:ring-2:focus-visible {
+  --tw-ring-color: rgba(248, 249, 251, 0.4) !important;
+}
+
+/* Make hover states more subtle */
+.hover\:border-brand\/30:hover {
+  border-color: rgba(107, 196, 65, 0.2) !important;
+}
+
+/* Override button and input borders specifically */
+button,
+input,
+select,
+textarea {
+  border-color: rgba(248, 249, 251, 0.5) !important;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  --tw-ring-color: rgba(107, 196, 65, 0.3) !important;
+}
+
+/* Badge border overrides */
+.badge {
+  border-color: rgba(248, 249, 251, 0.3) !important;
 }

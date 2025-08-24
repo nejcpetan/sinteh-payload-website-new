@@ -383,6 +383,425 @@ export interface Page {
             blockName?: string | null;
             blockType: 'richText';
           }
+        | {
+            /**
+             * Small badge text above title
+             */
+            badge?: string | null;
+            /**
+             * Main product title
+             */
+            title: string;
+            /**
+             * Product subtitle
+             */
+            subtitle?: string | null;
+            /**
+             * Product description
+             */
+            description?: string | null;
+            /**
+             * Product hero image
+             */
+            backgroundImage?: (number | null) | Media;
+            keyBenefits?:
+              | {
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            ctaButtons?:
+              | {
+                  label: string;
+                  type: 'page' | 'url' | 'anchor';
+                  page?: (number | null) | Page;
+                  url?: string | null;
+                  anchor?: string | null;
+                  variant?: ('default' | 'secondary' | 'outline' | 'ghost') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productHero';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            features?:
+              | {
+                  icon: 'mechanical' | 'shield' | 'retrofit' | 'modular' | 'temperature' | 'key';
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            bottomHighlight?: {
+              title?: string | null;
+              description?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'keyFeatures';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            images?:
+              | {
+                  title: string;
+                  description: string;
+                  category: string;
+                  image?: (number | null) | Media;
+                  id?: string | null;
+                }[]
+              | null;
+            downloadSection?: {
+              title?: string | null;
+              description?: string | null;
+              downloadButtonText?: string | null;
+              requestButtonText?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productGallery';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            specifications?:
+              | {
+                  category: string;
+                  items?:
+                    | {
+                        label: string;
+                        value: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            certificationBadges?:
+              | {
+                  name: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            additionalInfo?: {
+              title?: string | null;
+              description?: string | null;
+              details?:
+                | {
+                    label: string;
+                    value: string;
+                    id?: string | null;
+                  }[]
+                | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'specifications';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            applications?:
+              | {
+                  icon: 'oilgas' | 'energy' | 'pharm' | 'manufacturing' | 'atex' | 'water';
+                  title: string;
+                  description: string;
+                  details?:
+                    | {
+                        detail: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            stats?:
+              | {
+                  number: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            caseStudy?: {
+              title?: string | null;
+              description?: string | null;
+              stats?:
+                | {
+                    label: string;
+                    value: string;
+                    id?: string | null;
+                  }[]
+                | null;
+              image?: (number | null) | Media;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'applications';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            description: string;
+            technicalImage?: (number | null) | Media;
+            processSteps?:
+              | {
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            technicalBenefits?:
+              | {
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'technicalOverview';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            benefits?:
+              | {
+                  advantage: string;
+                  description: string;
+                  mGard: string;
+                  electronic: string;
+                  id?: string | null;
+                }[]
+              | null;
+            summaryCards?:
+              | {
+                  icon: 'shield' | 'clock' | 'users';
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            bottomCTA?: {
+              title?: string | null;
+              description?: string | null;
+              primaryButtonText?: string | null;
+              secondaryButtonText?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'benefitsComparison';
+          }
+        | {
+            title: string;
+            description: string;
+            stats?:
+              | {
+                  value: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            contactInfo?: {
+              phone?: string | null;
+              email?: string | null;
+              responseTime?: string | null;
+            };
+            whyUsPoints?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            heroImage?: (number | null) | Media;
+            formTitle?: string | null;
+            applicationOptions?:
+              | {
+                  value: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            privacyText?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productCTA';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            resources?:
+              | {
+                  title: string;
+                  description: string;
+                  fileType: string;
+                  fileSize: string;
+                  icon: string;
+                  category: string;
+                  downloadUrl?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            quickAccessItems?:
+              | {
+                  name: string;
+                  fileInfo: string;
+                  downloadUrl?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            contactSection?: {
+              title?: string | null;
+              description?: string | null;
+              phone?: string | null;
+              email?: string | null;
+            };
+            newsletterSection?: {
+              title?: string | null;
+              description?: string | null;
+              privacyText?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'productResources';
+          }
+        | {
+            /**
+             * Main contact page title
+             */
+            title: string;
+            /**
+             * Hero subtitle with response times
+             */
+            subtitle?: string | null;
+            quickContactMethods?:
+              | {
+                  type: 'phone' | 'email' | 'location';
+                  label: string;
+                  value: string;
+                  link: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactHero';
+          }
+        | {
+            /**
+             * Small badge text above title
+             */
+            badge?: string | null;
+            /**
+             * Contact form section title
+             */
+            title: string;
+            /**
+             * Contact form section subtitle
+             */
+            subtitle?: string | null;
+            /**
+             * Title inside the form container
+             */
+            formTitle?: string | null;
+            submitButtonText?: string | null;
+            submitButtonLoadingText?: string | null;
+            privacyText?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactForm';
+          }
+        | {
+            /**
+             * Small badge text above title
+             */
+            badge?: string | null;
+            /**
+             * Contact information section title
+             */
+            title: string;
+            /**
+             * Contact information section subtitle
+             */
+            subtitle?: string | null;
+            contactMethods?:
+              | {
+                  title: string;
+                  email: string;
+                  phone: string;
+                  description: string;
+                  hours: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactInfo';
+          }
+        | {
+            /**
+             * Small badge text above title
+             */
+            badge?: string | null;
+            /**
+             * Location section title
+             */
+            title: string;
+            /**
+             * Location section subtitle
+             */
+            subtitle?: string | null;
+            /**
+             * Google Maps embed URL
+             */
+            mapEmbedUrl?: string | null;
+            address?: {
+              companyName?: string | null;
+              street?: string | null;
+              city?: string | null;
+              country?: string | null;
+            };
+            emergencyPhone?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactLocation';
+          }
+        | {
+            /**
+             * Small badge text above title
+             */
+            badge?: string | null;
+            /**
+             * FAQ section title
+             */
+            title: string;
+            /**
+             * FAQ section subtitle
+             */
+            subtitle?: string | null;
+            faqs?:
+              | {
+                  question: string;
+                  answer: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactFAQ';
+          }
       )[]
     | null;
   meta?: {
@@ -798,6 +1217,394 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               content?: T;
+              id?: T;
+              blockName?: T;
+            };
+        productHero?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              backgroundImage?: T;
+              keyBenefits?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              ctaButtons?:
+                | T
+                | {
+                    label?: T;
+                    type?: T;
+                    page?: T;
+                    url?: T;
+                    anchor?: T;
+                    variant?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        keyFeatures?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              features?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              bottomHighlight?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        productGallery?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              images?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    category?: T;
+                    image?: T;
+                    id?: T;
+                  };
+              downloadSection?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    downloadButtonText?: T;
+                    requestButtonText?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        specifications?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              specifications?:
+                | T
+                | {
+                    category?: T;
+                    items?:
+                      | T
+                      | {
+                          label?: T;
+                          value?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              certificationBadges?:
+                | T
+                | {
+                    name?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              additionalInfo?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    details?:
+                      | T
+                      | {
+                          label?: T;
+                          value?: T;
+                          id?: T;
+                        };
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        applications?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              applications?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    details?:
+                      | T
+                      | {
+                          detail?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              stats?:
+                | T
+                | {
+                    number?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              caseStudy?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    stats?:
+                      | T
+                      | {
+                          label?: T;
+                          value?: T;
+                          id?: T;
+                        };
+                    image?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        technicalOverview?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              description?: T;
+              technicalImage?: T;
+              processSteps?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              technicalBenefits?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        benefitsComparison?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              benefits?:
+                | T
+                | {
+                    advantage?: T;
+                    description?: T;
+                    mGard?: T;
+                    electronic?: T;
+                    id?: T;
+                  };
+              summaryCards?:
+                | T
+                | {
+                    icon?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              bottomCTA?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    primaryButtonText?: T;
+                    secondaryButtonText?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        productCTA?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              contactInfo?:
+                | T
+                | {
+                    phone?: T;
+                    email?: T;
+                    responseTime?: T;
+                  };
+              whyUsPoints?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              heroImage?: T;
+              formTitle?: T;
+              applicationOptions?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              privacyText?: T;
+              id?: T;
+              blockName?: T;
+            };
+        productResources?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              resources?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    fileType?: T;
+                    fileSize?: T;
+                    icon?: T;
+                    category?: T;
+                    downloadUrl?: T;
+                    id?: T;
+                  };
+              quickAccessItems?:
+                | T
+                | {
+                    name?: T;
+                    fileInfo?: T;
+                    downloadUrl?: T;
+                    id?: T;
+                  };
+              contactSection?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    phone?: T;
+                    email?: T;
+                  };
+              newsletterSection?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    privacyText?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        contactHero?:
+          | T
+          | {
+              title?: T;
+              subtitle?: T;
+              quickContactMethods?:
+                | T
+                | {
+                    type?: T;
+                    label?: T;
+                    value?: T;
+                    link?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        contactForm?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              formTitle?: T;
+              submitButtonText?: T;
+              submitButtonLoadingText?: T;
+              privacyText?: T;
+              id?: T;
+              blockName?: T;
+            };
+        contactInfo?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              contactMethods?:
+                | T
+                | {
+                    title?: T;
+                    email?: T;
+                    phone?: T;
+                    description?: T;
+                    hours?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        contactLocation?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              mapEmbedUrl?: T;
+              address?:
+                | T
+                | {
+                    companyName?: T;
+                    street?: T;
+                    city?: T;
+                    country?: T;
+                  };
+              emergencyPhone?: T;
+              id?: T;
+              blockName?: T;
+            };
+        contactFAQ?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              faqs?:
+                | T
+                | {
+                    question?: T;
+                    answer?: T;
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };

@@ -20,17 +20,21 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const baseStyles =
-  'inline-flex items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 disabled:opacity-50 disabled:pointer-events-none font-medium'
+  'inline-flex items-center justify-center rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 disabled:opacity-50 disabled:pointer-events-none font-medium'
 
 const variantStyles: Record<ButtonVariant, string> = {
-  default: 'bg-brand text-white hover:bg-brand-600 shadow-sm data-[state=open]:bg-brand-600',
-  secondary: 'bg-surface text-foreground hover:bg-muted border border-border',
-  ghost: 'bg-transparent hover:bg-foreground/5 text-foreground',
-  outline: 'bg-transparent border border-border text-foreground hover:bg-foreground/5',
+  default:
+    'bg-brand text-white hover:bg-brand-600 border border-border/30 shadow-lg hover:shadow-xl data-[state=open]:bg-brand-600 transition-shadow duration-200',
+  secondary:
+    'bg-surface text-foreground hover:bg-muted border border-border/40 shadow-md hover:shadow-lg transition-shadow duration-200',
+  ghost: 'bg-transparent hover:bg-foreground/5 text-foreground border border-transparent',
+  outline:
+    'bg-transparent border border-border/50 text-foreground hover:bg-foreground/5 shadow-sm hover:shadow-md transition-shadow duration-200',
   outlineLight:
-    'bg-transparent border border-white/40 text-white hover:bg-white/5 hover:border-white/60',
-  contrast: 'bg-white text-[#0f1720] hover:bg-white/90',
-  link: 'bg-transparent underline-offset-4 hover:underline text-brand',
+    'bg-transparent border border-border/30 text-white hover:bg-white/5 hover:border-border/50 shadow-sm hover:shadow-md transition-shadow duration-200',
+  contrast:
+    'bg-white text-[#0f1720] hover:bg-white/90 border border-border/30 shadow-md hover:shadow-lg transition-shadow duration-200',
+  link: 'bg-transparent underline-offset-4 hover:underline text-brand border border-transparent',
 }
 
 const sizeStyles: Record<ButtonSize, string> = {

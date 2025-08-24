@@ -83,7 +83,7 @@ export default async function Footer() {
     <footer className="mt-24 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         {/* Main footer content with prettier glass effect */}
-        <div className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-white/90 to-slate-50/80 backdrop-blur-sm shadow-xl shadow-slate-200/50 px-6 py-8 md:px-10 md:py-12">
+        <div className="rounded-3xl border border-border/60 bg-gradient-to-br from-white/90 to-slate-50/80 backdrop-blur-sm shadow-xl shadow-slate-200/50 px-6 py-8 md:px-10 md:py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
             {/* Company info with logo */}
             <div className="lg:col-span-1">
@@ -137,7 +137,8 @@ export default async function Footer() {
                 <ul className="space-y-3">
                   {column.links?.map((link, linkIndex) => {
                     const href = getLinkHref(link)
-                    const isExternal = link.type === 'url' && 'url' in link && link.url?.startsWith('http')
+                    const isExternal =
+                      link.type === 'url' && 'url' in link && link.url?.startsWith('http')
                     const hasNewTab = 'newTab' in link && link.newTab
 
                     return (

@@ -100,7 +100,7 @@ export function WhyTrustBlock({ title, image, reasons, pillars, button }: WhyTru
                 {pillars.map((pillar, index) => {
                   const IconComponent = iconComponents[pillar.icon]
                   return (
-                    <Card key={index} className="bg-white border-[#e5e9ee]">
+                    <Card key={index} className="bg-white border-border/60">
                       <CardContent className="p-4">
                         <IconComponent className="h-5 w-5 text-brand" />
                         <div className="mt-2 text-sm font-medium">{pillar.title}</div>

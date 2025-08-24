@@ -1,0 +1,5 @@
+[33m040b5a4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31mmaster/master[m[33m, [m[1;31mmaster/HEAD[m[33m)[m Added quality of life improvements: Favicon, enabled Revalidation and added revalidation secret, fixed navigation with published pages collections
+[33m5a6bf6e[m Added ISR to project
+[33m0b48b2b[m made hero block more readable - white background
+[33mf363915[m ignore errors
+[33m37423b2[m initial commit

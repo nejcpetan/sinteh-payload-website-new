@@ -31,36 +31,36 @@ export function ContactBlock({
 
       <div className="relative mx-auto max-w-7xl container-px py-16 md:py-24">
         <div className="mx-auto max-w-3xl">
-          <div className="rounded-2xl bg-white/60 backdrop-blur-sm border border-gray-200/80 shadow-lg p-6 md:p-8">
+          <div className="rounded-2xl bg-white/60 backdrop-blur-sm border shadow-lg p-6 md:p-8">
             <div className="text-center">
               {badge && (
                 <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800">
                   {badge}
                 </span>
               )}
-              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
-              {subtitle && <p className="mt-2 text-gray-600 text-sm">{subtitle}</p>}
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-foreground">{title}</h2>
+              {subtitle && <p className="mt-2 text-foreground/70 text-sm">{subtitle}</p>}
             </div>
 
             <form className="mt-6 grid gap-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input
                   placeholder="Ime in Priimek"
-                  className="bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500"
+                  className="bg-white/80 text-foreground placeholder:text-muted-foreground"
                 />
                 <Input
                   placeholder="E-naslov"
                   type="email"
-                  className="bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500"
+                  className="bg-white/80 text-foreground placeholder:text-muted-foreground"
                 />
               </div>
               <Input
                 placeholder="Naziv podjetja"
-                className="bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500"
+                className="bg-white/80 border-border text-gray-900 placeholder:text-gray-500"
               />
               <Textarea
                 placeholder="Sporočilo"
-                className="bg-white/80 border-gray-300 text-gray-900 placeholder:text-gray-500"
+                className="bg-white/80 border-border text-gray-900 placeholder:text-gray-500"
               />
               <div className="flex justify-center">
                 <Button
@@ -71,10 +71,12 @@ export function ContactBlock({
                   Pošlji
                 </Button>
               </div>
-              {privacyText && <p className="text-xs text-center text-gray-500">{privacyText}</p>}
+              {privacyText && (
+                <p className="text-xs text-center text-muted-foreground">{privacyText}</p>
+              )}
             </form>
 
-            <div className="mt-6 flex flex-col items-center gap-2 text-xs text-gray-600 md:flex-row md:justify-center md:gap-6">
+            <div className="mt-6 flex flex-col items-center gap-2 text-xs text-muted-foreground md:flex-row md:justify-center md:gap-6">
               {phone && (
                 <a
                   href={`tel:${phone.replace(/\s/g, '')}`}
