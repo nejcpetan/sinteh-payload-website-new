@@ -116,6 +116,60 @@ export const Header: GlobalConfig = {
         description: 'Configure your main navigation menu',
       },
     },
+    // Mobile Navigation Settings
+    {
+      name: 'mobileNavigation',
+      type: 'group',
+      fields: [
+        {
+          name: 'enabled',
+          type: 'checkbox',
+          defaultValue: true,
+          admin: {
+            description: 'Enable hamburger menu for mobile devices',
+          },
+        },
+        {
+          name: 'menuButtonLabel',
+          type: 'text',
+          defaultValue: 'Menu',
+          admin: {
+            condition: (_, siblingData) => siblingData?.enabled,
+            description: 'Accessibility label for hamburger menu button',
+          },
+        },
+        {
+          name: 'closeButtonLabel',
+          type: 'text',
+          defaultValue: 'Close menu',
+          admin: {
+            condition: (_, siblingData) => siblingData?.enabled,
+            description: 'Accessibility label for close menu button',
+          },
+        },
+        {
+          name: 'showLanguageSelector',
+          type: 'checkbox',
+          defaultValue: true,
+          admin: {
+            condition: (_, siblingData) => siblingData?.enabled,
+            description: 'Show language selector in mobile menu',
+          },
+        },
+        {
+          name: 'showContactButton',
+          type: 'checkbox',
+          defaultValue: true,
+          admin: {
+            condition: (_, siblingData) => siblingData?.enabled,
+            description: 'Show contact button in mobile menu',
+          },
+        },
+      ],
+      admin: {
+        description: 'Configure mobile hamburger menu behavior',
+      },
+    },
     // Recent Posts Navigation Section
     {
       name: 'recentPosts',

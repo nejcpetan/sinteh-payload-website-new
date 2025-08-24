@@ -1741,6 +1741,31 @@ export interface Header {
       }[]
     | null;
   /**
+   * Configure mobile hamburger menu behavior
+   */
+  mobileNavigation?: {
+    /**
+     * Enable hamburger menu for mobile devices
+     */
+    enabled?: boolean | null;
+    /**
+     * Accessibility label for hamburger menu button
+     */
+    menuButtonLabel?: string | null;
+    /**
+     * Accessibility label for close menu button
+     */
+    closeButtonLabel?: string | null;
+    /**
+     * Show language selector in mobile menu
+     */
+    showLanguageSelector?: boolean | null;
+    /**
+     * Show contact button in mobile menu
+     */
+    showContactButton?: boolean | null;
+  };
+  /**
    * Configure recent posts dropdown in navigation
    */
   recentPosts?: {
@@ -2194,6 +2219,15 @@ export interface HeaderSelect<T extends boolean = true> {
         url?: T;
         newTab?: T;
         id?: T;
+      };
+  mobileNavigation?:
+    | T
+    | {
+        enabled?: T;
+        menuButtonLabel?: T;
+        closeButtonLabel?: T;
+        showLanguageSelector?: T;
+        showContactButton?: T;
       };
   recentPosts?:
     | T

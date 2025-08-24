@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import type { Header as HeaderType, Media } from '@/payload-types'
+import { MobileNav } from '@/components/MobileNav'
 
 const fallbackNavItems = [
   { href: '#storitve', label: 'Področja dela' },
@@ -50,7 +51,7 @@ export default async function Navigation({ className }: { className?: string }) 
                 className="object-contain"
               />
             ) : (
-              <span className="text-xl font-bold text-slate-900">
+              <span className="text-xl font-bold text-foreground">
                 {headerData?.siteName || 'SINTEH PRO'}
               </span>
             )}
@@ -69,9 +70,10 @@ export default async function Navigation({ className }: { className?: string }) 
                 // Header global navigation item
                 switch (item.type) {
                   case 'page':
-                    href = item.page && typeof item.page === 'object' && item.page.slug
-                      ? `/${item.page.slug === '/' ? '' : item.page.slug}`
-                      : '#'
+                    href =
+                      item.page && typeof item.page === 'object' && item.page.slug
+                        ? `/${item.page.slug === '/' ? '' : item.page.slug}`
+                        : '#'
                     break
                   case 'url':
                     href = item.url || '#'
@@ -80,10 +82,16 @@ export default async function Navigation({ className }: { className?: string }) 
                     href = '/blog'
                     break
                   case 'post':
-                    href = item.post && typeof item.post === 'object' && item.post.slug ? `/blog/${item.post.slug}` : '#'
+                    href =
+                      item.post && typeof item.post === 'object' && item.post.slug
+                        ? `/blog/${item.post.slug}`
+                        : '#'
                     break
                   case 'category':
-                    href = item.category && typeof item.category === 'object' && item.category.slug ? `/blog/category/${item.category.slug}` : '#'
+                    href =
+                      item.category && typeof item.category === 'object' && item.category.slug
+                        ? `/blog/category/${item.category.slug}`
+                        : '#'
                     break
                 }
               }
@@ -113,9 +121,10 @@ export default async function Navigation({ className }: { className?: string }) 
               <span className="opacity-40">|</span>
               <span>HR</span>
             </div>
-            <Button size="sm" asChild>
+            <Button size="sm" className="hidden sm:flex" asChild>
               <a href="#kontakt">Kontakt</a>
             </Button>
+            <MobileNav headerData={headerData} fallbackNavItems={fallbackNavItems} />
           </div>
         </div>
       </div>
