@@ -19,8 +19,15 @@ interface ProjectsBlockProps {
     }>
     link?: string
   }>
-  buttonText?: string
-  buttonLink?: string
+  button?: {
+    text: string
+    type: 'page' | 'url' | 'anchor'
+    page?: {
+      slug?: string
+    }
+    url?: string
+    anchor?: string
+  }
 }
 
 export function ProjectsBlock({ badge, title, subtitle, projects, button }: ProjectsBlockProps) {

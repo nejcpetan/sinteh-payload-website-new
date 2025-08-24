@@ -49,8 +49,15 @@ interface WhyTrustBlockProps {
     description: string
     icon: 'shield' | 'cog' | 'headset'
   }>
-  buttonText?: string
-  buttonLink?: string
+  button?: {
+    text: string
+    type: 'page' | 'url' | 'anchor'
+    page?: {
+      slug?: string
+    }
+    url?: string
+    anchor?: string
+  }
 }
 
 export function WhyTrustBlock({ title, image, reasons, pillars, button }: WhyTrustBlockProps) {

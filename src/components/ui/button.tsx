@@ -11,7 +11,7 @@ type ButtonVariant =
   | 'outlineLight'
   | 'contrast'
   | 'link'
-type ButtonSize = 'sm' | 'md' | 'lg'
+type ButtonSize = 'sm' | 'md' | 'lg' | 'icon'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant
@@ -37,6 +37,7 @@ const sizeStyles: Record<ButtonSize, string> = {
   sm: 'h-9 px-4 text-sm',
   md: 'h-11 px-6 text-sm',
   lg: 'h-14 px-8 text-base',
+  icon: 'h-10 w-10 p-0',
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -44,8 +45,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const classes = cn(baseStyles, variantStyles[variant], sizeStyles[size], className)
 
     if (asChild && React.isValidElement(children)) {
-      return React.cloneElement(children as React.ReactElement, {
-        className: cn(classes, (children as any).props?.className),
+      return React.cloneElement(children as React.ReactElement<any>, {
+        ...(children.props || {}),
+        className: cn(classes, (children.props as any)?.className),
       })
     }
 

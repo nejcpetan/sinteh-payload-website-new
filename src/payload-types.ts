@@ -180,21 +180,211 @@ export interface Page {
   id: number;
   title: string;
   slug: string;
-  content?: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
+  /**
+   * Build your page using blocks. Mix and match different content sections.
+   */
+  layout?:
+    | (
+        | {
+            /**
+             * Main hero title
+             */
+            title: string;
+            /**
+             * Hero subtitle or description
+             */
+            subtitle?: string | null;
+            /**
+             * Hero background image
+             */
+            backgroundImage?: (number | null) | Media;
+            ctaButtons?:
+              | {
+                  label: string;
+                  type: 'page' | 'url' | 'anchor';
+                  page?: (number | null) | Page;
+                  url?: string | null;
+                  anchor?: string | null;
+                  variant?: ('default' | 'secondary' | 'outline' | 'ghost') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            bottomText?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero';
+          }
+        | {
+            logos?:
+              | {
+                  logo: number | Media;
+                  alt: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'logoBelt';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            services?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  image: number | Media;
+                  features?:
+                    | {
+                        feature: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  button: {
+                    text: string;
+                    type: 'page' | 'url' | 'anchor';
+                    page?: (number | null) | Page;
+                    url?: string | null;
+                    anchor?: string | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'services';
+          }
+        | {
+            title: string;
+            description?: string | null;
+            image: number | Media;
+            badges?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            stats?:
+              | {
+                  number: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            process?:
+              | {
+                  step: string;
+                  id?: string | null;
+                }[]
+              | null;
+            calloutText?: string | null;
+            button: {
+              text: string;
+              type: 'page' | 'url' | 'anchor';
+              page?: (number | null) | Page;
+              url?: string | null;
+              anchor?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'about';
+          }
+        | {
+            title: string;
+            image: number | Media;
+            reasons?:
+              | {
+                  reason: string;
+                  id?: string | null;
+                }[]
+              | null;
+            pillars?:
+              | {
+                  title: string;
+                  description: string;
+                  icon: 'shield' | 'cog' | 'headset';
+                  id?: string | null;
+                }[]
+              | null;
+            button: {
+              text: string;
+              type: 'page' | 'url' | 'anchor';
+              page?: (number | null) | Page;
+              url?: string | null;
+              anchor?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'whyTrust';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            projects?:
+              | {
+                  title: string;
+                  category: string;
+                  image: number | Media;
+                  description: string;
+                  stack?:
+                    | {
+                        technology: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  link?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            button: {
+              text: string;
+              type: 'page' | 'url' | 'anchor';
+              page?: (number | null) | Page;
+              url?: string | null;
+              anchor?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'projects';
+          }
+        | {
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            phone?: string | null;
+            email?: string | null;
+            privacyText?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contact';
+          }
+        | {
+            /**
+             * Rich text content for flexible text sections
+             */
+            content: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'richText';
+          }
+      )[]
+    | null;
   meta?: {
     /**
      * SEO title (optional, defaults to page title)
@@ -420,7 +610,198 @@ export interface MediaSelect<T extends boolean = true> {
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
-  content?: T;
+  layout?:
+    | T
+    | {
+        hero?:
+          | T
+          | {
+              title?: T;
+              subtitle?: T;
+              backgroundImage?: T;
+              ctaButtons?:
+                | T
+                | {
+                    label?: T;
+                    type?: T;
+                    page?: T;
+                    url?: T;
+                    anchor?: T;
+                    variant?: T;
+                    id?: T;
+                  };
+              bottomText?: T;
+              id?: T;
+              blockName?: T;
+            };
+        logoBelt?:
+          | T
+          | {
+              logos?:
+                | T
+                | {
+                    logo?: T;
+                    alt?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        services?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              services?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    image?: T;
+                    features?:
+                      | T
+                      | {
+                          feature?: T;
+                          id?: T;
+                        };
+                    button?:
+                      | T
+                      | {
+                          text?: T;
+                          type?: T;
+                          page?: T;
+                          url?: T;
+                          anchor?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        about?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              image?: T;
+              badges?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              stats?:
+                | T
+                | {
+                    number?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              process?:
+                | T
+                | {
+                    step?: T;
+                    id?: T;
+                  };
+              calloutText?: T;
+              button?:
+                | T
+                | {
+                    text?: T;
+                    type?: T;
+                    page?: T;
+                    url?: T;
+                    anchor?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        whyTrust?:
+          | T
+          | {
+              title?: T;
+              image?: T;
+              reasons?:
+                | T
+                | {
+                    reason?: T;
+                    id?: T;
+                  };
+              pillars?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    icon?: T;
+                    id?: T;
+                  };
+              button?:
+                | T
+                | {
+                    text?: T;
+                    type?: T;
+                    page?: T;
+                    url?: T;
+                    anchor?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        projects?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              projects?:
+                | T
+                | {
+                    title?: T;
+                    category?: T;
+                    image?: T;
+                    description?: T;
+                    stack?:
+                      | T
+                      | {
+                          technology?: T;
+                          id?: T;
+                        };
+                    link?: T;
+                    id?: T;
+                  };
+              button?:
+                | T
+                | {
+                    text?: T;
+                    type?: T;
+                    page?: T;
+                    url?: T;
+                    anchor?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        contact?:
+          | T
+          | {
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              phone?: T;
+              email?: T;
+              privacyText?: T;
+              id?: T;
+              blockName?: T;
+            };
+        richText?:
+          | T
+          | {
+              content?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
   meta?:
     | T
     | {
@@ -721,6 +1102,10 @@ export interface Seo {
    * Default social sharing image (1200x630px recommended)
    */
   defaultImage?: (number | null) | Media;
+  /**
+   * Website favicon (.ico, .png, or .svg - 32x32px recommended)
+   */
+  favicon?: (number | null) | Media;
   /**
    * Default keywords for SEO (comma-separated)
    */
@@ -1093,6 +1478,7 @@ export interface SeoSelect<T extends boolean = true> {
   siteDescription?: T;
   siteUrl?: T;
   defaultImage?: T;
+  favicon?: T;
   keywords?: T;
   author?: T;
   twitterHandle?: T;

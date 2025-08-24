@@ -30,9 +30,18 @@ export default async function Page({ params }: PageProps) {
         slug: {
           equals: slug,
         },
-        status: {
-          equals: 'published',
-        },
+        or: [
+          {
+            status: {
+              equals: 'published',
+            },
+          },
+          {
+            _status: {
+              equals: 'published',
+            },
+          },
+        ],
       },
       limit: 1,
     })
@@ -70,9 +79,18 @@ export async function generateMetadata({ params }: PageProps) {
         slug: {
           equals: slug,
         },
-        status: {
-          equals: 'published',
-        },
+        or: [
+          {
+            status: {
+              equals: 'published',
+            },
+          },
+          {
+            _status: {
+              equals: 'published',
+            },
+          },
+        ],
       },
       limit: 1,
     })

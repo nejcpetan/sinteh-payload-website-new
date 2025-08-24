@@ -90,7 +90,7 @@ export default async function Footer() {
               <div className="h-8 w-[160px] relative mb-6">
                 {data.logo && typeof data.logo === 'object' && (data.logo as Media).url ? (
                   <Image
-                    src={(data.logo as Media).url}
+                    src={(data.logo as Media).url!}
                     alt={(data.logo as Media).alt || 'Company Logo'}
                     fill
                     className="object-contain"
@@ -137,14 +137,15 @@ export default async function Footer() {
                 <ul className="space-y-3">
                   {column.links?.map((link, linkIndex) => {
                     const href = getLinkHref(link)
-                    const isExternal = link.type === 'url' && link.url?.startsWith('http')
+                    const isExternal = link.type === 'url' && 'url' in link && link.url?.startsWith('http')
+                    const hasNewTab = 'newTab' in link && link.newTab
 
                     return (
                       <li key={linkIndex}>
                         <Link
                           href={href}
                           className="text-slate-700 hover:text-green-600 hover:underline transition-colors duration-200"
-                          target={isExternal || link.newTab ? '_blank' : undefined}
+                          target={isExternal || hasNewTab ? '_blank' : undefined}
                           rel={isExternal ? 'noopener noreferrer' : undefined}
                         >
                           {link.label}

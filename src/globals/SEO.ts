@@ -3,6 +3,7 @@ import { triggerRevalidation } from '@/lib/revalidation'
 
 export const SEO: GlobalConfig = {
   slug: 'seo',
+  label: 'SEO',
   access: {
     read: () => true,
     update: ({ req: { user } }) => Boolean(user),
@@ -41,6 +42,14 @@ export const SEO: GlobalConfig = {
       relationTo: 'media',
       admin: {
         description: 'Default social sharing image (1200x630px recommended)',
+      },
+    },
+    {
+      name: 'favicon',
+      type: 'upload',
+      relationTo: 'media',
+      admin: {
+        description: 'Website favicon (.ico, .png, or .svg - 32x32px recommended)',
       },
     },
     {

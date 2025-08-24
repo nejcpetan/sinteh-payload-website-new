@@ -42,7 +42,7 @@ export default async function Navigation({ className }: { className?: string }) 
             typeof headerData.logo === 'object' &&
             (headerData.logo as Media).url ? (
               <Image
-                src={(headerData.logo as Media).url}
+                src={(headerData.logo as Media).url!}
                 alt={(headerData.logo as Media).alt || headerData.siteName || 'Logo'}
                 width={120}
                 height={24}
@@ -69,7 +69,7 @@ export default async function Navigation({ className }: { className?: string }) 
                 // Header global navigation item
                 switch (item.type) {
                   case 'page':
-                    href = item.page?.slug
+                    href = item.page && typeof item.page === 'object' && item.page.slug
                       ? `/${item.page.slug === '/' ? '' : item.page.slug}`
                       : '#'
                     break
@@ -80,10 +80,10 @@ export default async function Navigation({ className }: { className?: string }) 
                     href = '/blog'
                     break
                   case 'post':
-                    href = item.post?.slug ? `/blog/${item.post.slug}` : '#'
+                    href = item.post && typeof item.post === 'object' && item.post.slug ? `/blog/${item.post.slug}` : '#'
                     break
                   case 'category':
-                    href = item.category?.slug ? `/blog/category/${item.category.slug}` : '#'
+                    href = item.category && typeof item.category === 'object' && item.category.slug ? `/blog/category/${item.category.slug}` : '#'
                     break
                 }
               }
@@ -95,7 +95,7 @@ export default async function Navigation({ className }: { className?: string }) 
                   key={index}
                   href={href}
                   className="text-foreground/80 hover:text-foreground transition"
-                  target={isExternal || item.newTab ? '_blank' : undefined}
+                  target={isExternal || ('newTab' in item && item.newTab) ? '_blank' : undefined}
                   rel={isExternal ? 'noopener noreferrer' : undefined}
                 >
                   {label}
