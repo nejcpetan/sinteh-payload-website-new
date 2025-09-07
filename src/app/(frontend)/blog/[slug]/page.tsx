@@ -10,7 +10,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 import config from '@/payload.config'
 import type { Post } from '@/payload-types'
-import SocialShare from '@/components/SocialShare'
 import BlogCTA from '@/components/BlogCTA'
 import RichTextRenderer from '@/components/RichTextRenderer'
 
@@ -232,9 +231,6 @@ async function BlogPostContent({ slug }: { slug: string }) {
               </div>
             </div>
           )}
-
-          {/* Social Share */}
-          <SocialShare title={post.title} />
         </article>
 
         {/* Blog CTA Section */}

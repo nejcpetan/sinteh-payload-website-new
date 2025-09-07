@@ -4,7 +4,7 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import type { SEO as SEOType, Media } from '@/payload-types'
+import type { Seo as SEOType, Media } from '@/payload-types'
 import './styles.css'
 
 const geistSans = Geist({

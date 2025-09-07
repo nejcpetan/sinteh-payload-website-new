@@ -12,5 +12,31 @@ export const Media: CollectionConfig = {
       required: true,
     },
   ],
-  upload: true,
+  upload: {
+    // Enable local storage for cropping functionality
+    disableLocalStorage: false,
+
+    // File type restrictions
+    mimeTypes: ['image/*'],
+
+    // Configure Sharp for image processing
+    formatOptions: {
+      format: 'webp',
+      options: {
+        quality: 90,
+      },
+    },
+
+    // Resize options for original image
+    resizeOptions: {
+      width: 2400,
+      height: 2400,
+      fit: 'inside',
+      withoutEnlargement: true,
+    },
+
+    // Enable focal point and cropping
+    crop: true,
+    focalPoint: true,
+  },
 }

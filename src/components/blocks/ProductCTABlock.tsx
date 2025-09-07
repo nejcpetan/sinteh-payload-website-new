@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -46,6 +49,53 @@ export function ProductCTABlock({
   applicationOptions,
   privacyText,
 }: ProductCTABlockProps) {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    application: '',
+    message: '',
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          subject: `Povpraševanje za sistem - ${formData.application || 'Splošno'}`,
+          source: 'product-cta',
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setSubmitted(true)
+    } catch (error) {
+      console.error('Error sending message:', error)
+      alert('Napaka pri pošiljanju sporočila. Prosimo poskusite znova.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <section className="w-full bg-background text-foreground">
       <div className="mx-auto max-w-7xl container-px py-16 md:py-24">
@@ -136,30 +186,54 @@ export function ProductCTABlock({
               {formTitle || 'Povpraševanje za sistem'}
             </h3>
 
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Ime in priimek *
                   </label>
-                  <Input placeholder="Vaše ime" required />
+                  <Input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Vaše ime"
+                    required
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     E-naslov *
                   </label>
-                  <Input type="email" placeholder="vas.email@podjetje.si" required />
+                  <Input
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="vas.email@podjetje.si"
+                    required
+                  />
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Podjetje</label>
-                  <Input placeholder="Naziv podjetja" />
+                  <Input
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Naziv podjetja"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Telefon</label>
-                  <Input type="tel" placeholder="+386 XX XXX XXX" />
+                  <Input
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+386 XX XXX XXX"
+                  />
                 </div>
               </div>
 
@@ -168,7 +242,12 @@ export function ProductCTABlock({
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Tip aplikacije
                   </label>
-                  <select className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand">
+                  <select
+                    name="application"
+                    value={formData.application}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-brand"
+                  >
                     <option value="">Izberite aplikacijo</option>
                     {applicationOptions.map((option, index) => (
                       <option key={index} value={option.value}>
@@ -184,6 +263,9 @@ export function ProductCTABlock({
                   Opis projekta *
                 </label>
                 <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Opišite vašo aplikacijo, varnostne zahteve in specifične potrebe..."
                   rows={4}
                   required
@@ -203,8 +285,8 @@ export function ProductCTABlock({
                 </label>
               </div>
 
-              <Button size="lg" type="submit" className="w-full">
-                Pošljite povpraševanje
+              <Button size="lg" type="submit" disabled={isSubmitting} className="w-full">
+                {isSubmitting ? 'Pošiljam...' : 'Pošljite povpraševanje'}
               </Button>
             </form>
           </div>

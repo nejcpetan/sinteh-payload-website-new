@@ -11,6 +11,10 @@ const nextConfig = {
     // Ignore ESLint errors during build
     ignoreDuringBuilds: true,
   },
+  // Ensure proper handling of dynamic routes
+  trailingSlash: false,
+  // Skip static optimization for admin and API routes
+  skipTrailingSlashRedirect: true,
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],

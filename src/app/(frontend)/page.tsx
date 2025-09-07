@@ -9,8 +9,7 @@ import type { Homepage } from '@/payload-types'
 export const revalidate = false // Use on-demand revalidation only
 
 export default async function HomePage() {
-  const payloadConfig = await config
-  const payload = await getPayload({ config: payloadConfig })
+  const payload = await getPayload({ config })
 
   // Fetch homepage global
   const homepage = (await payload.findGlobal({

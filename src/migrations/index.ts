@@ -1,9 +1,9 @@
-import * as migration_20250629_202637_initial from './20250629_202637_initial';
-import * as migration_20250712_180432 from './20250712_180432';
-import * as migration_20250823_112727 from './20250823_112727';
-import * as migration_20250823_114311 from './20250823_114311';
-import * as migration_20250831_111320_universal_blocks from './20250831_111320_universal_blocks';
-import * as migration_20250907_102003_header_dropdown_navigation from './20250907_102003_header_dropdown_navigation';
+import * as migration_20250629_202637_initial from './20250629_202637_initial'
+import * as migration_20250712_180432 from './20250712_180432'
+import * as migration_20250823_112727 from './20250823_112727'
+import * as migration_20250823_114311 from './20250823_114311'
+import * as migration_20250831_111320_universal_blocks from './20250831_111320_universal_blocks'
+import * as migration_20250907_102003_header_dropdown_navigation from './20250907_102003_header_dropdown_navigation'
 
 export const migrations = [
   {
@@ -34,6 +34,6 @@ export const migrations = [
   {
     up: migration_20250907_102003_header_dropdown_navigation.up,
     down: migration_20250907_102003_header_dropdown_navigation.down,
-    name: '20250907_102003_header_dropdown_navigation'
+    name: '20250907_102003_header_dropdown_navigation',
   },
-];
+]

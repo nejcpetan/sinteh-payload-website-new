@@ -10,11 +10,13 @@ import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
 import { Categories } from './collections/Categories'
+import { ContactSubmissions } from './collections/ContactSubmissions'
 // Import globals
 import { Header } from './globals/Header'
 import { Footer } from './globals/Footer'
 import { SEO } from './globals/SEO'
 import { Homepage } from './globals/Homepage'
+import { EmailAdmin } from './globals/EmailAdmin'
 
 // Import language objects
 import { en } from './translations/en'
@@ -38,8 +40,8 @@ export default buildConfig({
       sl: sl as any,
     },
   },
-  collections: [Users, Media, Pages, Posts, Categories],
-  globals: [Header, Footer, SEO, Homepage],
+  collections: [Users, Media, Pages, Posts, Categories, ContactSubmissions],
+  globals: [Header, Footer, SEO, Homepage, EmailAdmin],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

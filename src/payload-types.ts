@@ -72,6 +72,7 @@ export interface Config {
     pages: Page;
     posts: Post;
     categories: Category;
+    'contact-submissions': ContactSubmission;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -83,6 +84,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    'contact-submissions': ContactSubmissionsSelect<false> | ContactSubmissionsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -95,12 +97,14 @@ export interface Config {
     footer: Footer;
     seo: Seo;
     homepage: Homepage;
+    'email-admin': EmailAdmin;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
     seo: SeoSelect<false> | SeoSelect<true>;
     homepage: HomepageSelect<false> | HomepageSelect<true>;
+    'email-admin': EmailAdminSelect<false> | EmailAdminSelect<true>;
   };
   locale: null;
   user: User & {
@@ -1362,6 +1366,93 @@ export interface Category {
   createdAt: string;
 }
 /**
+ * Manage contact form submissions and track communication status
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-submissions".
+ */
+export interface ContactSubmission {
+  id: number;
+  name: string;
+  email: string;
+  company?: string | null;
+  phone?: string | null;
+  subject: string;
+  message: string;
+  projectType?: string | null;
+  budget?: string | null;
+  urgency?: string | null;
+  /**
+   * For product-specific inquiries
+   */
+  application?: string | null;
+  /**
+   * Track the current status of this inquiry
+   */
+  status: 'new' | 'in-progress' | 'responded' | 'closed' | 'spam';
+  /**
+   * Set priority level for follow-up
+   */
+  priority?: ('low' | 'medium' | 'high' | 'urgent') | null;
+  /**
+   * Assign this inquiry to a team member
+   */
+  assignedTo?: (number | null) | User;
+  /**
+   * Add tags for better organization (e.g., automation, safety, retrofit)
+   */
+  tags?: string[] | null;
+  /**
+   * Internal notes for team communication (not visible to customer)
+   */
+  internalNotes?: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * Set a reminder date for follow-up
+   */
+  followUpDate?: string | null;
+  /**
+   * Track all emails sent related to this inquiry
+   */
+  emailsSent?:
+    | {
+        type?: ('auto-reply' | 'admin-notification' | 'follow-up' | 'response') | null;
+        sentAt?: string | null;
+        recipient?: string | null;
+        subject?: string | null;
+        success?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Which form was used to submit this inquiry
+   */
+  source?: ('contact-form' | 'product-cta' | 'simple-contact' | 'universal-contact') | null;
+  /**
+   * IP address of the submitter (for spam prevention)
+   */
+  ipAddress?: string | null;
+  /**
+   * Browser information (for analytics)
+   */
+  userAgent?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
@@ -1387,6 +1478,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'categories';
         value: number | Category;
+      } | null)
+    | ({
+        relationTo: 'contact-submissions';
+        value: number | ContactSubmission;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -2570,6 +2665,43 @@ export interface CategoriesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-submissions_select".
+ */
+export interface ContactSubmissionsSelect<T extends boolean = true> {
+  name?: T;
+  email?: T;
+  company?: T;
+  phone?: T;
+  subject?: T;
+  message?: T;
+  projectType?: T;
+  budget?: T;
+  urgency?: T;
+  application?: T;
+  status?: T;
+  priority?: T;
+  assignedTo?: T;
+  tags?: T;
+  internalNotes?: T;
+  followUpDate?: T;
+  emailsSent?:
+    | T
+    | {
+        type?: T;
+        sentAt?: T;
+        recipient?: T;
+        subject?: T;
+        success?: T;
+        id?: T;
+      };
+  source?: T;
+  ipAddress?: T;
+  userAgent?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents_select".
  */
 export interface PayloadLockedDocumentsSelect<T extends boolean = true> {
@@ -3143,6 +3275,76 @@ export interface Homepage {
   createdAt?: string | null;
 }
 /**
+ * Manage email settings, templates, and contact form submissions
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "email-admin".
+ */
+export interface EmailAdmin {
+  id: number;
+  emailSettings: {
+    /**
+     * The email address that will appear as the sender
+     */
+    fromEmail: string;
+    /**
+     * The name that will appear as the sender
+     */
+    fromName: string;
+    /**
+     * Email address where contact form submissions will be sent
+     */
+    contactEmail: string;
+    /**
+     * Email address for replies (optional)
+     */
+    replyToEmail?: string | null;
+    /**
+     * Send automatic confirmation emails to form submitters
+     */
+    autoReplyEnabled?: boolean | null;
+    /**
+     * Send notification emails to admin when forms are submitted
+     */
+    notificationEnabled?: boolean | null;
+  };
+  templates: {
+    customerConfirmation: {
+      subject: string;
+      heading: string;
+      /**
+       * Use {{name}} for customer name, {{subject}} for inquiry subject
+       */
+      message?: {
+        root: {
+          type: string;
+          children: {
+            type: string;
+            version: number;
+            [k: string]: unknown;
+          }[];
+          direction: ('ltr' | 'rtl') | null;
+          format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+          indent: number;
+          version: number;
+        };
+        [k: string]: unknown;
+      } | null;
+      responseTime?: string | null;
+    };
+    adminNotification: {
+      /**
+       * Use {{subject}} for inquiry subject
+       */
+      subject: string;
+      heading: string;
+    };
+  };
+  quickActions?: {};
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
@@ -3500,6 +3702,44 @@ export interface HomepageSelect<T extends boolean = true> {
               blockName?: T;
             };
       };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "email-admin_select".
+ */
+export interface EmailAdminSelect<T extends boolean = true> {
+  emailSettings?:
+    | T
+    | {
+        fromEmail?: T;
+        fromName?: T;
+        contactEmail?: T;
+        replyToEmail?: T;
+        autoReplyEnabled?: T;
+        notificationEnabled?: T;
+      };
+  templates?:
+    | T
+    | {
+        customerConfirmation?:
+          | T
+          | {
+              subject?: T;
+              heading?: T;
+              message?: T;
+              responseTime?: T;
+            };
+        adminNotification?:
+          | T
+          | {
+              subject?: T;
+              heading?: T;
+            };
+      };
+  quickActions?: T | {};
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
