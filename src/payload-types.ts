@@ -201,8 +201,9 @@ export interface Page {
             ctaButtons?:
               | {
                   label: string;
-                  type: 'page' | 'url' | 'anchor';
+                  type: 'page' | 'post' | 'url' | 'anchor';
                   page?: (number | null) | Page;
+                  post?: (number | null) | Post;
                   url?: string | null;
                   anchor?: string | null;
                   variant?: ('default' | 'secondary' | 'outline' | 'ghost') | null;
@@ -281,8 +282,9 @@ export interface Page {
             calloutText?: string | null;
             button: {
               text: string;
-              type: 'page' | 'url' | 'anchor';
+              type: 'page' | 'post' | 'url' | 'anchor';
               page?: (number | null) | Page;
+              post?: (number | null) | Post;
               url?: string | null;
               anchor?: string | null;
             };
@@ -309,8 +311,9 @@ export interface Page {
               | null;
             button: {
               text: string;
-              type: 'page' | 'url' | 'anchor';
+              type: 'page' | 'post' | 'url' | 'anchor';
               page?: (number | null) | Page;
+              post?: (number | null) | Post;
               url?: string | null;
               anchor?: string | null;
             };
@@ -340,8 +343,9 @@ export interface Page {
               | null;
             button: {
               text: string;
-              type: 'page' | 'url' | 'anchor';
+              type: 'page' | 'post' | 'url' | 'anchor';
               page?: (number | null) | Page;
+              post?: (number | null) | Post;
               url?: string | null;
               anchor?: string | null;
             };
@@ -414,8 +418,9 @@ export interface Page {
             ctaButtons?:
               | {
                   label: string;
-                  type: 'page' | 'url' | 'anchor';
+                  type: 'page' | 'post' | 'url' | 'anchor';
                   page?: (number | null) | Page;
+                  post?: (number | null) | Post;
                   url?: string | null;
                   anchor?: string | null;
                   variant?: ('default' | 'secondary' | 'outline' | 'ghost') | null;
@@ -802,6 +807,449 @@ export interface Page {
             blockName?: string | null;
             blockType: 'contactFAQ';
           }
+        | {
+            variant?: ('standard' | 'blog' | 'contact' | 'minimal') | null;
+            badge?: string | null;
+            title: string;
+            subtitle?: string | null;
+            description: string;
+            benefits?:
+              | {
+                  title: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            benefitsLayout?: ('grid' | 'list') | null;
+            primaryCTA: {
+              text: string;
+              type: 'page' | 'post' | 'url' | 'anchor';
+              page?: (number | null) | Page;
+              post?: (number | null) | Post;
+              url?: string | null;
+              anchor?: string | null;
+              variant?: ('default' | 'outline' | 'secondary' | 'ghost') | null;
+            };
+            secondaryCTA: {
+              text?: string | null;
+              type: 'page' | 'post' | 'url' | 'anchor';
+              page?: (number | null) | Page;
+              post?: (number | null) | Post;
+              url?: string | null;
+              anchor?: string | null;
+              variant?: ('default' | 'outline' | 'secondary' | 'ghost') | null;
+            };
+            trustText?: string | null;
+            trustIndicators?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            stats?:
+              | {
+                  value: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            contactMethods?:
+              | {
+                  link: {
+                    type: 'page' | 'post' | 'url' | 'anchor';
+                    page?: (number | null) | Page;
+                    post?: (number | null) | Post;
+                    url?: string | null;
+                    anchor?: string | null;
+                  };
+                  title: string;
+                  value: string;
+                  id?: string | null;
+                }[]
+              | null;
+            showImage?: boolean | null;
+            backgroundStyle?: ('surface' | 'background' | 'white' | 'gradient') | null;
+            contentAlignment?: ('left' | 'center') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'universalHero';
+          }
+        | {
+            variant?: ('standard' | 'with-contact-form' | 'minimal' | 'full-width') | null;
+            title: string;
+            subtitle?: string | null;
+            description: string;
+            primaryCTA: {
+              text: string;
+              type: 'page' | 'post' | 'url' | 'anchor';
+              page?: (number | null) | Page;
+              post?: (number | null) | Post;
+              url?: string | null;
+              anchor?: string | null;
+              variant?: ('default' | 'outline' | 'secondary' | 'ghost') | null;
+            };
+            secondaryCTA: {
+              text?: string | null;
+              type: 'page' | 'post' | 'url' | 'anchor';
+              page?: (number | null) | Page;
+              post?: (number | null) | Post;
+              url?: string | null;
+              anchor?: string | null;
+              variant?: ('default' | 'outline' | 'secondary' | 'ghost') | null;
+            };
+            benefits?:
+              | {
+                  benefit: string;
+                  id?: string | null;
+                }[]
+              | null;
+            stats?:
+              | {
+                  value: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            backgroundStyle?: ('surface' | 'background' | 'white' | 'gradient') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'universalCTA';
+          }
+        | {
+            variant?: ('features' | 'services' | 'benefits' | 'solutions') | null;
+            title: string;
+            subtitle?: string | null;
+            description: string;
+            badge?: string | null;
+            features?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  badge?: string | null;
+                  link: {
+                    type: 'page' | 'post' | 'url' | 'anchor';
+                    page?: (number | null) | Page;
+                    post?: (number | null) | Post;
+                    url?: string | null;
+                    anchor?: string | null;
+                  };
+                  ctaText?: string | null;
+                  details?:
+                    | {
+                        detail: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            columns?: ('2' | '3' | '4') | null;
+            cardStyle?: ('default' | 'minimal' | 'bordered') | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'featureGrid';
+          }
+        | {
+            variant?: ('categories' | 'topics' | 'services' | 'industries') | null;
+            title: string;
+            subtitle?: string | null;
+            description: string;
+            badge?: string | null;
+            items?:
+              | {
+                  name: string;
+                  title: string;
+                  description?: string | null;
+                  link: {
+                    type: 'page' | 'post' | 'url' | 'anchor';
+                    page?: (number | null) | Page;
+                    post?: (number | null) | Post;
+                    url?: string | null;
+                    anchor?: string | null;
+                  };
+                  postCount?: number | null;
+                  applications?:
+                    | {
+                        application: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            columns?: ('2' | '3' | '4') | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contentGrid';
+          }
+        | {
+            variant?: ('standard' | 'highlighted' | 'minimal' | 'cards') | null;
+            title: string;
+            subtitle?: string | null;
+            description: string;
+            badge?: string | null;
+            stats?:
+              | {
+                  value: string;
+                  label: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            columns?: ('2' | '3' | '4' | '5') | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'statsSection';
+          }
+        | {
+            variant?: ('numbered' | 'timeline' | 'cards' | 'minimal') | null;
+            title: string;
+            subtitle?: string | null;
+            description: string;
+            badge?: string | null;
+            steps?:
+              | {
+                  number: string;
+                  title: string;
+                  description?: string | null;
+                  duration?: string | null;
+                  deliverable?: string | null;
+                  details?:
+                    | {
+                        detail: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'processSteps';
+          }
+        | {
+            variant?: ('blog-posts' | 'service-brands' | 'projects' | 'general' | 'featured-content') | null;
+            title: string;
+            subtitle?: string | null;
+            description: string;
+            badge?: string | null;
+            cards?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  excerpt?: string | null;
+                  category?: string | null;
+                  readTime?: string | null;
+                  publishedAt?: string | null;
+                  link: {
+                    type: 'page' | 'post' | 'url' | 'anchor';
+                    page?: (number | null) | Page;
+                    post?: (number | null) | Post;
+                    url?: string | null;
+                    anchor?: string | null;
+                  };
+                  featured?: boolean | null;
+                  tags?:
+                    | {
+                        tag: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            columns?: ('2' | '3' | '4') | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contentCards';
+          }
+        | {
+            variant?: ('form-only' | 'info-only' | 'split' | 'hero-style' | 'compact') | null;
+            title: string;
+            description: string;
+            badge?: string | null;
+            formTitle?: string | null;
+            formDescription?: string | null;
+            benefits?:
+              | {
+                  benefit: string;
+                  id?: string | null;
+                }[]
+              | null;
+            backgroundStyle?: ('surface' | 'background' | 'white' | 'gradient') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactSection';
+          }
+        | {
+            title: string;
+            description: string;
+            badge?: string | null;
+            primaryLabel: string;
+            secondaryLabel: string;
+            items?:
+              | {
+                  advantage: string;
+                  description?: string | null;
+                  primary?: ('yes' | 'no' | 'partial') | null;
+                  secondary?: ('yes' | 'no' | 'partial') | null;
+                  id?: string | null;
+                }[]
+              | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'comparisonTable';
+          }
+        | {
+            variant?: ('standard' | 'centered' | 'documentation' | 'legal' | 'minimal') | null;
+            title: string;
+            subtitle?: string | null;
+            content: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            };
+            breadcrumbs?:
+              | {
+                  label: string;
+                  link: {
+                    type: 'page' | 'post' | 'url' | 'anchor';
+                    page?: (number | null) | Page;
+                    post?: (number | null) | Post;
+                    url?: string | null;
+                    anchor?: string | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            links?:
+              | {
+                  title: string;
+                  link: {
+                    type: 'page' | 'post' | 'url' | 'anchor';
+                    page?: (number | null) | Page;
+                    post?: (number | null) | Post;
+                    url?: string | null;
+                    anchor?: string | null;
+                  };
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'simplePage';
+          }
+        | {
+            variant?: ('grid' | 'carousel' | 'list' | 'featured') | null;
+            title: string;
+            description: string;
+            badge?: string | null;
+            brands?:
+              | {
+                  name: string;
+                  description?: string | null;
+                  logo?: (number | null) | Media;
+                  id?: string | null;
+                }[]
+              | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'brandShowcase';
+          }
+        | {
+            variant?: ('overview' | 'specifications' | 'process' | 'documentation') | null;
+            title: string;
+            description: string;
+            badge?: string | null;
+            overviewContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            processSteps?:
+              | {
+                  number: string;
+                  title: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            specifications?:
+              | {
+                  category: string;
+                  items?:
+                    | {
+                        label: string;
+                        value: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'technicalContent';
+          }
+        | {
+            variant?: ('grid' | 'list' | 'categories' | 'featured') | null;
+            title: string;
+            description: string;
+            badge?: string | null;
+            resources?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  fileType?: string | null;
+                  fileSize?: string | null;
+                  category?: string | null;
+                  downloadUrl?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            galleryImages?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  category?: string | null;
+                  image?: (number | null) | Media;
+                  id?: string | null;
+                }[]
+              | null;
+            backgroundStyle?: ('background' | 'surface' | 'white') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'resourceGallery';
+          }
       )[]
     | null;
   meta?: {
@@ -1044,6 +1492,7 @@ export interface PagesSelect<T extends boolean = true> {
                     label?: T;
                     type?: T;
                     page?: T;
+                    post?: T;
                     url?: T;
                     anchor?: T;
                     variant?: T;
@@ -1130,6 +1579,7 @@ export interface PagesSelect<T extends boolean = true> {
                     text?: T;
                     type?: T;
                     page?: T;
+                    post?: T;
                     url?: T;
                     anchor?: T;
                   };
@@ -1161,6 +1611,7 @@ export interface PagesSelect<T extends boolean = true> {
                     text?: T;
                     type?: T;
                     page?: T;
+                    post?: T;
                     url?: T;
                     anchor?: T;
                   };
@@ -1195,6 +1646,7 @@ export interface PagesSelect<T extends boolean = true> {
                     text?: T;
                     type?: T;
                     page?: T;
+                    post?: T;
                     url?: T;
                     anchor?: T;
                   };
@@ -1241,6 +1693,7 @@ export interface PagesSelect<T extends boolean = true> {
                     label?: T;
                     type?: T;
                     page?: T;
+                    post?: T;
                     url?: T;
                     anchor?: T;
                     variant?: T;
@@ -1608,6 +2061,454 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        universalHero?:
+          | T
+          | {
+              variant?: T;
+              badge?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              benefits?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              benefitsLayout?: T;
+              primaryCTA?:
+                | T
+                | {
+                    text?: T;
+                    type?: T;
+                    page?: T;
+                    post?: T;
+                    url?: T;
+                    anchor?: T;
+                    variant?: T;
+                  };
+              secondaryCTA?:
+                | T
+                | {
+                    text?: T;
+                    type?: T;
+                    page?: T;
+                    post?: T;
+                    url?: T;
+                    anchor?: T;
+                    variant?: T;
+                  };
+              trustText?: T;
+              trustIndicators?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              contactMethods?:
+                | T
+                | {
+                    link?:
+                      | T
+                      | {
+                          type?: T;
+                          page?: T;
+                          post?: T;
+                          url?: T;
+                          anchor?: T;
+                        };
+                    title?: T;
+                    value?: T;
+                    id?: T;
+                  };
+              showImage?: T;
+              backgroundStyle?: T;
+              contentAlignment?: T;
+              id?: T;
+              blockName?: T;
+            };
+        universalCTA?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              primaryCTA?:
+                | T
+                | {
+                    text?: T;
+                    type?: T;
+                    page?: T;
+                    post?: T;
+                    url?: T;
+                    anchor?: T;
+                    variant?: T;
+                  };
+              secondaryCTA?:
+                | T
+                | {
+                    text?: T;
+                    type?: T;
+                    page?: T;
+                    post?: T;
+                    url?: T;
+                    anchor?: T;
+                    variant?: T;
+                  };
+              benefits?:
+                | T
+                | {
+                    benefit?: T;
+                    id?: T;
+                  };
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        featureGrid?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              badge?: T;
+              features?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    badge?: T;
+                    link?:
+                      | T
+                      | {
+                          type?: T;
+                          page?: T;
+                          post?: T;
+                          url?: T;
+                          anchor?: T;
+                        };
+                    ctaText?: T;
+                    details?:
+                      | T
+                      | {
+                          detail?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              columns?: T;
+              cardStyle?: T;
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        contentGrid?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              badge?: T;
+              items?:
+                | T
+                | {
+                    name?: T;
+                    title?: T;
+                    description?: T;
+                    link?:
+                      | T
+                      | {
+                          type?: T;
+                          page?: T;
+                          post?: T;
+                          url?: T;
+                          anchor?: T;
+                        };
+                    postCount?: T;
+                    applications?:
+                      | T
+                      | {
+                          application?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              columns?: T;
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        statsSection?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              badge?: T;
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              columns?: T;
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        processSteps?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              badge?: T;
+              steps?:
+                | T
+                | {
+                    number?: T;
+                    title?: T;
+                    description?: T;
+                    duration?: T;
+                    deliverable?: T;
+                    details?:
+                      | T
+                      | {
+                          detail?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        contentCards?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+              badge?: T;
+              cards?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    excerpt?: T;
+                    category?: T;
+                    readTime?: T;
+                    publishedAt?: T;
+                    link?:
+                      | T
+                      | {
+                          type?: T;
+                          page?: T;
+                          post?: T;
+                          url?: T;
+                          anchor?: T;
+                        };
+                    featured?: T;
+                    tags?:
+                      | T
+                      | {
+                          tag?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              columns?: T;
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        contactSection?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              description?: T;
+              badge?: T;
+              formTitle?: T;
+              formDescription?: T;
+              benefits?:
+                | T
+                | {
+                    benefit?: T;
+                    id?: T;
+                  };
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        comparisonTable?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              badge?: T;
+              primaryLabel?: T;
+              secondaryLabel?: T;
+              items?:
+                | T
+                | {
+                    advantage?: T;
+                    description?: T;
+                    primary?: T;
+                    secondary?: T;
+                    id?: T;
+                  };
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        simplePage?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              subtitle?: T;
+              content?: T;
+              breadcrumbs?:
+                | T
+                | {
+                    label?: T;
+                    link?:
+                      | T
+                      | {
+                          type?: T;
+                          page?: T;
+                          post?: T;
+                          url?: T;
+                          anchor?: T;
+                        };
+                    id?: T;
+                  };
+              links?:
+                | T
+                | {
+                    title?: T;
+                    link?:
+                      | T
+                      | {
+                          type?: T;
+                          page?: T;
+                          post?: T;
+                          url?: T;
+                          anchor?: T;
+                        };
+                    description?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        brandShowcase?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              description?: T;
+              badge?: T;
+              brands?:
+                | T
+                | {
+                    name?: T;
+                    description?: T;
+                    logo?: T;
+                    id?: T;
+                  };
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        technicalContent?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              description?: T;
+              badge?: T;
+              overviewContent?: T;
+              processSteps?:
+                | T
+                | {
+                    number?: T;
+                    title?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              specifications?:
+                | T
+                | {
+                    category?: T;
+                    items?:
+                      | T
+                      | {
+                          label?: T;
+                          value?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
+        resourceGallery?:
+          | T
+          | {
+              variant?: T;
+              title?: T;
+              description?: T;
+              badge?: T;
+              resources?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    fileType?: T;
+                    fileSize?: T;
+                    category?: T;
+                    downloadUrl?: T;
+                    id?: T;
+                  };
+              galleryImages?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    category?: T;
+                    image?: T;
+                    id?: T;
+                  };
+              backgroundStyle?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   meta?:
     | T
@@ -1719,7 +2620,14 @@ export interface Header {
   navigation?:
     | {
         label: string;
-        type: 'page' | 'url' | 'blog' | 'post' | 'category';
+        /**
+         * Choose between a normal link or dropdown menu
+         */
+        navType: 'link' | 'dropdown';
+        /**
+         * Link destination type (only for normal links)
+         */
+        type?: ('page' | 'url' | 'blog' | 'post' | 'category') | null;
         page?: (number | null) | Page;
         /**
          * Link to a specific blog post
@@ -1734,9 +2642,42 @@ export interface Header {
          */
         url?: string | null;
         /**
-         * Open link in new tab
+         * Open link in new tab (only for normal links)
          */
         newTab?: boolean | null;
+        /**
+         * Configure dropdown menu items
+         */
+        dropdownItems?:
+          | {
+              label: string;
+              /**
+               * Optional description for the dropdown item
+               */
+              description?: string | null;
+              type: 'page' | 'url' | 'blog' | 'post' | 'category' | 'divider';
+              page?: (number | null) | Page;
+              post?: (number | null) | Post;
+              category?: (number | null) | Category;
+              /**
+               * Enter full URL (e.g., https://example.com)
+               */
+              url?: string | null;
+              /**
+               * Open link in new tab
+               */
+              newTab?: boolean | null;
+              /**
+               * Highlight this item in the dropdown
+               */
+              featured?: boolean | null;
+              id?: string | null;
+            }[]
+          | null;
+        /**
+         * Choose dropdown menu layout style
+         */
+        dropdownStyle?: ('simple' | 'cards' | 'columns') | null;
         id?: string | null;
       }[]
     | null;
@@ -2212,12 +3153,28 @@ export interface HeaderSelect<T extends boolean = true> {
     | T
     | {
         label?: T;
+        navType?: T;
         type?: T;
         page?: T;
         post?: T;
         category?: T;
         url?: T;
         newTab?: T;
+        dropdownItems?:
+          | T
+          | {
+              label?: T;
+              description?: T;
+              type?: T;
+              page?: T;
+              post?: T;
+              category?: T;
+              url?: T;
+              newTab?: T;
+              featured?: T;
+              id?: T;
+            };
+        dropdownStyle?: T;
         id?: T;
       };
   mobileNavigation?:

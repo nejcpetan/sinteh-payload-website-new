@@ -36,6 +36,25 @@ export const Header: GlobalConfig = {
           required: true,
         },
         {
+          name: 'navType',
+          type: 'select',
+          options: [
+            {
+              label: 'Normal Link',
+              value: 'link',
+            },
+            {
+              label: 'Dropdown Menu',
+              value: 'dropdown',
+            },
+          ],
+          defaultValue: 'link',
+          required: true,
+          admin: {
+            description: 'Choose between a normal link or dropdown menu',
+          },
+        },
+        {
           name: 'type',
           type: 'select',
           options: [
@@ -62,6 +81,10 @@ export const Header: GlobalConfig = {
           ],
           defaultValue: 'page',
           required: true,
+          admin: {
+            condition: (_, siblingData) => siblingData?.navType === 'link',
+            description: 'Link destination type (only for normal links)',
+          },
         },
         {
           name: 'page',
@@ -69,7 +92,8 @@ export const Header: GlobalConfig = {
           relationTo: 'pages',
           maxDepth: 1, // Need slug for navigation links
           admin: {
-            condition: (_, siblingData) => siblingData?.type === 'page',
+            condition: (_, siblingData) =>
+              siblingData?.navType === 'link' && siblingData?.type === 'page',
           },
         },
         {
@@ -81,7 +105,8 @@ export const Header: GlobalConfig = {
             status: { equals: 'published' },
           },
           admin: {
-            condition: (_, siblingData) => siblingData?.type === 'post',
+            condition: (_, siblingData) =>
+              siblingData?.navType === 'link' && siblingData?.type === 'post',
             description: 'Link to a specific blog post',
           },
         },
@@ -91,7 +116,8 @@ export const Header: GlobalConfig = {
           relationTo: 'categories',
           maxDepth: 1, // Need slug for navigation links
           admin: {
-            condition: (_, siblingData) => siblingData?.type === 'category',
+            condition: (_, siblingData) =>
+              siblingData?.navType === 'link' && siblingData?.type === 'category',
             description: 'Link to a specific category',
           },
         },
@@ -99,7 +125,8 @@ export const Header: GlobalConfig = {
           name: 'url',
           type: 'text',
           admin: {
-            condition: (_, siblingData) => siblingData?.type === 'url',
+            condition: (_, siblingData) =>
+              siblingData?.navType === 'link' && siblingData?.type === 'url',
             description: 'Enter full URL (e.g., https://example.com)',
           },
         },
@@ -108,7 +135,143 @@ export const Header: GlobalConfig = {
           type: 'checkbox',
           defaultValue: false,
           admin: {
-            description: 'Open link in new tab',
+            condition: (_, siblingData) => siblingData?.navType === 'link',
+            description: 'Open link in new tab (only for normal links)',
+          },
+        },
+        // Dropdown Menu Fields
+        {
+          name: 'dropdownItems',
+          type: 'array',
+          maxRows: 8,
+          admin: {
+            condition: (_, siblingData) => siblingData?.navType === 'dropdown',
+            description: 'Configure dropdown menu items',
+          },
+          fields: [
+            {
+              name: 'label',
+              type: 'text',
+              required: true,
+            },
+            {
+              name: 'description',
+              type: 'text',
+              admin: {
+                description: 'Optional description for the dropdown item',
+              },
+            },
+            {
+              name: 'type',
+              type: 'select',
+              options: [
+                {
+                  label: 'Internal Page',
+                  value: 'page',
+                },
+                {
+                  label: 'Custom URL',
+                  value: 'url',
+                },
+                {
+                  label: 'Blog',
+                  value: 'blog',
+                },
+                {
+                  label: 'Specific Post',
+                  value: 'post',
+                },
+                {
+                  label: 'Category',
+                  value: 'category',
+                },
+                {
+                  label: 'Divider',
+                  value: 'divider',
+                },
+              ],
+              defaultValue: 'page',
+              required: true,
+            },
+            {
+              name: 'page',
+              type: 'relationship',
+              relationTo: 'pages',
+              maxDepth: 1,
+              admin: {
+                condition: (_, siblingData) => siblingData?.type === 'page',
+              },
+            },
+            {
+              name: 'post',
+              type: 'relationship',
+              relationTo: 'posts',
+              maxDepth: 1,
+              filterOptions: {
+                status: { equals: 'published' },
+              },
+              admin: {
+                condition: (_, siblingData) => siblingData?.type === 'post',
+              },
+            },
+            {
+              name: 'category',
+              type: 'relationship',
+              relationTo: 'categories',
+              maxDepth: 1,
+              admin: {
+                condition: (_, siblingData) => siblingData?.type === 'category',
+              },
+            },
+            {
+              name: 'url',
+              type: 'text',
+              admin: {
+                condition: (_, siblingData) => siblingData?.type === 'url',
+                description: 'Enter full URL (e.g., https://example.com)',
+              },
+            },
+            {
+              name: 'newTab',
+              type: 'checkbox',
+              defaultValue: false,
+              admin: {
+                condition: (_, siblingData) => siblingData?.type !== 'divider',
+                description: 'Open link in new tab',
+              },
+            },
+            {
+              name: 'featured',
+              type: 'checkbox',
+              defaultValue: false,
+              admin: {
+                condition: (_, siblingData) => siblingData?.type !== 'divider',
+                description: 'Highlight this item in the dropdown',
+              },
+            },
+          ],
+        },
+        {
+          name: 'dropdownStyle',
+          type: 'select',
+          options: [
+            {
+              label: 'Simple List',
+              value: 'simple',
+            },
+            {
+              label: 'Cards with Descriptions',
+              value: 'cards',
+            },
+            {
+              label: 'Two Column Layout',
+              value: 'columns',
+            },
+          ],
+          defaultValue: 'simple',
+          admin: {
+            condition: (_, siblingData) => siblingData?.navType === 'dropdown',
+            description: 'Choose dropdown menu layout style',
           },
         },
       ],

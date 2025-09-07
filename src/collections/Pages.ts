@@ -1,5 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { triggerRevalidation, isPublished } from '@/lib/revalidation'
+import { universalBlocks } from './blocks/universalBlocks'
+import { linkFieldArray } from '@/lib/linkField'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -99,6 +101,10 @@ export const Pages: CollectionConfig = {
                       value: 'page',
                     },
                     {
+                      label: 'Blog Post',
+                      value: 'post',
+                    },
+                    {
                       label: 'External URL',
                       value: 'url',
                     },
@@ -114,6 +120,14 @@ export const Pages: CollectionConfig = {
                   relationTo: 'pages',
                   admin: {
                     condition: (_, siblingData) => siblingData?.type === 'page',
+                  },
+                },
+                {
+                  name: 'post',
+                  type: 'relationship',
+                  relationTo: 'posts',
+                  admin: {
+                    condition: (_, siblingData) => siblingData?.type === 'post',
                   },
                 },
                 {
@@ -411,6 +425,10 @@ export const Pages: CollectionConfig = {
                       value: 'page',
                     },
                     {
+                      label: 'Blog Post',
+                      value: 'post',
+                    },
+                    {
                       label: 'External URL',
                       value: 'url',
                     },
@@ -426,6 +444,14 @@ export const Pages: CollectionConfig = {
                   relationTo: 'pages',
                   admin: {
                     condition: (_, siblingData) => siblingData?.type === 'page',
+                  },
+                },
+                {
+                  name: 'post',
+                  type: 'relationship',
+                  relationTo: 'posts',
+                  admin: {
+                    condition: (_, siblingData) => siblingData?.type === 'post',
                   },
                 },
                 {
@@ -535,6 +561,10 @@ export const Pages: CollectionConfig = {
                       value: 'page',
                     },
                     {
+                      label: 'Blog Post',
+                      value: 'post',
+                    },
+                    {
                       label: 'External URL',
                       value: 'url',
                     },
@@ -550,6 +580,14 @@ export const Pages: CollectionConfig = {
                   relationTo: 'pages',
                   admin: {
                     condition: (_, siblingData) => siblingData?.type === 'page',
+                  },
+                },
+                {
+                  name: 'post',
+                  type: 'relationship',
+                  relationTo: 'posts',
+                  admin: {
+                    condition: (_, siblingData) => siblingData?.type === 'post',
                   },
                 },
                 {
@@ -660,6 +698,10 @@ export const Pages: CollectionConfig = {
                       value: 'page',
                     },
                     {
+                      label: 'Blog Post',
+                      value: 'post',
+                    },
+                    {
                       label: 'External URL',
                       value: 'url',
                     },
@@ -675,6 +717,14 @@ export const Pages: CollectionConfig = {
                   relationTo: 'pages',
                   admin: {
                     condition: (_, siblingData) => siblingData?.type === 'page',
+                  },
+                },
+                {
+                  name: 'post',
+                  type: 'relationship',
+                  relationTo: 'posts',
+                  admin: {
+                    condition: (_, siblingData) => siblingData?.type === 'post',
                   },
                 },
                 {
@@ -880,6 +930,10 @@ export const Pages: CollectionConfig = {
                       value: 'page',
                     },
                     {
+                      label: 'Blog Post',
+                      value: 'post',
+                    },
+                    {
                       label: 'External URL',
                       value: 'url',
                     },
@@ -895,6 +949,14 @@ export const Pages: CollectionConfig = {
                   relationTo: 'pages',
                   admin: {
                     condition: (_, siblingData) => siblingData?.type === 'page',
+                  },
+                },
+                {
+                  name: 'post',
+                  type: 'relationship',
+                  relationTo: 'posts',
+                  admin: {
+                    condition: (_, siblingData) => siblingData?.type === 'post',
                   },
                 },
                 {
@@ -2648,6 +2710,8 @@ export const Pages: CollectionConfig = {
             },
           ],
         },
+        // Universal Blocks
+        ...universalBlocks,
       ],
       admin: {
         description: 'Build your page using blocks. Mix and match different content sections.',

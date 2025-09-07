@@ -6,6 +6,7 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import type { Header as HeaderType, Media } from '@/payload-types'
 import { MobileNav } from '@/components/MobileNav'
+import { DropdownNav } from '@/components/DropdownNav'
 
 const fallbackNavItems = [
   { href: '#storitve', label: 'Področja dela' },
@@ -66,8 +67,30 @@ export default async function Navigation({ className }: { className?: string }) 
                 // Fallback navigation item
                 href = item.href
                 label = item.label
+                return (
+                  <Link
+                    key={index}
+                    href={href}
+                    className="text-foreground/80 hover:text-foreground transition"
+                  >
+                    {label}
+                  </Link>
+                )
               } else {
                 // Header global navigation item
+                // Check if this is a dropdown menu
+                if ('navType' in item && item.navType === 'dropdown' && item.dropdownItems) {
+                  return (
+                    <DropdownNav
+                      key={index}
+                      label={item.label}
+                      items={item.dropdownItems}
+                      style={item.dropdownStyle}
+                    />
+                  )
+                }
+
+                // Regular navigation link
                 switch (item.type) {
                   case 'page':
                     href =
@@ -94,21 +117,21 @@ export default async function Navigation({ className }: { className?: string }) 
                         : '#'
                     break
                 }
+
+                const isExternal = href.startsWith('http')
+
+                return (
+                  <Link
+                    key={index}
+                    href={href}
+                    className="text-foreground/80 hover:text-foreground transition"
+                    target={isExternal || ('newTab' in item && item.newTab) ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                  >
+                    {label}
+                  </Link>
+                )
               }
-
-              const isExternal = href.startsWith('http')
-
-              return (
-                <Link
-                  key={index}
-                  href={href}
-                  className="text-foreground/80 hover:text-foreground transition"
-                  target={isExternal || ('newTab' in item && item.newTab) ? '_blank' : undefined}
-                  rel={isExternal ? 'noopener noreferrer' : undefined}
-                >
-                  {label}
-                </Link>
-              )
             })}
           </nav>
           <div className="flex items-center gap-2">

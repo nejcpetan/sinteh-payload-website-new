@@ -1,5 +1,6 @@
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import { Page, Homepage, Media } from '@/payload-types'
+import { getButtonData, getCTAData, getLinkData, getLinkHref } from '@/lib/linkUtils'
 import { HeroBlock } from '@/components/blocks/HeroBlock'
 import { LogoBeltBlock } from '@/components/blocks/LogoBeltBlock'
 import { ServicesBlock } from '@/components/blocks/ServicesBlock'
@@ -22,6 +23,21 @@ import { ContactInfoBlock } from '@/components/blocks/ContactInfoBlock'
 import { ContactLocationBlock } from '@/components/blocks/ContactLocationBlock'
 import { ContactFAQBlock } from '@/components/blocks/ContactFAQBlock'
 
+// Universal Blocks
+import { UniversalHero } from '@/components/blocks/universal/UniversalHero'
+import { UniversalCTA } from '@/components/blocks/universal/UniversalCTA'
+import { FeatureGrid } from '@/components/blocks/universal/FeatureGrid'
+import { ContentGrid } from '@/components/blocks/universal/ContentGrid'
+import { StatsSection } from '@/components/blocks/universal/StatsSection'
+import { ProcessSteps } from '@/components/blocks/universal/ProcessSteps'
+import { ContentCards } from '@/components/blocks/universal/ContentCards'
+import { ContactSection } from '@/components/blocks/universal/ContactSection'
+import { ComparisonTable } from '@/components/blocks/universal/ComparisonTable'
+import { SimplePage } from '@/components/blocks/universal/SimplePage'
+import { BrandShowcase } from '@/components/blocks/universal/BrandShowcase'
+import { TechnicalContent } from '@/components/blocks/universal/TechnicalContent'
+import { ResourceGallery } from '@/components/blocks/universal/ResourceGallery'
+
 interface PageTemplateProps {
   page: Page | Homepage
 }
@@ -42,17 +58,7 @@ function getArrayData<T>(arr: any[] | null | undefined): T[] {
   return arr?.filter((item) => item != null) || []
 }
 
-// Helper function to safely extract button data
-function getButtonData(button: any) {
-  if (!button || typeof button !== 'object') return undefined
-  return {
-    text: button.text,
-    type: button.type,
-    page: button.page && typeof button.page === 'object' ? { slug: button.page.slug } : undefined,
-    url: button.url || undefined,
-    anchor: button.anchor || undefined,
-  }
-}
+// Link utilities are now imported from @/lib/linkUtils
 
 export function PageTemplate({ page }: PageTemplateProps) {
   // If the page has blocks, render them
@@ -355,6 +361,235 @@ export function PageTemplate({ page }: PageTemplateProps) {
                   faqs={getArrayData(block.faqs || [])}
                 />
               )
+
+            // Universal Blocks
+            case 'universalHero':
+              return (
+                <UniversalHero
+                  key={index}
+                  variant={block.variant}
+                  badge={block.badge}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  description={block.description}
+                  benefits={getArrayData(block.benefits || [])}
+                  benefitsLayout={block.benefitsLayout}
+                  primaryCTA={block.primaryCTA}
+                  secondaryCTA={block.secondaryCTA}
+                  trustText={block.trustText}
+                  trustIndicators={getArrayData(block.trustIndicators || [])}
+                  stats={getArrayData(block.stats || [])}
+                  contactMethods={getArrayData(block.contactMethods || [])}
+                  showImage={block.showImage}
+                  backgroundStyle={block.backgroundStyle}
+                  contentAlignment={block.contentAlignment}
+                />
+              )
+
+            case 'universalCTA':
+              return (
+                <UniversalCTA
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  description={block.description}
+                  primaryCTA={block.primaryCTA}
+                  secondaryCTA={block.secondaryCTA}
+                  benefits={getArrayData(block.benefits || []).map((b: any) => b.benefit)}
+                  stats={getArrayData(block.stats || [])}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'featureGrid':
+              return (
+                <FeatureGrid
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  description={block.description}
+                  badge={block.badge}
+                  features={getArrayData(block.features || []).map((feature: any) => ({
+                    ...feature,
+                    icon: <div>🔧</div>, // Placeholder icon
+                    details: getArrayData(feature.details || []).map((d: any) => d.detail),
+                  }))}
+                  columns={block.columns}
+                  cardStyle={block.cardStyle}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'contentGrid':
+              return (
+                <ContentGrid
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  description={block.description}
+                  badge={block.badge}
+                  items={getArrayData(block.items || []).map((item: any) => ({
+                    ...item,
+                    icon: <div>📋</div>, // Placeholder icon
+                    applications: getArrayData(item.applications || []).map(
+                      (a: any) => a.application,
+                    ),
+                  }))}
+                  columns={block.columns}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'statsSection':
+              return (
+                <StatsSection
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  description={block.description}
+                  badge={block.badge}
+                  stats={getArrayData(block.stats || [])}
+                  columns={block.columns}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'processSteps':
+              return (
+                <ProcessSteps
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  description={block.description}
+                  badge={block.badge}
+                  steps={getArrayData(block.steps || []).map((step: any) => ({
+                    ...step,
+                    details: getArrayData(step.details || []).map((d: any) => d.detail),
+                  }))}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'contentCards':
+              return (
+                <ContentCards
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  description={block.description}
+                  badge={block.badge}
+                  cards={getArrayData(block.cards || []).map((card: any) => ({
+                    ...card,
+                    tags: getArrayData(card.tags || []).map((t: any) => t.tag),
+                  }))}
+                  columns={block.columns}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'contactSection':
+              return (
+                <ContactSection
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  description={block.description}
+                  badge={block.badge}
+                  formTitle={block.formTitle}
+                  formDescription={block.formDescription}
+                  benefits={getArrayData(block.benefits || []).map((b: any) => b.benefit)}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'comparisonTable':
+              return (
+                <ComparisonTable
+                  key={index}
+                  title={block.title}
+                  description={block.description}
+                  badge={block.badge}
+                  items={getArrayData(block.items || [])}
+                  primaryLabel={block.primaryLabel}
+                  secondaryLabel={block.secondaryLabel}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'simplePage':
+              return (
+                <SimplePage
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  subtitle={block.subtitle}
+                  breadcrumbs={getArrayData(block.breadcrumbs || [])}
+                  links={getArrayData(block.links || [])}
+                >
+                  <RichText data={block.content} />
+                </SimplePage>
+              )
+
+            case 'brandShowcase':
+              return (
+                <BrandShowcase
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  description={block.description}
+                  badge={block.badge}
+                  brands={getArrayData(block.brands || []).map((brand: any) => ({
+                    ...brand,
+                    logo: brand.logo ? getImageData(brand.logo).url : undefined,
+                  }))}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'technicalContent':
+              return (
+                <TechnicalContent
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  description={block.description}
+                  badge={block.badge}
+                  overviewContent={block.overviewContent}
+                  processSteps={getArrayData(block.processSteps || [])}
+                  specifications={getArrayData(block.specifications || []).map((spec: any) => ({
+                    ...spec,
+                    items: getArrayData(spec.items || []),
+                  }))}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
+            case 'resourceGallery':
+              return (
+                <ResourceGallery
+                  key={index}
+                  variant={block.variant}
+                  title={block.title}
+                  description={block.description}
+                  badge={block.badge}
+                  resources={getArrayData(block.resources || []).map((resource: any) => ({
+                    ...resource,
+                    icon: <div>📄</div>, // Placeholder icon
+                  }))}
+                  galleryImages={getArrayData(block.galleryImages || []).map((img: any) => ({
+                    ...img,
+                    imageUrl: img.image ? getImageData(img.image).url : undefined,
+                  }))}
+                  backgroundStyle={block.backgroundStyle}
+                />
+              )
+
             default:
               return null
           }

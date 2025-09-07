@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import type { Header as HeaderType, Media } from '@/payload-types'
+import { MobileDropdownNav } from '@/components/DropdownNav'
 
 interface MobileNavProps {
   headerData: HeaderType | null
@@ -15,6 +16,7 @@ interface MobileNavProps {
 export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+  const [openDropdowns, setOpenDropdowns] = useState<Set<number>>(new Set())
 
   const mobileConfig = headerData?.mobileNavigation
   const isEnabled = mobileConfig?.enabled !== false // Default to true
@@ -29,7 +31,20 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
   }
 
   const toggleMenu = () => setIsOpen(!isOpen)
-  const closeMenu = () => setIsOpen(false)
+  const closeMenu = () => {
+    setIsOpen(false)
+    setOpenDropdowns(new Set()) // Close all dropdowns when menu closes
+  }
+
+  const toggleDropdown = (index: number) => {
+    const newOpenDropdowns = new Set(openDropdowns)
+    if (newOpenDropdowns.has(index)) {
+      newOpenDropdowns.delete(index)
+    } else {
+      newOpenDropdowns.add(index)
+    }
+    setOpenDropdowns(newOpenDropdowns)
+  }
 
   const navigationItems = headerData?.navigation || fallbackNavItems
 
@@ -92,7 +107,7 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
 
           {/* Navigation Items */}
           <nav className="flex-1 px-6 py-8">
-            <ul className="space-y-1">
+            <div className="space-y-2">
               {navigationItems.map((item, index) => {
                 // Handle different link types
                 let href = '#'
@@ -102,8 +117,32 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
                   // Fallback navigation item
                   href = item.href
                   label = item.label
+                  return (
+                    <Link
+                      key={index}
+                      href={href}
+                      onClick={closeMenu}
+                      className="block py-4 px-4 text-lg font-medium text-foreground hover:text-primary hover:bg-muted rounded-lg transition-all"
+                    >
+                      {label}
+                    </Link>
+                  )
                 } else {
                   // Header global navigation item
+                  // Check if this is a dropdown menu
+                  if ('navType' in item && item.navType === 'dropdown' && item.dropdownItems) {
+                    return (
+                      <MobileDropdownNav
+                        key={index}
+                        label={item.label}
+                        items={item.dropdownItems}
+                        isOpen={openDropdowns.has(index)}
+                        onToggle={() => toggleDropdown(index)}
+                      />
+                    )
+                  }
+
+                  // Regular navigation link
                   switch (item.type) {
                     case 'page':
                       href =
@@ -130,16 +169,15 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
                           : '#'
                       break
                   }
-                }
 
-                const isExternal = href.startsWith('http')
+                  const isExternal = href.startsWith('http')
 
-                return (
-                  <li key={index}>
+                  return (
                     <Link
+                      key={index}
                       href={href}
                       onClick={closeMenu}
-                      className="block py-4 px-4 text-lg font-medium text-foreground hover:text-brand hover:bg-surface rounded-lg transition-all"
+                      className="block py-4 px-4 text-lg font-medium text-foreground hover:text-primary hover:bg-muted rounded-lg transition-all"
                       target={
                         isExternal || ('newTab' in item && item.newTab) ? '_blank' : undefined
                       }
@@ -147,10 +185,10 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
                     >
                       {label}
                     </Link>
-                  </li>
-                )
+                  )
+                }
               })}
-            </ul>
+            </div>
           </nav>
 
           {/* Footer */}
