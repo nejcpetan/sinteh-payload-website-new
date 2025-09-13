@@ -13,6 +13,7 @@ export const Header: GlobalConfig = {
       type: 'text',
       required: true,
       defaultValue: 'My Website',
+      localized: true, // Localize site name for different languages
       admin: {
         description: 'The name of your website/brand',
       },
@@ -34,6 +35,7 @@ export const Header: GlobalConfig = {
           name: 'label',
           type: 'text',
           required: true,
+          localized: true, // Localize navigation labels
         },
         {
           name: 'navType',
@@ -153,10 +155,12 @@ export const Header: GlobalConfig = {
               name: 'label',
               type: 'text',
               required: true,
+              localized: true, // Localize dropdown item labels
             },
             {
               name: 'description',
               type: 'text',
+              localized: true, // Localize dropdown item descriptions
               admin: {
                 description: 'Optional description for the dropdown item',
               },

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import type { Footer as FooterType, Media } from '@/payload-types'
+import type { Locale } from '@/lib/i18n/config'
 
 function getLinkHref(link: any) {
   switch (link.type) {
@@ -17,7 +18,7 @@ function getLinkHref(link: any) {
   }
 }
 
-export default async function Footer() {
+export default async function Footer({ locale }: { locale?: Locale }) {
   const payload = await getPayload({ config })
 
   let footerData: FooterType | null = null
@@ -25,6 +26,8 @@ export default async function Footer() {
   try {
     footerData = await payload.findGlobal({
       slug: 'footer',
+      locale: locale || 'sl',
+      fallbackLocale: 'en',
       depth: 2,
     })
   } catch (error) {

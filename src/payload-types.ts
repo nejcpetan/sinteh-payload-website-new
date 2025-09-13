@@ -106,7 +106,7 @@ export interface Config {
     homepage: HomepageSelect<false> | HomepageSelect<true>;
     'email-admin': EmailAdminSelect<false> | EmailAdminSelect<true>;
   };
-  locale: null;
+  locale: 'sl' | 'en' | 'de' | 'hr';
   user: User & {
     collection: 'users';
   };
@@ -1316,6 +1316,10 @@ export interface Post {
   author?: (number | null) | User;
   publishedAt?: string | null;
   status?: ('draft' | 'published' | 'archived') | null;
+  /**
+   * Publish this post in the current locale
+   */
+  published?: boolean | null;
   meta?: {
     /**
      * SEO title (optional, defaults to post title)
@@ -2637,6 +2641,7 @@ export interface PostsSelect<T extends boolean = true> {
   author?: T;
   publishedAt?: T;
   status?: T;
+  published?: T;
   meta?:
     | T
     | {

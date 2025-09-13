@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidatePath, revalidateTag } from 'next/cache'
+import { locales } from '@/lib/i18n/config'
 
 export async function POST(req: NextRequest) {
   try {
@@ -11,55 +12,77 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json()
-    const { collection, slug, type = 'path' } = body
+    const { collection, slug, type = 'path', locales: affectedLocales } = body
 
     if (!collection) {
       return NextResponse.json({ message: 'Collection is required' }, { status: 400 })
     }
 
+    // Determine which locales to revalidate
+    const localesToRevalidate = affectedLocales || locales
+
     // Handle different types of revalidation
     switch (collection) {
       case 'pages':
         if (slug) {
-          // Revalidate specific page
-          await revalidatePath(`/${slug}`)
-          console.log(`Revalidated page: /${slug}`)
+          // Revalidate specific page for all affected locales
+          for (const locale of localesToRevalidate) {
+            if (slug === 'home') {
+              await revalidatePath(`/${locale}`)
+              console.log(`Revalidated homepage for locale: ${locale}`)
+            } else {
+              await revalidatePath(`/${locale}/${slug}`)
+              console.log(`Revalidated page: /${locale}/${slug}`)
+            }
+          }
         } else {
           // Revalidate all pages if no slug provided
-          await revalidatePath('/(frontend)', 'layout')
-          console.log('Revalidated all pages')
+          for (const locale of localesToRevalidate) {
+            await revalidatePath(`/${locale}`, 'layout')
+            console.log(`Revalidated all pages for locale: ${locale}`)
+          }
         }
         break
 
       case 'posts':
         if (slug) {
-          // Revalidate specific blog post
-          await revalidatePath(`/blog/${slug}`)
-          console.log(`Revalidated post: /blog/${slug}`)
+          // Revalidate specific blog post for all affected locales
+          for (const locale of localesToRevalidate) {
+            await revalidatePath(`/${locale}/blog/${slug}`)
+            console.log(`Revalidated post: /${locale}/blog/${slug}`)
+          }
         }
         // Always revalidate blog listing when posts change
-        await revalidatePath('/blog')
-        console.log('Revalidated blog listing')
+        for (const locale of localesToRevalidate) {
+          await revalidatePath(`/${locale}/blog`)
+          console.log(`Revalidated blog listing for locale: ${locale}`)
+        }
         break
 
       case 'homepage':
-        // Revalidate homepage
-        await revalidatePath('/')
-        console.log('Revalidated homepage')
+        // Revalidate homepage for all affected locales
+        for (const locale of localesToRevalidate) {
+          await revalidatePath(`/${locale}`)
+          console.log(`Revalidated homepage for locale: ${locale}`)
+        }
         break
 
       case 'header':
       case 'footer':
       case 'seo':
         // Revalidate entire layout when global content changes
-        await revalidatePath('/(frontend)', 'layout')
-        console.log(`Revalidated layout due to ${collection} change`)
+        for (const locale of localesToRevalidate) {
+          await revalidatePath(`/${locale}`, 'layout')
+          console.log(`Revalidated layout for locale ${locale} due to ${collection} change`)
+        }
         break
 
       default:
         // For any other collection, revalidate the entire frontend
-        await revalidatePath('/(frontend)', 'layout')
-        console.log(`Revalidated layout due to ${collection} change`)
+        for (const locale of localesToRevalidate) {
+          await revalidatePath(`/${locale}`, 'layout')
+          console.log(`Revalidated layout for locale ${locale} due to ${collection} change`)
+        }
     }
 
     // If using cache tags, you can also revalidate by tag

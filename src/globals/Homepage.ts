@@ -11,6 +11,7 @@ export const Homepage: GlobalConfig = {
     {
       name: 'layout',
       type: 'blocks',
+      localized: true, // Localize homepage content blocks
       blocks: [
         {
           slug: 'hero',

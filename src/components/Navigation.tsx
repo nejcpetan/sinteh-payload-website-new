@@ -5,8 +5,10 @@ import { cn } from '@/lib/utils'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import type { Header as HeaderType, Media } from '@/payload-types'
+import type { Locale } from '@/lib/i18n/config'
 import { MobileNav } from '@/components/MobileNav'
 import { DropdownNav } from '@/components/DropdownNav'
+import { LocaleSwitcher } from '@/components/LocaleSwitcher'
 
 const fallbackNavItems = [
   { href: '#storitve', label: 'Področja dela' },
@@ -16,7 +18,13 @@ const fallbackNavItems = [
   { href: '#kontakt', label: 'Kontakt' },
 ]
 
-export default async function Navigation({ className }: { className?: string }) {
+export default async function Navigation({
+  className,
+  locale,
+}: {
+  className?: string
+  locale?: Locale
+}) {
   const payload = await getPayload({ config })
 
   let headerData: HeaderType | null = null
@@ -24,6 +32,8 @@ export default async function Navigation({ className }: { className?: string }) 
   try {
     headerData = await payload.findGlobal({
       slug: 'header',
+      locale: locale || 'sl',
+      fallbackLocale: 'en',
       depth: 2,
     })
   } catch (error) {
@@ -135,19 +145,15 @@ export default async function Navigation({ className }: { className?: string }) 
             })}
           </nav>
           <div className="flex items-center gap-2">
-            <div className="hidden sm:flex items-center gap-2 text-xs text-foreground/70">
-              <span>SI</span>
-              <span className="opacity-40">|</span>
-              <span>EN</span>
-              <span className="opacity-40">|</span>
-              <span>DE</span>
-              <span className="opacity-40">|</span>
-              <span>HR</span>
-            </div>
+            <LocaleSwitcher currentLocale={locale || 'sl'} className="hidden sm:flex" />
             <Button size="sm" className="hidden sm:flex" asChild>
               <a href="#kontakt">Kontakt</a>
             </Button>
-            <MobileNav headerData={headerData} fallbackNavItems={fallbackNavItems} />
+            <MobileNav
+              headerData={headerData}
+              fallbackNavItems={fallbackNavItems}
+              locale={locale || 'sl'}
+            />
           </div>
         </div>
       </div>
