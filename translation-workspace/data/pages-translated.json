@@ -1,0 +1,667 @@
+[
+  {
+    "id": 7,
+    "slug": "fortress-alfred",
+    "title": "Fortress Alfred",
+    "meta": {
+      "title": null,
+      "description": null
+    },
+    "blocks": [
+      {
+        "blockType": "productHero",
+        "id": "68cd07e337611ba1bc4376e1",
+        "translatable": {
+          "title": "Fortress Alfred",
+          "subtitle": "Varnostni zaklepi za eksplozivna in nevarna okolja",
+          "description": "Visoko konfigurabilni mehanskihin elektromehanski sistemi zaklepnih naprav, certificiranih za uporabo v eksplozivnih atmosferah in nevarnih conah, v skladu z najnovejšimi varnostnimi standardi. Sistem je modularen, robusten in popolnoma prilagodljiv zahtevam sodobnih industrijskih procesov."
+        }
+      },
+      {
+        "blockType": "keyFeatures",
+        "id": "68cd085537611ba1bc4376e3",
+        "translatable": {
+          "title": "Zakaj Alfred?",
+          "subtitle": "Alfred je rešitvena linija zaklepov, ki vam omogoča tehnično brezhibno, varnostno skladno in\nindustrijsko učinkovito rešitev.",
+          "features": [
+            {
+              "title": "Popolna varnost",
+              "description": "Preprečuje vstop v območje stroja dokler ni zagotovljeno varno stanje"
+            },
+            {
+              "title": "Certificirana zaščita",
+              "description": "Certifikati ATEX, IECEx, UKEx, CCCEx in severnoameriški HazLoc (plin, prah in TEMP > 85 °C)"
+            },
+            {
+              "title": "Zasnovano za industrijo 4.0",
+              "description": "Na voljo z RFID ključi, pametnimi aktuatorji, integracijo s PLC sistemi in varnostnimi releji."
+            },
+            {
+              "title": "Modularno sestavljivo",
+              "description": "Popolnoma prilagodljiv sistem zahtevam sodobnih industrijskih procesov."
+            },
+            {
+              "title": "Odporno na okolje",
+              "description": "Ohišja iz nerjavečega jekla (zaščita IP69 in IP67)"
+            },
+            {
+              "title": "Dolga življenjska doba",
+              "description": "Izredno odporna konstrukcija proti obrabi, prahu, vlagi in vibracijam"
+            }
+          ]
+        }
+      },
+      {
+        "blockType": "technicalOverview",
+        "id": "68cd08b237611ba1bc4376e5",
+        "translatable": {
+          "title": "Kako deluje Alfred sistem?",
+          "description": "Alfred je pameten varnostni sistem, ki združuje nadzor dostopa, spremljanje stanja in varnostno komunikacijo v eni napravi. Zasnovan je za enostavno integracijo v industrijska omrežja. Sistem zagotavlja zanesljiv nadzor, logično zaporedje odklepanja in napredno diagnostiko v realnem času."
+        }
+      }
+    ],
+    "existingTranslations": {
+      "en": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress Alfred\""
+      },
+      "de": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": false,
+        "title": "Fortress Alfred"
+      },
+      "hr": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": false,
+        "title": "Fortress Alfred"
+      }
+    },
+    "needsTranslation": [
+      "de",
+      "hr"
+    ],
+    "originalData": {
+      "id": 7,
+      "title": "Fortress Alfred",
+      "slug": "fortress-alfred",
+      "layout": [
+        {
+          "id": "68cd07e337611ba1bc4376e1",
+          "badge": "Visoko konfigurabilnih mehanski in elektromehanski zaklepi",
+          "title": "Fortress Alfred",
+          "subtitle": "Varnostni zaklepi za eksplozivna in nevarna okolja",
+          "description": "Visoko konfigurabilni mehanskihin elektromehanski sistemi zaklepnih naprav, certificiranih za uporabo v eksplozivnih atmosferah in nevarnih conah, v skladu z najnovejšimi varnostnimi standardi. Sistem je modularen, robusten in popolnoma prilagodljiv zahtevam sodobnih industrijskih procesov.",
+          "backgroundImage": null,
+          "blockName": null,
+          "keyBenefits": [
+            {
+              "id": "68cd07e3f90a305c94a5d41d",
+              "title": "Modularna Zasnova",
+              "description": "Prilagoditve po meri"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d41e",
+              "title": "Certificirana zaščita",
+              "description": "ATEX, IECEx, UKEx, CCCEx, HazLoc"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d41f",
+              "title": "Zasnovano za industrijo 4.0",
+              "description": "Integracija za LoTo, SIL/PL aplikacije, SCADA"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d420",
+              "title": "Modularna Zasnova",
+              "description": "Prilagoditve po meri"
+            }
+          ],
+          "ctaButtons": [
+            {
+              "id": "68cd07e3f90a305c94a5d421",
+              "label": "Zahtevaj ponudbo",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "kontakt",
+              "variant": "default"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d422",
+              "label": "Prenesi katalog",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "resources",
+              "variant": "outline"
+            }
+          ],
+          "blockType": "productHero"
+        },
+        {
+          "id": "68cd085537611ba1bc4376e3",
+          "badge": "",
+          "title": "Zakaj Alfred?",
+          "subtitle": "Alfred je rešitvena linija zaklepov, ki vam omogoča tehnično brezhibno, varnostno skladno in\nindustrijsko učinkovito rešitev.",
+          "blockName": null,
+          "features": [
+            {
+              "id": "68cd0855f90a305c94a5d423",
+              "icon": "shield",
+              "title": "Popolna varnost",
+              "description": "Preprečuje vstop v območje stroja dokler ni zagotovljeno varno stanje"
+            },
+            {
+              "id": "68cd0855f90a305c94a5d424",
+              "icon": "shield",
+              "title": "Certificirana zaščita",
+              "description": "Certifikati ATEX, IECEx, UKEx, CCCEx in severnoameriški HazLoc (plin, prah in TEMP > 85 °C)"
+            },
+            {
+              "id": "68cd0855f90a305c94a5d425",
+              "icon": "mechanical",
+              "title": "Zasnovano za industrijo 4.0",
+              "description": "Na voljo z RFID ključi, pametnimi aktuatorji, integracijo s PLC sistemi in varnostnimi releji."
+            },
+            {
+              "id": "68cd0855f90a305c94a5d426",
+              "icon": "modular",
+              "title": "Modularno sestavljivo",
+              "description": "Popolnoma prilagodljiv sistem zahtevam sodobnih industrijskih procesov."
+            },
+            {
+              "id": "68cd0855f90a305c94a5d427",
+              "icon": "temperature",
+              "title": "Odporno na okolje",
+              "description": "Ohišja iz nerjavečega jekla (zaščita IP69 in IP67)"
+            },
+            {
+              "id": "68cd0855f90a305c94a5d428",
+              "icon": "mechanical",
+              "title": "Dolga življenjska doba",
+              "description": "Izredno odporna konstrukcija proti obrabi, prahu, vlagi in vibracijam"
+            }
+          ],
+          "blockType": "keyFeatures",
+          "bottomHighlight": {
+            "title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+            "description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+          }
+        },
+        {
+          "id": "68cd08b237611ba1bc4376e5",
+          "badge": null,
+          "title": "Kako deluje Alfred sistem?",
+          "description": "Alfred je pameten varnostni sistem, ki združuje nadzor dostopa, spremljanje stanja in varnostno komunikacijo v eni napravi. Zasnovan je za enostavno integracijo v industrijska omrežja. Sistem zagotavlja zanesljiv nadzor, logično zaporedje odklepanja in napredno diagnostiko v realnem času.",
+          "technicalImage": null,
+          "blockName": null,
+          "processSteps": [
+            {
+              "id": "68cd08b3f90a305c94a5d429",
+              "title": "Nadzor dostopa",
+              "description": "Uporabnik se identificira prek RFID ali kode"
+            },
+            {
+              "id": "68cd08b3f90a305c94a5d42a",
+              "title": "Povezava z omrežjem",
+              "description": "Sistem komunicira neposredno s PLC prek EtherNet/IP ali PROFINET"
+            },
+            {
+              "id": "68cd08b3f90a305c94a5d42b",
+              "title": "Varno odklepanje in diagnostika",
+              "description": "Ko so pogoji izpolnjeni, se vrata varno odklenejo. Sistem omogoča sprotno diagnostiko in beleženje dogodkov"
+            }
+          ],
+          "technicalBenefits": [
+            {
+              "id": "68cd08b3f90a305c94a5d42c",
+              "title": "Pametna diagnostika",
+              "description": "Sproten nadzor in podatki o delovanju za zmanjšanje izpadov"
+            },
+            {
+              "id": "68cd08b3f90a305c94a5d42d",
+              "title": "Integracija v omrežja",
+              "description": "Enostavna povezljivost s PLC in varnostnimi protokoli"
+            }
+          ],
+          "blockType": "technicalOverview"
+        }
+      ],
+      "meta": {
+        "title": null,
+        "description": null
+      },
+      "publishedAt": "2025-09-07T16:22:01.704Z",
+      "status": "draft",
+      "updatedAt": "2025-09-19T11:20:50.112Z",
+      "createdAt": "2025-09-07T16:22:08.852Z",
+      "_status": "published"
+    },
+    "languageVersions": {
+      "de": {
+        "title": "\"Festung Alfred\"",
+        "meta": {
+          "title": null,
+          "description": null
+        },
+        "blocks": [
+          {
+            "blockType": "productHero",
+            "id": "68cd07e337611ba1bc4376e1",
+            "translatable": {
+              "title": "\"Festung Alfred\"",
+              "subtitle": "\"Sicherheitsverschlüsse für explosive und gefährliche Umgebungen\"",
+              "description": "Hoch konfigurierbare mechanische und elektromehanische Systeme von Schließvorrichtungen, die für den Einsatz in explosiven Atmosphären und gefährlichen Bereichen zertifiziert sind, gemäß den neuesten Sicherheitsstandards. Das System ist modular, robust und vollständig an die Anforderungen moderner Industrieprozesse anpassbar."
+            }
+          },
+          {
+            "blockType": "keyFeatures",
+            "id": "68cd085537611ba1bc4376e3",
+            "translatable": {
+              "title": "\"Warum Alfred?\"",
+              "subtitle": "\"Alfred ist eine Lösungslinie für Schlösser, die Ihnen eine technisch einwandfreie, sicherheitskonforme und industriell effiziente Lösung ermöglicht.\"",
+              "features": [
+                {
+                  "title": "Popolna varnost",
+                  "description": "Preprečuje vstop v območje stroja dokler ni zagotovljeno varno stanje"
+                },
+                {
+                  "title": "Certificirana zaščita",
+                  "description": "Certifikati ATEX, IECEx, UKEx, CCCEx in severnoameriški HazLoc (plin, prah in TEMP > 85 °C)"
+                },
+                {
+                  "title": "Zasnovano za industrijo 4.0",
+                  "description": "Na voljo z RFID ključi, pametnimi aktuatorji, integracijo s PLC sistemi in varnostnimi releji."
+                },
+                {
+                  "title": "Modularno sestavljivo",
+                  "description": "Popolnoma prilagodljiv sistem zahtevam sodobnih industrijskih procesov."
+                },
+                {
+                  "title": "Odporno na okolje",
+                  "description": "Ohišja iz nerjavečega jekla (zaščita IP69 in IP67)"
+                },
+                {
+                  "title": "Dolga življenjska doba",
+                  "description": "Izredno odporna konstrukcija proti obrabi, prahu, vlagi in vibracijam"
+                }
+              ]
+            }
+          },
+          {
+            "blockType": "technicalOverview",
+            "id": "68cd08b237611ba1bc4376e5",
+            "translatable": {
+              "title": "\"Wie funktioniert das Alfred-System?\"",
+              "description": "\"Alfred ist ein intelligentes Sicherheitssystem, das Zugangskontrolle, Statusüberwachung und Sicherheitskommunikation in einem Gerät vereint. Es ist für eine einfache Integration in industrielle Netzwerke konzipiert. Das System bietet zuverlässige Kontrolle, logische Entsperrsequenzen und fortschrittliche Diagnosen in Echtzeit.\""
+            }
+          }
+        ]
+      },
+      "hr": {
+        "title": "\"Fortress Alfred\"",
+        "meta": {
+          "title": null,
+          "description": null
+        },
+        "blocks": [
+          {
+            "blockType": "productHero",
+            "id": "68cd07e337611ba1bc4376e1",
+            "translatable": {
+              "title": "\"Fortress Alfred\"",
+              "subtitle": "\"Sigurnosne brave za eksplozivna i opasna okruženja\"",
+              "description": "\"Visoko konfigurabilni mehanički i elektromehanički sustavi zaključnih naprava, certificirani za upotrebu u eksplozivnim atmosferama i opasnim zonama, u skladu s najnovijim sigurnosnim standardima. Sustav je modularan, robustan i potpuno prilagodljiv zahtjevima suvremenih industrijskih procesa.\""
+            }
+          },
+          {
+            "blockType": "keyFeatures",
+            "id": "68cd085537611ba1bc4376e3",
+            "translatable": {
+              "title": "\"Zašto Alfred?\"",
+              "subtitle": "\"Alfred je rješenja linija brava koja vam omogućuje tehnički besprijekornu, sigurnosno usklađenu i industrijski učinkovitu soluciju.\"",
+              "features": [
+                {
+                  "title": "Popolna varnost",
+                  "description": "Preprečuje vstop v območje stroja dokler ni zagotovljeno varno stanje"
+                },
+                {
+                  "title": "Certificirana zaščita",
+                  "description": "Certifikati ATEX, IECEx, UKEx, CCCEx in severnoameriški HazLoc (plin, prah in TEMP > 85 °C)"
+                },
+                {
+                  "title": "Zasnovano za industrijo 4.0",
+                  "description": "Na voljo z RFID ključi, pametnimi aktuatorji, integracijo s PLC sistemi in varnostnimi releji."
+                },
+                {
+                  "title": "Modularno sestavljivo",
+                  "description": "Popolnoma prilagodljiv sistem zahtevam sodobnih industrijskih procesov."
+                },
+                {
+                  "title": "Odporno na okolje",
+                  "description": "Ohišja iz nerjavečega jekla (zaščita IP69 in IP67)"
+                },
+                {
+                  "title": "Dolga življenjska doba",
+                  "description": "Izredno odporna konstrukcija proti obrabi, prahu, vlagi in vibracijam"
+                }
+              ]
+            }
+          },
+          {
+            "blockType": "technicalOverview",
+            "id": "68cd08b237611ba1bc4376e5",
+            "translatable": {
+              "title": "\"Kako djeluje Alfred sustav?\"",
+              "description": "\"Alfred je pametan sigurnosni sustav koji kombinira kontrolu pristupa, praćenje stanja i sigurnosnu komunikaciju u jednom uređaju. Dizajniran je za jednostavnu integraciju u industrijska mreža. Sustav osigurava pouzdanu kontrolu, logički slijed otključavanja i naprednu dijagnostiku u stvarnom vremenu.\""
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
+    "slug": "kontakt",
+    "title": "Kontakt",
+    "meta": {
+      "title": null,
+      "description": null
+    },
+    "blocks": [
+      {
+        "blockType": "contactHero",
+        "id": "68cd1034524c8f2770bca254",
+        "translatable": {
+          "title": "Kontakt",
+          "subtitle": "Odgovarjamo v 24h | Nujna podpora: 24/7"
+        }
+      },
+      {
+        "blockType": "contactForm",
+        "id": "68cd1040524c8f2770bca256",
+        "translatable": {
+          "title": "Pošljite sporočilo",
+          "subtitle": "Odgovorimo v 24 urah."
+        }
+      },
+      {
+        "blockType": "contactInfo",
+        "id": "68cd1046524c8f2770bca258",
+        "translatable": {
+          "title": "Direkten kontakt",
+          "subtitle": "Telefon in e-mail za hitrejši odziv."
+        }
+      },
+      {
+        "blockType": "contactFAQ",
+        "id": "68cd104e524c8f2770bca25a",
+        "translatable": {
+          "title": "Pogosta vprašanja",
+          "subtitle": "Odgovori na najpogostejša vprašanja, ki nam jih zastavljajo stranke.",
+          "faqs": [
+            {
+              "question": "Kako hitro lahko začnete z delom?",
+              "answer": "Manjše projekte v 1-2 tednih, večje v 4-6 tednih. Nujne posege v 24 urah."
+            },
+            {
+              "question": "Garancija?",
+              "answer": "2 leti na naša dela, 1 leto na komponente."
+            },
+            {
+              "question": "Plačilni pogoji?",
+              "answer": "30 dni od računa. Za večje projekte obročno plačilo."
+            },
+            {
+              "question": "Delate tudi v tujini?",
+              "answer": "Da, v regiji (Hrvaška, Srbija, Avstrija)."
+            }
+          ]
+        }
+      },
+      {
+        "blockType": "contactLocation",
+        "id": "68cd1054524c8f2770bca25c",
+        "translatable": {
+          "title": "Naš urad",
+          "subtitle": "V Celju, obisk po dogovoru."
+        }
+      }
+    ],
+    "existingTranslations": {
+      "en": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Contact\""
+      },
+      "de": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Kontakt\""
+      },
+      "hr": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": false,
+        "title": "Kontakt"
+      }
+    },
+    "needsTranslation": [
+      "hr"
+    ],
+    "originalData": {
+      "id": 2,
+      "title": "Kontakt",
+      "slug": "kontakt",
+      "layout": [
+        {
+          "id": "68cd1034524c8f2770bca254",
+          "title": "Kontakt",
+          "subtitle": "Odgovarjamo v 24h | Nujna podpora: 24/7",
+          "blockName": null,
+          "quickContactMethods": [
+            {
+              "id": "68cd1035f90a305c94a5d53b",
+              "type": "phone",
+              "label": "Telefon",
+              "value": "+386 (3) 426 36 46",
+              "link": "tel:+38634263646"
+            },
+            {
+              "id": "68cd1035f90a305c94a5d53c",
+              "type": "email",
+              "label": "E-pošta",
+              "value": "info@sinteh.pro",
+              "link": "mailto:info@sinteh.pro"
+            },
+            {
+              "id": "68cd1035f90a305c94a5d53d",
+              "type": "location",
+              "label": "Lokacija",
+              "value": "Celje, Slovenija",
+              "link": "#location"
+            }
+          ],
+          "blockType": "contactHero"
+        },
+        {
+          "id": "68cd1040524c8f2770bca256",
+          "badge": "Povpraševanje",
+          "title": "Pošljite sporočilo",
+          "subtitle": "Odgovorimo v 24 urah.",
+          "formTitle": "Kontaktni obrazec",
+          "submitButtonText": "Pošlji povpraševanje",
+          "submitButtonLoadingText": "Pošiljam...",
+          "privacyText": "Soglašam z obdelavo osebnih podatkov in politiko zasebnosti. Podatki bodo uporabljeni izključno za obravnavo povpraševanja in pripravo ponudbe.",
+          "blockName": null,
+          "blockType": "contactForm"
+        },
+        {
+          "id": "68cd1046524c8f2770bca258",
+          "badge": "Kontaktni podatki",
+          "title": "Direkten kontakt",
+          "subtitle": "Telefon in e-mail za hitrejši odziv.",
+          "blockName": null,
+          "contactMethods": [
+            {
+              "id": "68cd1047f90a305c94a5d53e",
+              "title": "Splošne informacije",
+              "email": "info@sinteh.pro",
+              "phone": "+386 (3) 426 36 46",
+              "description": "Splošna vprašanja, informacije o podjetju in storitvah",
+              "hours": "Pon-Pet: 7:00-16:00"
+            },
+            {
+              "id": "68cd1047f90a305c94a5d53f",
+              "title": "Tehnična podpora",
+              "email": "servis@sinteh.pro",
+              "phone": "+386 (3) 426 36 46",
+              "description": "Servis, vzdrževanje, tehnična pomoč in nadomestni deli",
+              "hours": "24/7 dežurna služba"
+            },
+            {
+              "id": "68cd1047f90a305c94a5d540",
+              "title": "Prodaja in projekti",
+              "email": "prodaja@sinteh.pro",
+              "phone": "+386 (3) 426 36 46",
+              "description": "Ponudbe, projekti, svetovanje in tehnični izračuni",
+              "hours": "Pon-Pet: 7:00-16:00"
+            }
+          ],
+          "blockType": "contactInfo"
+        },
+        {
+          "id": "68cd104e524c8f2770bca25a",
+          "badge": "Pogosta vprašanja",
+          "title": "Pogosta vprašanja",
+          "subtitle": "Odgovori na najpogostejša vprašanja, ki nam jih zastavljajo stranke.",
+          "blockName": null,
+          "faqs": [
+            {
+              "id": "68cd104ff90a305c94a5d541",
+              "question": "Kako hitro lahko začnete z delom?",
+              "answer": "Manjše projekte v 1-2 tednih, večje v 4-6 tednih. Nujne posege v 24 urah."
+            },
+            {
+              "id": "68cd104ff90a305c94a5d542",
+              "question": "Garancija?",
+              "answer": "2 leti na naša dela, 1 leto na komponente."
+            },
+            {
+              "id": "68cd104ff90a305c94a5d543",
+              "question": "Plačilni pogoji?",
+              "answer": "30 dni od računa. Za večje projekte obročno plačilo."
+            },
+            {
+              "id": "68cd104ff90a305c94a5d544",
+              "question": "Delate tudi v tujini?",
+              "answer": "Da, v regiji (Hrvaška, Srbija, Avstrija)."
+            }
+          ],
+          "blockType": "contactFAQ"
+        },
+        {
+          "id": "68cd1054524c8f2770bca25c",
+          "badge": "Lokacija",
+          "title": "Naš urad",
+          "subtitle": "V Celju, obisk po dogovoru.",
+          "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2751.8!2d15.2664!3d46.2396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f8a89d21ae0ad%3A0x4a5b0f1c78ae9a7f!2sCesta%20na%20Ostro%C5%BEno%208%2C%203000%20Celje%2C%20Slovenia!5e0!3m2!1sen!2ssi!4v1700000000000!5m2!1sen!2ssi",
+          "emergencyPhone": "+386 (3) 426 36 46",
+          "blockName": null,
+          "blockType": "contactLocation",
+          "address": {
+            "companyName": "SINTEH PRO d.o.o.",
+            "street": "Cesta na Ostrožno 8",
+            "city": "3000 Celje",
+            "country": "Slovenija - EU"
+          }
+        }
+      ],
+      "meta": {
+        "title": null,
+        "description": null
+      },
+      "publishedAt": "2025-08-23T18:31:47.492Z",
+      "status": "draft",
+      "updatedAt": "2025-09-19T11:21:33.365Z",
+      "createdAt": "2025-08-23T18:32:01.405Z",
+      "_status": "published"
+    },
+    "languageVersions": {
+      "hr": {
+        "title": "\"Kontakt\"",
+        "meta": {
+          "title": null,
+          "description": null
+        },
+        "blocks": [
+          {
+            "blockType": "contactHero",
+            "id": "68cd1034524c8f2770bca254",
+            "translatable": {
+              "title": "\"Kontakt\"",
+              "subtitle": "\"Odgovaramo u 24h | Hitna podrška: 24/7\""
+            }
+          },
+          {
+            "blockType": "contactForm",
+            "id": "68cd1040524c8f2770bca256",
+            "translatable": {
+              "title": "\"Pošaljite poruku\"",
+              "subtitle": "\"Odgovaramo u 24 sata.\""
+            }
+          },
+          {
+            "blockType": "contactInfo",
+            "id": "68cd1046524c8f2770bca258",
+            "translatable": {
+              "title": "\"Direktan kontakt\"",
+              "subtitle": "\"Telefon i e-mail za brži odgovor.\""
+            }
+          },
+          {
+            "blockType": "contactFAQ",
+            "id": "68cd104e524c8f2770bca25a",
+            "translatable": {
+              "title": "\"Česta pitanja\"",
+              "subtitle": "\"Odgovori na najčešća pitanja koja nam postavljaju klijenti.\"",
+              "faqs": [
+                {
+                  "question": "Kako hitro lahko začnete z delom?",
+                  "answer": "Manjše projekte v 1-2 tednih, večje v 4-6 tednih. Nujne posege v 24 urah."
+                },
+                {
+                  "question": "Garancija?",
+                  "answer": "2 leti na naša dela, 1 leto na komponente."
+                },
+                {
+                  "question": "Plačilni pogoji?",
+                  "answer": "30 dni od računa. Za večje projekte obročno plačilo."
+                },
+                {
+                  "question": "Delate tudi v tujini?",
+                  "answer": "Da, v regiji (Hrvaška, Srbija, Avstrija)."
+                }
+              ]
+            }
+          },
+          {
+            "blockType": "contactLocation",
+            "id": "68cd1054524c8f2770bca25c",
+            "translatable": {
+              "title": "\"Naš ured\"",
+              "subtitle": "\"U Celju, posjet po dogovoru.\""
+            }
+          }
+        ]
+      }
+    }
+  }
+]
