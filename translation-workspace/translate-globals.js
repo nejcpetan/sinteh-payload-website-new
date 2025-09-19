@@ -29,8 +29,8 @@ class GlobalTranslator {
       console.log(chalk.blue('🔐 Authenticating with Payload CMS...'))
 
       const response = await axios.post(`${this.baseUrl}/api/users/login`, {
-        email: 'nathan@webfast.si',
-        password: 'Adidas_forlife1!',
+        email: 'example@example.com',
+        password: 'password123_enter your password here',
       })
 
       if (response.data.token) {
