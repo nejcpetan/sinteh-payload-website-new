@@ -68,8 +68,9 @@ export const Posts: CollectionConfig = {
       name: 'featuredImage',
       type: 'upload',
       relationTo: 'media',
+      required: false,
       admin: {
-        description: 'Main image for the post',
+        description: 'Main image for the post (optional)',
       },
     },
     {

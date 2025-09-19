@@ -4,19 +4,7 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import type { Footer as FooterType, Media } from '@/payload-types'
 import type { Locale } from '@/lib/i18n/config'
-
-function getLinkHref(link: any) {
-  switch (link.type) {
-    case 'page':
-      return link.page?.slug ? `/${link.page.slug === '/' ? '' : link.page.slug}` : '#'
-    case 'url':
-      return link.url || '#'
-    case 'anchor':
-      return link.anchor || '#'
-    default:
-      return '#'
-  }
-}
+import { getNavigationHref } from '@/lib/linkUtils'
 
 export default async function Footer({ locale }: { locale?: Locale }) {
   const payload = await getPayload({ config })
@@ -139,7 +127,7 @@ export default async function Footer({ locale }: { locale?: Locale }) {
                 </h4>
                 <ul className="space-y-3">
                   {column.links?.map((link, linkIndex) => {
-                    const href = getLinkHref(link)
+                    const href = getNavigationHref(link, locale)
                     const isExternal =
                       link.type === 'url' && 'url' in link && link.url?.startsWith('http')
                     const hasNewTab = 'newTab' in link && link.newTab
@@ -173,7 +161,7 @@ export default async function Footer({ locale }: { locale?: Locale }) {
           {data.bottomLinks && data.bottomLinks.length > 0 && (
             <div className="flex items-center gap-6">
               {data.bottomLinks.map((link, index) => {
-                const href = getLinkHref(link)
+                const href = getNavigationHref(link, locale)
                 const isExternal = link.type === 'url' && link.url?.startsWith('http')
 
                 return (

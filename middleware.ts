@@ -4,6 +4,8 @@ import { locales, defaultLocale, isValidLocale } from './src/lib/i18n/config'
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  
+  console.log(`[Middleware] Processing: ${pathname}`)
 
   // Skip middleware for:
   // - API routes
@@ -18,6 +20,7 @@ export function middleware(request: NextRequest) {
     pathname.includes('.') ||
     pathname === '/favicon.ico'
   ) {
+    console.log(`[Middleware] Skipping: ${pathname}`)
     return NextResponse.next()
   }
 
@@ -27,11 +30,13 @@ export function middleware(request: NextRequest) {
 
   // If pathname starts with a valid locale, allow it through
   if (potentialLocale && isValidLocale(potentialLocale)) {
+    console.log(`[Middleware] Valid locale found: ${potentialLocale}`)
     return NextResponse.next()
   }
 
   // If no locale or invalid locale, redirect to default locale
   const redirectUrl = new URL(`/${defaultLocale}${pathname}`, request.url)
+  console.log(`[Middleware] Redirecting ${pathname} to ${redirectUrl.pathname}`)
   return NextResponse.redirect(redirectUrl)
 }
 

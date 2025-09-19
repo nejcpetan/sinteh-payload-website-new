@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import type { Locale } from '@/lib/i18n/config'
+import { getNavigationHref } from '@/lib/linkUtils'
 import { cn } from '@/lib/utils'
 import type { Header as HeaderType } from '@/payload-types'
 
@@ -23,9 +25,16 @@ interface DropdownNavProps {
   items: DropdownItem[]
   style?: 'simple' | 'cards' | 'columns'
   className?: string
+  locale?: Locale
 }
 
-export function DropdownNav({ label, items, style = 'simple', className }: DropdownNavProps) {
+export function DropdownNav({
+  label,
+  items,
+  style = 'simple',
+  className,
+  locale,
+}: DropdownNavProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -63,26 +72,7 @@ export function DropdownNav({ label, items, style = 'simple', className }: Dropd
   }
 
   const getItemHref = (item: DropdownItem): string => {
-    switch (item.type) {
-      case 'page':
-        return item.page && typeof item.page === 'object' && item.page.slug
-          ? `/${item.page.slug === '/' ? '' : item.page.slug}`
-          : '#'
-      case 'url':
-        return item.url || '#'
-      case 'blog':
-        return '/blog'
-      case 'post':
-        return item.post && typeof item.post === 'object' && item.post.slug
-          ? `/blog/${item.post.slug}`
-          : '#'
-      case 'category':
-        return item.category && typeof item.category === 'object' && item.category.slug
-          ? `/blog/category/${item.category.slug}`
-          : '#'
-      default:
-        return '#'
-    }
+    return getNavigationHref(item, locale)
   }
 
   const renderDropdownContent = () => {
@@ -263,30 +253,18 @@ interface MobileDropdownNavProps {
   items: DropdownItem[]
   isOpen: boolean
   onToggle: () => void
+  locale?: Locale
 }
 
-export function MobileDropdownNav({ label, items, isOpen, onToggle }: MobileDropdownNavProps) {
+export function MobileDropdownNav({
+  label,
+  items,
+  isOpen,
+  onToggle,
+  locale,
+}: MobileDropdownNavProps) {
   const getItemHref = (item: DropdownItem): string => {
-    switch (item.type) {
-      case 'page':
-        return item.page && typeof item.page === 'object' && item.page.slug
-          ? `/${item.page.slug === '/' ? '' : item.page.slug}`
-          : '#'
-      case 'url':
-        return item.url || '#'
-      case 'blog':
-        return '/blog'
-      case 'post':
-        return item.post && typeof item.post === 'object' && item.post.slug
-          ? `/blog/${item.post.slug}`
-          : '#'
-      case 'category':
-        return item.category && typeof item.category === 'object' && item.category.slug
-          ? `/blog/category/${item.category.slug}`
-          : '#'
-      default:
-        return '#'
-    }
+    return getNavigationHref(item, locale)
   }
 
   const validItems = items.filter((item) => item.type !== 'divider' || items.length > 1)
@@ -337,4 +315,3 @@ export function MobileDropdownNav({ label, items, isOpen, onToggle }: MobileDrop
     </div>
   )
 }
-

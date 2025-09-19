@@ -1300,7 +1300,7 @@ export interface Post {
     [k: string]: unknown;
   };
   /**
-   * Main image for the post
+   * Main image for the post (optional)
    */
   featuredImage?: (number | null) | Media;
   categories?: (number | Category)[] | null;
@@ -2756,6 +2756,9 @@ export interface Header {
    */
   navigation?:
     | {
+        /**
+         * Navigation label (required for all languages)
+         */
         label: string;
         /**
          * Choose between a normal link or dropdown menu
@@ -2787,7 +2790,10 @@ export interface Header {
          */
         dropdownItems?:
           | {
-              label: string;
+              /**
+               * Dropdown item label (required for all languages except dividers)
+               */
+              label?: string | null;
               /**
                * Optional description for the dropdown item
                */

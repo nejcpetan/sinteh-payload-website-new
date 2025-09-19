@@ -9,13 +9,14 @@ import type { Locale } from '@/lib/i18n/config'
 import { MobileNav } from '@/components/MobileNav'
 import { DropdownNav } from '@/components/DropdownNav'
 import { LocaleSwitcher } from '@/components/LocaleSwitcher'
+import { getNavigationHref } from '@/lib/linkUtils'
 
 const fallbackNavItems = [
-  { href: '#storitve', label: 'Področja dela' },
-  { href: '#onas', label: 'O nas' },
-  { href: '#projekti', label: 'Študije primerov' },
-  { href: '/blog', label: 'Blog' },
-  { href: '#kontakt', label: 'Kontakt' },
+  { type: 'anchor', anchor: '#storitve', label: 'Področja dela' },
+  { type: 'anchor', anchor: '#onas', label: 'O nas' },
+  { type: 'anchor', anchor: '#projekti', label: 'Študije primerov' },
+  { type: 'blog', label: 'Blog' },
+  { type: 'anchor', anchor: '#kontakt', label: 'Kontakt' },
 ]
 
 export default async function Navigation({
@@ -30,14 +31,33 @@ export default async function Navigation({
   let headerData: HeaderType | null = null
 
   try {
+    const requestedLocale = locale || 'sl'
+    console.log(`[Navigation] Fetching header data for locale: ${requestedLocale}`)
+
     headerData = await payload.findGlobal({
       slug: 'header',
-      locale: locale || 'sl',
-      fallbackLocale: 'en',
+      locale: requestedLocale,
+      fallbackLocale: false, // Disable fallback to force locale-specific data
       depth: 2,
     })
+
+    console.log(`[Navigation] Header data fetched successfully for locale: ${requestedLocale}`)
+    console.log(`[Navigation] Navigation items count: ${headerData?.navigation?.length || 0}`)
   } catch (error) {
-    console.error('Error fetching header data:', error)
+    console.error(`[Navigation] Error fetching header data for locale ${locale}:`, error)
+
+    // If the requested locale fails, try with fallback
+    try {
+      console.log(`[Navigation] Attempting fallback to 'en' locale`)
+      headerData = await payload.findGlobal({
+        slug: 'header',
+        locale: 'en',
+        fallbackLocale: false,
+        depth: 2,
+      })
+    } catch (fallbackError) {
+      console.error('[Navigation] Fallback to English also failed:', fallbackError)
+    }
   }
 
   return (
@@ -49,7 +69,7 @@ export default async function Navigation({
     >
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href={locale ? `/${locale}` : '/'} className="flex items-center gap-3">
             {headerData?.logo &&
             typeof headerData.logo === 'object' &&
             (headerData.logo as Media).url ? (
@@ -74,8 +94,20 @@ export default async function Navigation({
               let label = item.label || 'Menu Item'
 
               if ('href' in item) {
-                // Fallback navigation item
-                href = item.href
+                // Fallback navigation item - convert to use getNavigationHref
+                const fallbackItem = {
+                  type: item.type || 'anchor',
+                  anchor: item.href?.startsWith('#') ? item.href : undefined,
+                  url:
+                    !item.href?.startsWith('#') && item.href?.startsWith('http')
+                      ? item.href
+                      : undefined,
+                  page:
+                    !item.href?.startsWith('#') && !item.href?.startsWith('http')
+                      ? { slug: item.href?.replace('/', '') }
+                      : undefined,
+                }
+                href = getNavigationHref(fallbackItem, locale)
                 label = item.label
                 return (
                   <Link
@@ -96,38 +128,13 @@ export default async function Navigation({
                       label={item.label}
                       items={item.dropdownItems}
                       style={item.dropdownStyle}
+                      locale={locale}
                     />
                   )
                 }
 
-                // Regular navigation link
-                switch (item.type) {
-                  case 'page':
-                    href =
-                      item.page && typeof item.page === 'object' && item.page.slug
-                        ? `/${item.page.slug === '/' ? '' : item.page.slug}`
-                        : '#'
-                    break
-                  case 'url':
-                    href = item.url || '#'
-                    break
-                  case 'blog':
-                    href = '/blog'
-                    break
-                  case 'post':
-                    href =
-                      item.post && typeof item.post === 'object' && item.post.slug
-                        ? `/blog/${item.post.slug}`
-                        : '#'
-                    break
-                  case 'category':
-                    href =
-                      item.category && typeof item.category === 'object' && item.category.slug
-                        ? `/blog/category/${item.category.slug}`
-                        : '#'
-                    break
-                }
-
+                // Generate locale-aware href using the utility function
+                href = getNavigationHref(item, locale)
                 const isExternal = href.startsWith('http')
 
                 return (
