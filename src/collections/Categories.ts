@@ -18,6 +18,7 @@ export const Categories: CollectionConfig = {
       type: 'text',
       required: true,
       unique: true,
+      localized: true, // Localize category name for different languages
     },
     {
       name: 'slug',
@@ -44,6 +45,7 @@ export const Categories: CollectionConfig = {
     {
       name: 'description',
       type: 'textarea',
+      localized: true, // Localize category description for different languages
       admin: {
         description: 'Optional description of this category',
       },

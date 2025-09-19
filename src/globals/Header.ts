@@ -13,6 +13,7 @@ export const Header: GlobalConfig = {
       type: 'text',
       required: true,
       defaultValue: 'My Website',
+      localized: true, // Localize site name for different languages
       admin: {
         description: 'The name of your website/brand',
       },
@@ -34,6 +35,16 @@ export const Header: GlobalConfig = {
           name: 'label',
           type: 'text',
           required: true,
+          localized: true, // Localize navigation labels
+          validate: (val) => {
+            if (!val || val.trim() === '') {
+              return 'Navigation label is required and cannot be empty'
+            }
+            return true
+          },
+          admin: {
+            description: 'Navigation label (required for all languages)',
+          },
         },
         {
           name: 'navType',
@@ -152,11 +163,27 @@ export const Header: GlobalConfig = {
             {
               name: 'label',
               type: 'text',
-              required: true,
+              required: false, // Not required for dividers
+              localized: true, // Localize dropdown item labels
+              validate: (val, { siblingData }) => {
+                // Skip validation for divider items
+                if (siblingData?.type === 'divider') {
+                  return true
+                }
+                if (!val || val.trim() === '') {
+                  return 'Dropdown item label is required and cannot be empty'
+                }
+                return true
+              },
+              admin: {
+                description: 'Dropdown item label (required for all languages except dividers)',
+                condition: (_, siblingData) => siblingData?.type !== 'divider',
+              },
             },
             {
               name: 'description',
               type: 'text',
+              localized: true, // Localize dropdown item descriptions
               admin: {
                 description: 'Optional description for the dropdown item',
               },
@@ -504,6 +531,36 @@ export const Header: GlobalConfig = {
     },
   ],
   hooks: {
+    beforeValidate: [
+      async ({ data, req }) => {
+        // Ensure navigation items have labels for all locales
+        if (data.navigation && Array.isArray(data.navigation)) {
+          data.navigation = data.navigation.map((navItem: any) => {
+            // Ensure main navigation label exists
+            if (!navItem.label || (typeof navItem.label === 'string' && navItem.label.trim() === '')) {
+              navItem.label = navItem.navType === 'dropdown' ? 'Dropdown Menu' : 'Navigation Item'
+            }
+            
+            // Handle dropdown items
+            if (navItem.dropdownItems && Array.isArray(navItem.dropdownItems)) {
+              navItem.dropdownItems = navItem.dropdownItems.map((dropdownItem: any) => {
+                // Skip label requirement for dividers
+                if (dropdownItem.type === 'divider') {
+                  dropdownItem.label = '' // Explicitly set empty for dividers
+                } else if (!dropdownItem.label || (typeof dropdownItem.label === 'string' && dropdownItem.label.trim() === '')) {
+                  dropdownItem.label = 'Dropdown Item'
+                }
+                return dropdownItem
+              })
+            }
+            
+            return navItem
+          })
+        }
+        
+        return data
+      },
+    ],
     afterChange: [
       async ({ doc }) => {
         try {

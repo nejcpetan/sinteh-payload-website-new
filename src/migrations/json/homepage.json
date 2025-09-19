@@ -1,0 +1,716 @@
+{
+  "id": 1,
+
+  "layout": [
+    {
+      "id": "68a9b80223548f6e2c95bed9",
+      "title": "Pametne rešitve za varno in učinkovito industrijo",
+      "subtitle": "Prihodnost vaše proizvodnje je danes. Vaša vizija, naša izvedba.",
+
+      "backgroundImage": {
+        "id": 3,
+        "alt": "Sinteh-Logo",
+        "updatedAt": "2025-09-07T11:11:20.079Z",
+        "createdAt": "2025-09-07T11:11:16.868Z",
+        "url": "/api/media/file/logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+        "thumbnailURL": null,
+        "filename": "logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+        "mimeType": "image/png",
+        "filesize": 3923,
+        "width": 150,
+        "height": 31,
+        "focalX": 50,
+        "focalY": 50
+      },
+      "bottomText": "",
+      "blockName": null,
+
+      "ctaButtons": [],
+      "blockType": "hero"
+    },
+
+    {
+      "id": "68a9b86523548f6e2c95bedb",
+      "blockName": null,
+
+      "logos": [
+        {
+          "id": "68a9b86d23548f6e2c95bedf",
+
+          "logo": {
+            "id": 15,
+            "alt": "abb",
+            "updatedAt": "2025-09-07T13:01:25.481Z",
+            "createdAt": "2025-09-07T12:40:21.380Z",
+            "url": "/api/media/file/abb-logo-vector-free-download-11574188521pumksegk7w.png",
+            "thumbnailURL": null,
+            "filename": "abb-logo-vector-free-download-11574188521pumksegk7w.png",
+            "mimeType": "image/png",
+            "filesize": 74898,
+            "width": 840,
+            "height": 859,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "abb"
+        },
+
+        {
+          "id": "68aad55e99060d32ec7c1218",
+
+          "logo": {
+            "id": 14,
+            "alt": "siemens",
+            "updatedAt": "2025-09-07T12:51:40.652Z",
+            "createdAt": "2025-09-07T12:40:20.440Z",
+            "url": "/api/media/file/Siemens-Logo.png",
+            "thumbnailURL": null,
+            "filename": "Siemens-Logo.png",
+            "mimeType": "image/png",
+            "filesize": 16679,
+            "width": 3840,
+            "height": 2160,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "siemens"
+        },
+
+        {
+          "id": "68aad56099060d32ec7c121a",
+
+          "logo": {
+            "id": 13,
+            "alt": "weidmuller",
+            "updatedAt": "2025-09-07T12:52:14.806Z",
+            "createdAt": "2025-09-07T12:40:19.710Z",
+            "url": "/api/media/file/apps.9274.819d6410-4868-44ba-aacb-f038f3603aa9.e06ec125-819d-4102-9239-a2fa691b5138%20(1).a6cc063b-c55d-4fab-a51f-5191691e19ba.png",
+            "thumbnailURL": null,
+            "filename": "apps.9274.819d6410-4868-44ba-aacb-f038f3603aa9.e06ec125-819d-4102-9239-a2fa691b5138 (1).a6cc063b-c55d-4fab-a51f-5191691e19ba.png",
+            "mimeType": "image/png",
+            "filesize": 15786,
+            "width": 216,
+            "height": 216,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "weidmuller"
+        },
+
+        {
+          "id": "68aad56299060d32ec7c121c",
+
+          "logo": {
+            "id": 12,
+            "alt": "sneider",
+            "updatedAt": "2025-09-07T12:40:21.803Z",
+            "createdAt": "2025-09-07T12:40:18.870Z",
+            "url": "/api/media/file/SU.PA_BIG-8cd10b23.png",
+            "thumbnailURL": null,
+            "filename": "SU.PA_BIG-8cd10b23.png",
+            "mimeType": "image/png",
+            "filesize": 27527,
+            "width": 1554,
+            "height": 459,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "sneider electirc"
+        },
+
+        {
+          "id": "68bd7d635b3f8225aa8d226e",
+
+          "logo": {
+            "id": 11,
+            "alt": "rockwell",
+            "updatedAt": "2025-09-07T12:40:20.964Z",
+            "createdAt": "2025-09-07T12:40:18.142Z",
+            "url": "/api/media/file/ro7116r8ba-rockwell-automation-logo-rockwell-automation-logo-.png",
+            "thumbnailURL": null,
+            "filename": "ro7116r8ba-rockwell-automation-logo-rockwell-automation-logo-.png",
+            "mimeType": "image/png",
+            "filesize": 37893,
+            "width": 880,
+            "height": 668,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "rockwell"
+        },
+
+        {
+          "id": "68bd7d695b3f8225aa8d2270",
+
+          "logo": {
+            "id": 10,
+            "alt": "ROK",
+            "updatedAt": "2025-09-07T12:40:20.275Z",
+            "createdAt": "2025-09-07T12:40:16.926Z",
+            "url": "/api/media/file/ROK.png",
+            "thumbnailURL": null,
+            "filename": "ROK.png",
+            "mimeType": "image/png",
+            "filesize": 99376,
+            "width": 1550,
+            "height": 1548,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "rok"
+        },
+
+        {
+          "id": "68bd7d6f5b3f8225aa8d2272",
+
+          "logo": {
+            "id": 9,
+            "alt": "zenon",
+            "updatedAt": "2025-09-07T12:40:19.063Z",
+            "createdAt": "2025-09-07T12:40:15.540Z",
+            "url": "/api/media/file/zenon_logo-1-1990x2048.png",
+            "thumbnailURL": null,
+            "filename": "zenon_logo-1-1990x2048.png",
+            "mimeType": "image/png",
+            "filesize": 138386,
+            "width": 1990,
+            "height": 2048,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "zenon"
+        },
+
+        {
+          "id": "68bd7d765b3f8225aa8d2274",
+
+          "logo": {
+            "id": 8,
+            "alt": "beckhoff",
+            "updatedAt": "2025-09-07T12:40:17.660Z",
+            "createdAt": "2025-09-07T12:40:14.619Z",
+            "url": "/api/media/file/beckhoff-logo.png",
+            "thumbnailURL": null,
+            "filename": "beckhoff-logo.png",
+            "mimeType": "image/png",
+            "filesize": 8477,
+            "width": 600,
+            "height": 600,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "beckhoff"
+        },
+
+        {
+          "id": "68bd7d7d5b3f8225aa8d2276",
+
+          "logo": {
+            "id": 6,
+            "alt": "Emerson1",
+            "updatedAt": "2025-09-07T12:40:15.591Z",
+            "createdAt": "2025-09-07T12:40:12.480Z",
+            "url": "/api/media/file/1274865.png",
+            "thumbnailURL": null,
+            "filename": "1274865.png",
+            "mimeType": "image/png",
+            "filesize": 21637,
+            "width": 2400,
+            "height": 2400,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "alt": "emerson"
+        }
+      ],
+      "blockType": "logoBelt"
+    },
+
+    {
+      "id": "68a9b86a23548f6e2c95bedd",
+      "badge": "STORITVE",
+      "title": "Specializirani za krmiljenje in avtomatizacijo",
+      "subtitle": "Od načrtovanja do zagona in servisa",
+      "blockName": null,
+
+      "services": [
+        {
+          "id": "68a9b86b27ac9d09b0b839cb",
+          "title": "PLC programiranje",
+          "description": "Sistematičen pristop, preverjene komponente, popolna dokumentacija.",
+
+          "image": {
+            "id": 3,
+            "alt": "Sinteh-Logo",
+            "updatedAt": "2025-09-07T11:11:20.079Z",
+            "createdAt": "2025-09-07T11:11:16.868Z",
+            "url": "/api/media/file/logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+            "thumbnailURL": null,
+            "filename": "logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+            "mimeType": "image/png",
+            "filesize": 3923,
+            "width": 150,
+            "height": 31,
+            "focalX": 50,
+            "focalY": 50
+          },
+
+          "features": [
+            {
+              "id": "68a9b86b27ac9d09b0b839c8",
+              "feature": "Siemens TIA Portal"
+            },
+
+            {
+              "id": "68a9b86b27ac9d09b0b839c9",
+              "feature": "Allen-Bradley Studio 5000"
+            },
+
+            {
+              "id": "68a9b86b27ac9d09b0b839ca",
+              "feature": "Schneider Unity Pro"
+            }
+          ],
+
+          "button": {
+            "text": "Več o storitvi",
+            "type": "anchor",
+            "page": null,
+            "url": null,
+            "anchor": "#kontakt"
+          }
+        },
+
+        {
+          "id": "68a9b86b27ac9d09b0b839cf",
+          "title": "HMI/SCADA sistemi",
+          "description": "Uporabniški vmesniki za nadzor in upravljanje procesov.",
+
+          "image": {
+            "id": 1,
+            "alt": "robotki",
+            "updatedAt": "2025-09-07T11:06:26.777Z",
+            "createdAt": "2025-09-07T11:06:22.433Z",
+            "url": "/api/media/file/Comau_Industrial-Automation_Collaborative-Mobile-Robots_1920x1080_96dpi.jpg",
+            "thumbnailURL": null,
+            "filename": "Comau_Industrial-Automation_Collaborative-Mobile-Robots_1920x1080_96dpi.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 547272,
+            "width": 1920,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50
+          },
+
+          "features": [
+            {
+              "id": "68a9b86b27ac9d09b0b839cc",
+              "feature": "WinCC"
+            },
+
+            {
+              "id": "68a9b86b27ac9d09b0b839cd",
+              "feature": "FactoryTalk View"
+            },
+
+            {
+              "id": "68a9b86b27ac9d09b0b839ce",
+              "feature": "Vijeo Citect"
+            }
+          ],
+
+          "button": {
+            "text": "Več o storitvi",
+            "type": "anchor",
+            "page": null,
+            "url": null,
+            "anchor": "#kontakt"
+          }
+        },
+
+        {
+          "id": "68a9b86b27ac9d09b0b839d3",
+          "title": "Pogonska tehnika",
+          "description": "Programiranje in konfiguracija frekvenčnih pretvornikov.",
+
+          "image": {
+            "id": 3,
+            "alt": "Sinteh-Logo",
+            "updatedAt": "2025-09-07T11:11:20.079Z",
+            "createdAt": "2025-09-07T11:11:16.868Z",
+            "url": "/api/media/file/logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+            "thumbnailURL": null,
+            "filename": "logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+            "mimeType": "image/png",
+            "filesize": 3923,
+            "width": 150,
+            "height": 31,
+            "focalX": 50,
+            "focalY": 50
+          },
+
+          "features": [
+            {
+              "id": "68a9b86b27ac9d09b0b839d0",
+              "feature": "Sinamics"
+            },
+
+            {
+              "id": "68a9b86b27ac9d09b0b839d1",
+              "feature": "PowerFlex"
+            },
+
+            {
+              "id": "68a9b86b27ac9d09b0b839d2",
+              "feature": "Altivar"
+            }
+          ],
+
+          "button": {
+            "text": "Več o storitvi",
+            "type": "anchor",
+            "page": null,
+            "url": null,
+            "anchor": "#kontakt"
+          }
+        }
+      ],
+      "blockType": "services"
+    },
+
+    {
+      "id": "68a9b8b823548f6e2c95bee3",
+      "title": "O podjetju",
+      "description": "Specializirani smo za industrijske avtomatizacijske sisteme z več kot 10-letnimi izkušnjami.",
+
+      "image": {
+        "id": 4,
+        "alt": "sinteh-machine-display",
+        "updatedAt": "2025-09-07T12:31:55.627Z",
+        "createdAt": "2025-09-07T12:31:51.852Z",
+        "url": "/api/media/file/DSC_2697_sinteh.jpg",
+        "thumbnailURL": null,
+        "filename": "DSC_2697_sinteh.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 297254,
+        "width": 1631,
+        "height": 1080,
+        "focalX": 50,
+        "focalY": 50
+      },
+      "calloutText": "Naše ekipe načrtujejo, programirajo in zaganjajo sisteme krmiljenja, pogone ter HMI/SCADA v tesnem sodelovanju z vašimi tehnologijami.",
+      "blockName": null,
+
+      "badges": [
+        {
+          "id": "68a9b8b827ac9d09b0b839d4",
+          "text": "ISO 9001"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839d5",
+          "text": "CE označevanje"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839d6",
+          "text": "Siemens partner"
+        }
+      ],
+
+      "stats": [
+        {
+          "id": "68a9b8b827ac9d09b0b839d7",
+          "number": "150+",
+          "label": "Končanih projektov"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839d8",
+          "number": "10+",
+          "label": "Let izkušenj"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839d9",
+          "number": "50+",
+          "label": "Zadovoljnih strank"
+        }
+      ],
+
+      "process": [
+        {
+          "id": "68a9b8b827ac9d09b0b839da",
+          "step": "Analiza potreb"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839db",
+          "step": "Načrtovanje"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839dc",
+          "step": "Programiranje"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839dd",
+          "step": "Testiranje"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839de",
+          "step": "Zagon"
+        },
+
+        {
+          "id": "68a9b8b827ac9d09b0b839df",
+          "step": "Podpora"
+        }
+      ],
+      "blockType": "about",
+
+      "button": {
+        "text": "Več o nas",
+        "type": "anchor",
+        "page": null,
+        "url": null,
+        "anchor": "#kontakt"
+      }
+    },
+
+    {
+      "id": "68ac2a3e4eadda2a3993bb86",
+      "title": "Zakaj nam zaupajo?",
+
+      "image": {
+        "id": 5,
+        "alt": "elektronika-sinteh",
+        "updatedAt": "2025-09-07T12:33:07.480Z",
+        "createdAt": "2025-09-07T12:33:04.014Z",
+        "url": "/api/media/file/IMG_1608-e1621182986292.jpg",
+        "thumbnailURL": null,
+        "filename": "IMG_1608-e1621182986292.jpg",
+        "mimeType": "image/jpeg",
+        "filesize": 111887,
+        "width": 645,
+        "height": 860,
+        "focalX": 50,
+        "focalY": 50
+      },
+      "blockName": null,
+
+      "reasons": [
+        {
+          "id": "68ac2a3f26c007000432bddd",
+          "reason": "Certificirane komponente in skladnost s standardi"
+        },
+
+        {
+          "id": "68ac2a3f26c007000432bdde",
+          "reason": "Obsežna dokumentacija in prenos znanja"
+        },
+
+        {
+          "id": "68ac2a3f26c007000432bddf",
+          "reason": "Predvidljivi roki in transparentno komuniciranje"
+        },
+
+        {
+          "id": "68ac2a3f26c007000432bde0",
+          "reason": "Odziven servis in dolgoročna podpora"
+        }
+      ],
+
+      "pillars": [
+        {
+          "id": "68ac2a3f26c007000432bde1",
+          "title": "Varnost",
+          "description": "Skladnost s standardi in preverjene komponente.",
+          "icon": "shield"
+        },
+
+        {
+          "id": "68ac2a3f26c007000432bde2",
+          "title": "Zanesljivost",
+          "description": "Stabilno delovanje in predvidljivi zagoni.",
+          "icon": "cog"
+        },
+
+        {
+          "id": "68ac2a3f26c007000432bde3",
+          "title": "Podpora",
+          "description": "Odziven servis ter prenos znanja vaši ekipi.",
+          "icon": "headset"
+        }
+      ],
+      "blockType": "whyTrust",
+
+      "button": {
+        "text": "Zaupajte nam",
+        "type": "anchor",
+        "page": null,
+        "url": null,
+        "anchor": "#kontakt"
+      }
+    },
+
+    {
+      "id": "68a9b8dc23548f6e2c95bee7",
+      "badge": "PROJEKTI",
+      "title": "Naši projekti",
+      "subtitle": "Izsek projektov, ki so izboljšali produktivnost, varnost in sledljivost.",
+      "blockName": null,
+
+      "projects": [
+        {
+          "id": "68a9b8dc27ac9d09b0b839ea",
+          "title": "Avtomatizacija proizvodne linije",
+          "category": "Avtomatizacija",
+
+          "image": {
+            "id": 1,
+            "alt": "robotki",
+            "updatedAt": "2025-09-07T11:06:26.777Z",
+            "createdAt": "2025-09-07T11:06:22.433Z",
+            "url": "/api/media/file/Comau_Industrial-Automation_Collaborative-Mobile-Robots_1920x1080_96dpi.jpg",
+            "thumbnailURL": null,
+            "filename": "Comau_Industrial-Automation_Collaborative-Mobile-Robots_1920x1080_96dpi.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 547272,
+            "width": 1920,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "description": "Popolna avtomatizacija proizvodne linije z integracijo MES sistema.",
+          "link": null,
+
+          "stack": [
+            {
+              "id": "68a9b8dc27ac9d09b0b839e7",
+              "technology": "Siemens S7-1500"
+            },
+
+            {
+              "id": "68a9b8dc27ac9d09b0b839e8",
+              "technology": "WinCC"
+            },
+
+            {
+              "id": "68a9b8dc27ac9d09b0b839e9",
+              "technology": "PROFINET"
+            }
+          ]
+        },
+
+        {
+          "id": "68a9b8dc27ac9d09b0b839ee",
+          "title": "Sistem nadzora kakovosti",
+          "category": "Kakovost",
+
+          "image": {
+            "id": 3,
+            "alt": "Sinteh-Logo",
+            "updatedAt": "2025-09-07T11:11:20.079Z",
+            "createdAt": "2025-09-07T11:11:16.868Z",
+            "url": "/api/media/file/logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+            "thumbnailURL": null,
+            "filename": "logo_ed87f33a8b8e06789dde09b2502b6aab_1x.png",
+            "mimeType": "image/png",
+            "filesize": 3923,
+            "width": 150,
+            "height": 31,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "description": "Implementacija sistema za nadzor kakovosti s sledljivostjo.",
+          "link": null,
+
+          "stack": [
+            {
+              "id": "68a9b8dc27ac9d09b0b839eb",
+              "technology": "Allen-Bradley"
+            },
+
+            {
+              "id": "68a9b8dc27ac9d09b0b839ec",
+              "technology": "FactoryTalk"
+            },
+
+            {
+              "id": "68a9b8dc27ac9d09b0b839ed",
+              "technology": "Cognex"
+            }
+          ]
+        },
+
+        {
+          "id": "68a9b8dc27ac9d09b0b839f2",
+          "title": "Energetski management",
+          "category": "Energetika",
+
+          "image": {
+            "id": 1,
+            "alt": "robotki",
+            "updatedAt": "2025-09-07T11:06:26.777Z",
+            "createdAt": "2025-09-07T11:06:22.433Z",
+            "url": "/api/media/file/Comau_Industrial-Automation_Collaborative-Mobile-Robots_1920x1080_96dpi.jpg",
+            "thumbnailURL": null,
+            "filename": "Comau_Industrial-Automation_Collaborative-Mobile-Robots_1920x1080_96dpi.jpg",
+            "mimeType": "image/jpeg",
+            "filesize": 547272,
+            "width": 1920,
+            "height": 1080,
+            "focalX": 50,
+            "focalY": 50
+          },
+          "description": "Sistem za upravljanje energije in optimizacijo porabe.",
+          "link": null,
+
+          "stack": [
+            {
+              "id": "68a9b8dc27ac9d09b0b839ef",
+              "technology": "Schneider"
+            },
+
+            {
+              "id": "68a9b8dc27ac9d09b0b839f0",
+              "technology": "PowerLogic"
+            },
+
+            {
+              "id": "68a9b8dc27ac9d09b0b839f1",
+              "technology": "Modbus"
+            }
+          ]
+        }
+      ],
+      "blockType": "projects",
+
+      "button": {
+        "text": "Vsi projekti",
+        "type": "anchor",
+        "page": null,
+        "url": null,
+        "anchor": "#kontakt"
+      }
+    },
+
+    {
+      "id": "68a9b8f123548f6e2c95bee9",
+      "badge": "KONTAKT",
+      "title": "Stopite v stik z nami",
+      "subtitle": "Pripravili vam bomo ponudbo v 24 urah",
+      "phone": "+386 1 234 5678",
+      "email": "info@sinteh.si",
+      "privacyText": "Pošiljanjem soglašate z našo politiko zasebnosti. Vaših podatkov ne posredujemo tretjim.",
+      "blockName": null,
+      "blockType": "contact"
+    }
+  ],
+  "updatedAt": "2025-09-07T12:42:19.804Z",
+  "createdAt": "2025-08-23T12:46:07.094Z",
+  "globalType": "homepage"
+}

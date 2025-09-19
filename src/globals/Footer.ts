@@ -21,6 +21,7 @@ export const Footer: GlobalConfig = {
       name: 'copyright',
       type: 'text',
       defaultValue: '© 2025 SINTEH PRO. Vse pravice pridržane.',
+      localized: true, // Localize copyright text
       admin: {
         description: 'Copyright text displayed in footer',
       },
@@ -69,6 +70,7 @@ export const Footer: GlobalConfig = {
           name: 'title',
           type: 'text',
           required: true,
+          localized: true, // Localize footer section titles
         },
         {
           name: 'links',
@@ -79,6 +81,7 @@ export const Footer: GlobalConfig = {
               name: 'label',
               type: 'text',
               required: true,
+              localized: true, // Localize footer link labels
             },
             {
               name: 'type',

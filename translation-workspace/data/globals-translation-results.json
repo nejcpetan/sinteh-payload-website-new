@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-09-19T12:16:17.267Z",
+  "summary": {
+    "totalGlobals": 4,
+    "successfulGlobals": 4,
+    "failedGlobals": 0,
+    "totalErrors": 12
+  },
+  "translatedGlobals": [
+    "homepage",
+    "header",
+    "footer",
+    "seo"
+  ],
+  "errors": [
+    {
+      "global": "homepage",
+      "language": "en",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "homepage",
+      "language": "de",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "homepage",
+      "language": "hr",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "header",
+      "language": "en",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "header",
+      "language": "de",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "header",
+      "language": "hr",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "footer",
+      "language": "en",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "footer",
+      "language": "de",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "footer",
+      "language": "hr",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "seo",
+      "language": "en",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "seo",
+      "language": "de",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    },
+    {
+      "global": "seo",
+      "language": "hr",
+      "error": "401 Incorrect API key provided: test-key********lder. You can find your API key at https://platform.openai.com/account/api-keys."
+    }
+  ]
+}

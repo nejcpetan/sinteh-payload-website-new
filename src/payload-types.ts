@@ -106,7 +106,7 @@ export interface Config {
     homepage: HomepageSelect<false> | HomepageSelect<true>;
     'email-admin': EmailAdminSelect<false> | EmailAdminSelect<true>;
   };
-  locale: null;
+  locale: 'sl' | 'en' | 'de' | 'hr';
   user: User & {
     collection: 'users';
   };
@@ -1300,7 +1300,7 @@ export interface Post {
     [k: string]: unknown;
   };
   /**
-   * Main image for the post
+   * Main image for the post (optional)
    */
   featuredImage?: (number | null) | Media;
   categories?: (number | Category)[] | null;
@@ -1316,6 +1316,10 @@ export interface Post {
   author?: (number | null) | User;
   publishedAt?: string | null;
   status?: ('draft' | 'published' | 'archived') | null;
+  /**
+   * Publish this post in the current locale
+   */
+  published?: boolean | null;
   meta?: {
     /**
      * SEO title (optional, defaults to post title)
@@ -2637,6 +2641,7 @@ export interface PostsSelect<T extends boolean = true> {
   author?: T;
   publishedAt?: T;
   status?: T;
+  published?: T;
   meta?:
     | T
     | {
@@ -2751,6 +2756,9 @@ export interface Header {
    */
   navigation?:
     | {
+        /**
+         * Navigation label (required for all languages)
+         */
         label: string;
         /**
          * Choose between a normal link or dropdown menu
@@ -2782,7 +2790,10 @@ export interface Header {
          */
         dropdownItems?:
           | {
-              label: string;
+              /**
+               * Dropdown item label (required for all languages except dividers)
+               */
+              label?: string | null;
               /**
                * Optional description for the dropdown item
                */

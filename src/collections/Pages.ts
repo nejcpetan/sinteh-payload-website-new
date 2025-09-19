@@ -20,6 +20,7 @@ export const Pages: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+      localized: true, // Localize page title for different languages
     },
     {
       name: 'slug',
@@ -46,6 +47,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
+      localized: true, // Localize page content blocks for different languages
       blocks: [
         // Homepage Blocks
         {
@@ -2720,6 +2722,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'meta',
       type: 'group',
+      localized: true, // Localize SEO meta fields
       fields: [
         {
           name: 'title',

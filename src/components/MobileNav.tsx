@@ -6,14 +6,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import type { Header as HeaderType, Media } from '@/payload-types'
+import type { Locale } from '@/lib/i18n/config'
+import { getNavigationHref } from '@/lib/linkUtils'
 import { MobileDropdownNav } from '@/components/DropdownNav'
+import { MobileLocaleSwitcher } from '@/components/LocaleSwitcher'
 
 interface MobileNavProps {
   headerData: HeaderType | null
   fallbackNavItems: Array<{ href: string; label: string }>
+  locale: Locale
 }
 
-export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
+export function MobileNav({ headerData, fallbackNavItems, locale }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const [openDropdowns, setOpenDropdowns] = useState<Set<number>>(new Set())
@@ -114,8 +118,20 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
                 let label = item.label || 'Menu Item'
 
                 if ('href' in item) {
-                  // Fallback navigation item
-                  href = item.href
+                  // Fallback navigation item - convert to locale-aware format
+                  const fallbackItem = {
+                    type: item.type || 'anchor',
+                    anchor: item.href?.startsWith('#') ? item.href : undefined,
+                    url:
+                      !item.href?.startsWith('#') && item.href?.startsWith('http')
+                        ? item.href
+                        : undefined,
+                    page:
+                      !item.href?.startsWith('#') && !item.href?.startsWith('http')
+                        ? { slug: item.href?.replace('/', '') }
+                        : undefined,
+                  }
+                  href = getNavigationHref(fallbackItem, locale)
                   label = item.label
                   return (
                     <Link
@@ -138,37 +154,13 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
                         items={item.dropdownItems}
                         isOpen={openDropdowns.has(index)}
                         onToggle={() => toggleDropdown(index)}
+                        locale={locale}
                       />
                     )
                   }
 
-                  // Regular navigation link
-                  switch (item.type) {
-                    case 'page':
-                      href =
-                        item.page && typeof item.page === 'object' && item.page.slug
-                          ? `/${item.page.slug === '/' ? '' : item.page.slug}`
-                          : '#'
-                      break
-                    case 'url':
-                      href = item.url || '#'
-                      break
-                    case 'blog':
-                      href = '/blog'
-                      break
-                    case 'post':
-                      href =
-                        item.post && typeof item.post === 'object' && item.post.slug
-                          ? `/blog/${item.post.slug}`
-                          : '#'
-                      break
-                    case 'category':
-                      href =
-                        item.category && typeof item.category === 'object' && item.category.slug
-                          ? `/blog/category/${item.category.slug}`
-                          : '#'
-                      break
-                  }
+                  // Regular navigation link - use locale-aware href generation
+                  href = getNavigationHref(item, locale)
 
                   const isExternal = href.startsWith('http')
 
@@ -195,23 +187,7 @@ export function MobileNav({ headerData, fallbackNavItems }: MobileNavProps) {
           <div className="p-6 border-t bg-surface space-y-6">
             {/* Language Selector */}
             {mobileConfig?.showLanguageSelector !== false && (
-              <div className="flex items-center justify-center gap-4 text-sm text-foreground/70">
-                <button className="py-2 px-3 hover:bg-background rounded-md transition-colors">
-                  SI
-                </button>
-                <span className="opacity-40">|</span>
-                <button className="py-2 px-3 hover:bg-background rounded-md transition-colors">
-                  EN
-                </button>
-                <span className="opacity-40">|</span>
-                <button className="py-2 px-3 hover:bg-background rounded-md transition-colors">
-                  DE
-                </button>
-                <span className="opacity-40">|</span>
-                <button className="py-2 px-3 hover:bg-background rounded-md transition-colors">
-                  HR
-                </button>
-              </div>
+              <MobileLocaleSwitcher currentLocale={locale} onLocaleChange={closeMenu} />
             )}
 
             {/* Contact Button */}

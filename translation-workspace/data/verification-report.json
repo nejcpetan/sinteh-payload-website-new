@@ -1,0 +1,262 @@
+{
+  "timestamp": "2025-09-19T12:59:49.958Z",
+  "summary": {
+    "totalPages": 5,
+    "languageStats": {
+      "en": {
+        "name": "English",
+        "completed": 5,
+        "errors": 0,
+        "avgCompletion": 100,
+        "completionRate": 100
+      },
+      "de": {
+        "name": "German",
+        "completed": 5,
+        "errors": 0,
+        "avgCompletion": 100,
+        "completionRate": 100
+      },
+      "hr": {
+        "name": "Croatian",
+        "completed": 5,
+        "errors": 0,
+        "avgCompletion": 100,
+        "completionRate": 100
+      }
+    }
+  },
+  "pages": [
+    {
+      "pageId": 7,
+      "title": "Fortress Alfred",
+      "slug": "fortress-alfred",
+      "languages": {
+        "en": {
+          "pageId": 7,
+          "pageTitle": "Fortress Alfred",
+          "language": "en",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 3,
+          "translatedBlocks": 3,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T12:12:29.689Z"
+        },
+        "de": {
+          "pageId": 7,
+          "pageTitle": "Fortress Alfred",
+          "language": "de",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 3,
+          "translatedBlocks": 3,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T12:12:29.689Z"
+        },
+        "hr": {
+          "pageId": 7,
+          "pageTitle": "Fortress Alfred",
+          "language": "hr",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 3,
+          "translatedBlocks": 3,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T12:12:29.689Z"
+        }
+      }
+    },
+    {
+      "pageId": 6,
+      "title": "Fortress amGardpro",
+      "slug": "fortress-amgardpro",
+      "languages": {
+        "en": {
+          "pageId": 6,
+          "pageTitle": "Fortress amGardpro",
+          "language": "en",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 9,
+          "translatedBlocks": 9,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:04.260Z"
+        },
+        "de": {
+          "pageId": 6,
+          "pageTitle": "Fortress amGardpro",
+          "language": "de",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 9,
+          "translatedBlocks": 9,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:04.260Z"
+        },
+        "hr": {
+          "pageId": 6,
+          "pageTitle": "Fortress amGardpro",
+          "language": "hr",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 9,
+          "translatedBlocks": 9,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:04.260Z"
+        }
+      }
+    },
+    {
+      "pageId": 4,
+      "title": "Avtomatizacija",
+      "slug": "avtomatizacija",
+      "languages": {
+        "en": {
+          "pageId": 4,
+          "pageTitle": "Avtomatizacija",
+          "language": "en",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 1,
+          "translatedBlocks": 1,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:12.596Z"
+        },
+        "de": {
+          "pageId": 4,
+          "pageTitle": "Avtomatizacija",
+          "language": "de",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 3,
+          "translatedBlocks": 3,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:12.596Z"
+        },
+        "hr": {
+          "pageId": 4,
+          "pageTitle": "Avtomatizacija",
+          "language": "hr",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 3,
+          "translatedBlocks": 3,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:12.596Z"
+        }
+      }
+    },
+    {
+      "pageId": 3,
+      "title": "Fortress mGard",
+      "slug": "fotress-mgard",
+      "languages": {
+        "en": {
+          "pageId": 3,
+          "pageTitle": "Fortress mGard",
+          "language": "en",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 9,
+          "translatedBlocks": 9,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:25.103Z"
+        },
+        "de": {
+          "pageId": 3,
+          "pageTitle": "Fortress mGard",
+          "language": "de",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 9,
+          "translatedBlocks": 9,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:25.103Z"
+        },
+        "hr": {
+          "pageId": 3,
+          "pageTitle": "Fortress mGard",
+          "language": "hr",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 9,
+          "translatedBlocks": 9,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T11:21:25.103Z"
+        }
+      }
+    },
+    {
+      "pageId": 2,
+      "title": "Kontakt",
+      "slug": "kontakt",
+      "languages": {
+        "en": {
+          "pageId": 2,
+          "pageTitle": "Kontakt",
+          "language": "en",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 5,
+          "translatedBlocks": 5,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T12:59:38.176Z"
+        },
+        "de": {
+          "pageId": 2,
+          "pageTitle": "Kontakt",
+          "language": "de",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 5,
+          "translatedBlocks": 5,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T12:59:38.176Z"
+        },
+        "hr": {
+          "pageId": 2,
+          "pageTitle": "Kontakt",
+          "language": "hr",
+          "hasTitle": true,
+          "hasLayout": true,
+          "hasMeta": null,
+          "totalBlocks": 5,
+          "translatedBlocks": 5,
+          "completionPercentage": 100,
+          "isComplete": true,
+          "lastUpdated": "2025-09-19T12:59:38.176Z"
+        }
+      }
+    }
+  ],
+  "recommendations": []
+}

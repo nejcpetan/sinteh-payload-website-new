@@ -1,0 +1,3168 @@
+[
+  {
+    "id": 7,
+    "slug": "fortress-alfred",
+    "title": "Fortress Alfred",
+    "meta": {
+      "title": null,
+      "description": null
+    },
+    "blocks": [
+      {
+        "blockType": "productHero",
+        "id": "68cd07e337611ba1bc4376e1",
+        "translatable": {
+          "badge": "Visoko konfigurabilnih mehanski in elektromehanski zaklepi",
+          "title": "Fortress Alfred",
+          "subtitle": "Varnostni zaklepi za eksplozivna in nevarna okolja",
+          "description": "Visoko konfigurabilni mehanskihin elektromehanski sistemi zaklepnih naprav, certificiranih za uporabo v eksplozivnih atmosferah in nevarnih conah, v skladu z najnovejšimi varnostnimi standardi. Sistem je modularen, robusten in popolnoma prilagodljiv zahtevam sodobnih industrijskih procesov.",
+          "keyBenefits[0].title": "Modularna Zasnova",
+          "keyBenefits[0].description": "Prilagoditve po meri",
+          "keyBenefits[1].title": "Certificirana zaščita",
+          "keyBenefits[1].description": "ATEX, IECEx, UKEx, CCCEx, HazLoc",
+          "keyBenefits[2].title": "Zasnovano za industrijo 4.0",
+          "keyBenefits[2].description": "Integracija za LoTo, SIL/PL aplikacije, SCADA",
+          "keyBenefits[3].title": "Modularna Zasnova",
+          "keyBenefits[3].description": "Prilagoditve po meri",
+          "ctaButtons[0].label": "Zahtevaj ponudbo",
+          "ctaButtons[0].type": "anchor",
+          "ctaButtons[0].anchor": "kontakt",
+          "ctaButtons[0].variant": "default",
+          "ctaButtons[1].label": "Prenesi katalog",
+          "ctaButtons[1].type": "anchor",
+          "ctaButtons[1].anchor": "resources",
+          "ctaButtons[1].variant": "outline"
+        }
+      },
+      {
+        "blockType": "keyFeatures",
+        "id": "68cd085537611ba1bc4376e3",
+        "translatable": {
+          "title": "Zakaj Alfred?",
+          "subtitle": "Alfred je rešitvena linija zaklepov, ki vam omogoča tehnično brezhibno, varnostno skladno in\nindustrijsko učinkovito rešitev.",
+          "features[0].icon": "shield",
+          "features[0].title": "Popolna varnost",
+          "features[0].description": "Preprečuje vstop v območje stroja dokler ni zagotovljeno varno stanje",
+          "features[1].icon": "shield",
+          "features[1].title": "Certificirana zaščita",
+          "features[1].description": "Certifikati ATEX, IECEx, UKEx, CCCEx in severnoameriški HazLoc (plin, prah in TEMP > 85 °C)",
+          "features[2].icon": "mechanical",
+          "features[2].title": "Zasnovano za industrijo 4.0",
+          "features[2].description": "Na voljo z RFID ključi, pametnimi aktuatorji, integracijo s PLC sistemi in varnostnimi releji.",
+          "features[3].icon": "modular",
+          "features[3].title": "Modularno sestavljivo",
+          "features[3].description": "Popolnoma prilagodljiv sistem zahtevam sodobnih industrijskih procesov.",
+          "features[4].icon": "temperature",
+          "features[4].title": "Odporno na okolje",
+          "features[4].description": "Ohišja iz nerjavečega jekla (zaščita IP69 in IP67)",
+          "features[5].icon": "mechanical",
+          "features[5].title": "Dolga življenjska doba",
+          "features[5].description": "Izredno odporna konstrukcija proti obrabi, prahu, vlagi in vibracijam",
+          "bottomHighlight.title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+          "bottomHighlight.description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+        }
+      },
+      {
+        "blockType": "technicalOverview",
+        "id": "68cd08b237611ba1bc4376e5",
+        "translatable": {
+          "title": "Kako deluje Alfred sistem?",
+          "description": "Alfred je pameten varnostni sistem, ki združuje nadzor dostopa, spremljanje stanja in varnostno komunikacijo v eni napravi. Zasnovan je za enostavno integracijo v industrijska omrežja. Sistem zagotavlja zanesljiv nadzor, logično zaporedje odklepanja in napredno diagnostiko v realnem času.",
+          "processSteps[0].title": "Nadzor dostopa",
+          "processSteps[0].description": "Uporabnik se identificira prek RFID ali kode",
+          "processSteps[1].title": "Povezava z omrežjem",
+          "processSteps[1].description": "Sistem komunicira neposredno s PLC prek EtherNet/IP ali PROFINET",
+          "processSteps[2].title": "Varno odklepanje in diagnostika",
+          "processSteps[2].description": "Ko so pogoji izpolnjeni, se vrata varno odklenejo. Sistem omogoča sprotno diagnostiko in beleženje dogodkov",
+          "technicalBenefits[0].title": "Pametna diagnostika",
+          "technicalBenefits[0].description": "Sproten nadzor in podatki o delovanju za zmanjšanje izpadov",
+          "technicalBenefits[1].title": "Integracija v omrežja",
+          "technicalBenefits[1].description": "Enostavna povezljivost s PLC in varnostnimi protokoli"
+        }
+      }
+    ],
+    "existingTranslations": {
+      "en": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress Alfred\""
+      },
+      "de": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Festung Alfred\""
+      },
+      "hr": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress Alfred\""
+      }
+    },
+    "needsTranslation": [],
+    "originalData": {
+      "id": 7,
+      "title": "Fortress Alfred",
+      "slug": "fortress-alfred",
+      "layout": [
+        {
+          "id": "68cd07e337611ba1bc4376e1",
+          "badge": "Visoko konfigurabilnih mehanski in elektromehanski zaklepi",
+          "title": "Fortress Alfred",
+          "subtitle": "Varnostni zaklepi za eksplozivna in nevarna okolja",
+          "description": "Visoko konfigurabilni mehanskihin elektromehanski sistemi zaklepnih naprav, certificiranih za uporabo v eksplozivnih atmosferah in nevarnih conah, v skladu z najnovejšimi varnostnimi standardi. Sistem je modularen, robusten in popolnoma prilagodljiv zahtevam sodobnih industrijskih procesov.",
+          "backgroundImage": null,
+          "blockName": null,
+          "keyBenefits": [
+            {
+              "id": "68cd07e3f90a305c94a5d41d",
+              "title": "Modularna Zasnova",
+              "description": "Prilagoditve po meri"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d41e",
+              "title": "Certificirana zaščita",
+              "description": "ATEX, IECEx, UKEx, CCCEx, HazLoc"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d41f",
+              "title": "Zasnovano za industrijo 4.0",
+              "description": "Integracija za LoTo, SIL/PL aplikacije, SCADA"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d420",
+              "title": "Modularna Zasnova",
+              "description": "Prilagoditve po meri"
+            }
+          ],
+          "ctaButtons": [
+            {
+              "id": "68cd07e3f90a305c94a5d421",
+              "label": "Zahtevaj ponudbo",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "kontakt",
+              "variant": "default"
+            },
+            {
+              "id": "68cd07e3f90a305c94a5d422",
+              "label": "Prenesi katalog",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "resources",
+              "variant": "outline"
+            }
+          ],
+          "blockType": "productHero"
+        },
+        {
+          "id": "68cd085537611ba1bc4376e3",
+          "badge": "",
+          "title": "Zakaj Alfred?",
+          "subtitle": "Alfred je rešitvena linija zaklepov, ki vam omogoča tehnično brezhibno, varnostno skladno in\nindustrijsko učinkovito rešitev.",
+          "blockName": null,
+          "features": [
+            {
+              "id": "68cd0855f90a305c94a5d423",
+              "icon": "shield",
+              "title": "Popolna varnost",
+              "description": "Preprečuje vstop v območje stroja dokler ni zagotovljeno varno stanje"
+            },
+            {
+              "id": "68cd0855f90a305c94a5d424",
+              "icon": "shield",
+              "title": "Certificirana zaščita",
+              "description": "Certifikati ATEX, IECEx, UKEx, CCCEx in severnoameriški HazLoc (plin, prah in TEMP > 85 °C)"
+            },
+            {
+              "id": "68cd0855f90a305c94a5d425",
+              "icon": "mechanical",
+              "title": "Zasnovano za industrijo 4.0",
+              "description": "Na voljo z RFID ključi, pametnimi aktuatorji, integracijo s PLC sistemi in varnostnimi releji."
+            },
+            {
+              "id": "68cd0855f90a305c94a5d426",
+              "icon": "modular",
+              "title": "Modularno sestavljivo",
+              "description": "Popolnoma prilagodljiv sistem zahtevam sodobnih industrijskih procesov."
+            },
+            {
+              "id": "68cd0855f90a305c94a5d427",
+              "icon": "temperature",
+              "title": "Odporno na okolje",
+              "description": "Ohišja iz nerjavečega jekla (zaščita IP69 in IP67)"
+            },
+            {
+              "id": "68cd0855f90a305c94a5d428",
+              "icon": "mechanical",
+              "title": "Dolga življenjska doba",
+              "description": "Izredno odporna konstrukcija proti obrabi, prahu, vlagi in vibracijam"
+            }
+          ],
+          "blockType": "keyFeatures",
+          "bottomHighlight": {
+            "title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+            "description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+          }
+        },
+        {
+          "id": "68cd08b237611ba1bc4376e5",
+          "badge": null,
+          "title": "Kako deluje Alfred sistem?",
+          "description": "Alfred je pameten varnostni sistem, ki združuje nadzor dostopa, spremljanje stanja in varnostno komunikacijo v eni napravi. Zasnovan je za enostavno integracijo v industrijska omrežja. Sistem zagotavlja zanesljiv nadzor, logično zaporedje odklepanja in napredno diagnostiko v realnem času.",
+          "technicalImage": null,
+          "blockName": null,
+          "processSteps": [
+            {
+              "id": "68cd08b3f90a305c94a5d429",
+              "title": "Nadzor dostopa",
+              "description": "Uporabnik se identificira prek RFID ali kode"
+            },
+            {
+              "id": "68cd08b3f90a305c94a5d42a",
+              "title": "Povezava z omrežjem",
+              "description": "Sistem komunicira neposredno s PLC prek EtherNet/IP ali PROFINET"
+            },
+            {
+              "id": "68cd08b3f90a305c94a5d42b",
+              "title": "Varno odklepanje in diagnostika",
+              "description": "Ko so pogoji izpolnjeni, se vrata varno odklenejo. Sistem omogoča sprotno diagnostiko in beleženje dogodkov"
+            }
+          ],
+          "technicalBenefits": [
+            {
+              "id": "68cd08b3f90a305c94a5d42c",
+              "title": "Pametna diagnostika",
+              "description": "Sproten nadzor in podatki o delovanju za zmanjšanje izpadov"
+            },
+            {
+              "id": "68cd08b3f90a305c94a5d42d",
+              "title": "Integracija v omrežja",
+              "description": "Enostavna povezljivost s PLC in varnostnimi protokoli"
+            }
+          ],
+          "blockType": "technicalOverview"
+        }
+      ],
+      "meta": {
+        "title": null,
+        "description": null
+      },
+      "publishedAt": "2025-09-07T16:22:01.704Z",
+      "status": "draft",
+      "updatedAt": "2025-09-19T12:12:29.689Z",
+      "createdAt": "2025-09-07T16:22:08.852Z",
+      "_status": "published"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "fortress-amgardpro",
+    "title": "Fortress amGardpro",
+    "meta": {
+      "title": null,
+      "description": null
+    },
+    "blocks": [
+      {
+        "blockType": "productHero",
+        "id": "68cd0a98524c8f2770bca222",
+        "translatable": {
+          "badge": "Modularni varnostni zaklepi",
+          "title": "Fortress amGardpro",
+          "subtitle": "Modularni varnostni zaklepi za najzahtevnejše industrijske pogoje",
+          "description": "Zmogljiva linija varnostnih zaklepnih sistemov, zasnovana za uporabo v težkih industrijskih okoljih. Sistem je certificiran za najvišje varnostne standarde PLe / Category 4 in SIL 3, ter omogoča integracijo ključev, zaklepanja vrat, izhodov v sili, gumbov, signalnih lučk in nadzora dostopa preko RFID tehnologije.",
+          "keyBenefits[0].title": "Enostavnost in učinkovitost",
+          "keyBenefits[0].description": "Neposredna komunikacija S PLC-ji preko PROFINET ali EtherNet/IP",
+          "keyBenefits[1].title": "Široka paleta komponent",
+          "keyBenefits[1].description": "Mehanske, elektromehanske in elektronske",
+          "keyBenefits[2].title": "Modularna zasnova",
+          "keyBenefits[2].description": "Konfiguracija sistema glede na stroj/proces",
+          "keyBenefits[3].title": "Standard PLe/Category 4 in SIL 3",
+          "keyBenefits[3].description": "Najvišji varnostni standardi",
+          "keyBenefits[4].title": "RFID tehnologija",
+          "keyBenefits[4].description": "Integracija ključev in zaklepanja",
+          "keyBenefits[5].title": "ProNet modul",
+          "keyBenefits[5].description": "Povezljivost preko EtherNet/IP, PROFINET in EtherCAT",
+          "ctaButtons[0].label": "Zahtevaj ponudbo",
+          "ctaButtons[0].type": "anchor",
+          "ctaButtons[0].anchor": "kontakt",
+          "ctaButtons[0].variant": "default",
+          "ctaButtons[1].label": "Prenesi katalog",
+          "ctaButtons[1].type": "anchor",
+          "ctaButtons[1].anchor": "resources",
+          "ctaButtons[1].variant": "outline"
+        }
+      },
+      {
+        "blockType": "keyFeatures",
+        "id": "68cd0ae3524c8f2770bca228",
+        "translatable": {
+          "title": "Zakaj izbrati amGardpro?",
+          "subtitle": "Primerjava mehanskih amGardpro sistemov z elektronskimi varnostnimi rešitvami.",
+          "features[0].icon": "mechanical",
+          "features[0].title": "Robustna zasnova",
+          "features[0].description": "Združene mehanske inelektronske varnostne funkcije v eni napravi.",
+          "features[1].icon": "shield",
+          "features[1].title": "Najvišji certifikati",
+          "features[1].description": "SIL 3, Category 4, PLe s TÜV potrditvijo. Najvišji varnostni standardi.",
+          "features[2].icon": "key",
+          "features[2].title": "proNet modul",
+          "features[2].description": "Omogoča povezljivost preko EtherNet/IP, PROFINET in EtherCAT, kar močno poenostavi ožičenje, izboljša diagnostiko ter fleksibilnost.",
+          "features[3].icon": "modular",
+          "features[3].title": "Fleksibilnost za inženiring",
+          "features[3].description": "Zaradi modularne zasnove lahko amGard konfigurirate glede na zahteve stroja ali procesa.",
+          "bottomHighlight.title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+          "bottomHighlight.description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+        }
+      },
+      {
+        "blockType": "technicalOverview",
+        "id": "68cd0b7e524c8f2770bca22a",
+        "translatable": {
+          "title": "Kako deluje amGardpro sistem?",
+          "description": "amGardpro je zmogljiva linija varnostnih zaklepnih sistemov, zasnovana za uporabo v težkih\nindustrijskih okoljih. Ponuja popolnoma prilagodljivo rešitev, ki združuje mehanske in\nelektronske varnostne funkcije v eni robustni napravi. Integracija z ProNet modulom omogoča komunikacijo preko PROFINET, EtherNet/IP ali EtherCAT, kar zagotavlja hitro diagnostiko, zmanjšano ožičenje in fleksibilno razširljivost.",
+          "processSteps[0].title": "Robustnost",
+          "processSteps[0].description": "Mehanske in elektronske varnostne funkcije",
+          "processSteps[1].title": "Nadzor dostopa z RFID tehnologijo",
+          "processSteps[1].description": "Integracija ključev, zaklepanja vrat, izhodov v sili, gumbov itd.",
+          "processSteps[2].title": "Dodaten proNet modul",
+          "processSteps[2].description": "Povezljivost prek EtherNet/IP, PROFINET in EtherCAT poenostavi ožičenje, omogoča diagnostiko in modularno razširljivost"
+        }
+      },
+      {
+        "blockType": "specifications",
+        "id": "68cd0bb3524c8f2770bca22c",
+        "translatable": {
+          "title": "Specifikacije in certifikati",
+          "subtitle": "Podrobne tehnične informacije in certificiranje za najvišjo stopnjo varnosti v industriji.",
+          "specifications[0].category": "Varnostni certifikati",
+          "specifications[0].items[0].label": "Varnostna raven",
+          "specifications[0].items[0].value": "SIL 3",
+          "specifications[0].items[1].label": "Kategorija",
+          "specifications[0].items[1].value": "Category 4",
+          "specifications[0].items[2].label": "Performance Level",
+          "specifications[0].items[2].value": "PLe",
+          "specifications[0].items[3].label": "Certificiranje",
+          "specifications[0].items[3].value": "TÜV potrjeno",
+          "specifications[1].category": "Materiali in konstrukcija",
+          "specifications[1].items[0].label": "Ohišje",
+          "specifications[1].items[0].value": "Industrijsko kovinsko ohišje",
+          "specifications[1].items[1].label": "Dostop",
+          "specifications[1].items[1].value": "RFID tehnologija",
+          "specifications[1].items[2].label": "Zaščitni razred",
+          "specifications[1].items[2].value": "IP66/IP67",
+          "certificationBadges[0].name": "SIL 3",
+          "certificationBadges[0].description": "Safety Integrity Level",
+          "certificationBadges[1].name": "TÜV",
+          "certificationBadges[1].description": "Certificirano",
+          "certificationBadges[2].name": "PLe",
+          "certificationBadges[2].description": "Performance Level"
+        }
+      },
+      {
+        "blockType": "applications",
+        "id": "68cd0ca7524c8f2770bca22e",
+        "translatable": {
+          "title": "Kje uporabljamo amGardpro?",
+          "subtitle": "amGardpro sistemi se uporabljajo v težkih industrijskih okoljih, kjer se zahtevajo najviši varnostni standardi",
+          "applications[0].icon": "manufacturing",
+          "applications[0].title": "Avtomobilska proizvodnja",
+          "applications[0].description": "Uporaba zaklepnih interlock sistemov",
+          "applications[0].details[0].detail": "Zaščita pred nevarnimi premiki",
+          "applications[0].details[1].detail": "Modularni varnostni zaklepi",
+          "applications[0].details[2].detail": "Robustno kovinsko ohišje",
+          "applications[1].icon": "pharm",
+          "applications[1].title": "Živilsko-pijačna industrija",
+          "applications[1].description": "Varnost in skladnost s higienskimi standardi",
+          "applications[1].details[0].detail": "Higienski varnostni standardi",
+          "applications[1].details[1].detail": "Nujni izklopi in interlocki",
+          "applications[1].details[2].detail": "Preprečevanje kontaminacije",
+          "applications[2].icon": "manufacturing",
+          "applications[2].title": "ASRS in pametna logistika",
+          "applications[2].description": "Varnost in učinkovitost v avtomatiziranih skladiščih",
+          "applications[2].details[0].detail": "Varnost v skladiščih",
+          "applications[2].details[1].detail": "Povezani interlock sistemi",
+          "applications[2].details[2].detail": "Optimizacija prostora",
+          "applications[3].icon": "atex",
+          "applications[3].title": "Elektronska in baterijska proizvodnja",
+          "applications[3].description": "Varnost v nevarnih proizvodnih okoljih",
+          "applications[3].details[0].detail": "Eksplozijsko varna izvedba",
+          "applications[3].details[1].detail": "Zaščita pred visoko napetostjo",
+          "applications[3].details[2].detail": "Nerjaveča konstrukcija",
+          "applications[4].icon": "manufacturing",
+          "applications[4].title": "Težka industrija",
+          "applications[4].description": "Robusten nadzor in zaščita v zahtevnih pogojih",
+          "applications[4].details[0].detail": "Preprečevanje poškodb",
+          "applications[4].details[1].detail": "Zanesljivo delovanje strojev",
+          "applications[4].details[2].detail": "Robusten nadzor",
+          "applications[5].icon": "manufacturing",
+          "applications[5].title": "Transportne linije z roboti",
+          "applications[5].description": "Zaščita v robotiziranih transportnih sistemih",
+          "applications[5].details[0].detail": "Zaščita robotskih celic",
+          "applications[5].details[1].detail": "Avtomatski transport ",
+          "applications[5].details[2].detail": "Povečana produktivnost",
+          "caseStudy.title": "Primer uporabe: Kemijska industrija",
+          "caseStudy.description": "V kemijski tovarni je mGard sistem omogočil varno vzdrževanje reaktorjev z mehanskim zaklepanjem vseh virov energije. Sistem zagotavlja, da se reaktor lahko odpre šele po popolni izolaciji vseh kemijskih dovoda.",
+          "caseStudy.stats[0].label": "Zmanjšanje nesreč",
+          "caseStudy.stats[0].value": "100%",
+          "caseStudy.stats[1].label": "Čas za vzdrževanje",
+          "caseStudy.stats[1].value": "-40%"
+        }
+      },
+      {
+        "blockType": "benefitsComparison",
+        "id": "68cd0d6b524c8f2770bca230",
+        "translatable": {
+          "title": "Zakaj izbrati amGardpro?",
+          "subtitle": "Primerjava mehanskih mGard sistemov z elektronskimi varnostnimi rešitvami.",
+          "benefits[0].advantage": "Integracija z omrežjem",
+          "benefits[0].description": "Enostavna razširljivost",
+          "benefits[0].mGard": "✓ PROFINET, EtherNet/IP, EtherCAT (ProNet)",
+          "benefits[0].electronic": "✗ Pogosto omejena na en protokol",
+          "benefits[1].advantage": "Najvišji certifikati",
+          "benefits[1].description": "SIL 3, Category 4, PLe – s TÜV potrditvijo",
+          "benefits[1].mGard": "✓ SIL 3 / PLe certificirano",
+          "benefits[1].electronic": "△ Do SIL 2 (tipično)",
+          "benefits[2].advantage": "Modularna sestavljivost",
+          "benefits[2].description": "Enostavna integracija v obstoječe procese brez ožičenja",
+          "benefits[2].mGard": "✓ Mehanske + elektronske + RFID moduli",
+          "benefits[2].electronic": "✗ Omejene možnosti razširitve",
+          "benefits[3].advantage": "Diagnostika in konfiguracija",
+          "benefits[3].description": "Sistem primeren za različne vrste aplikacij",
+          "benefits[3].mGard": "✓Hitro, preko varnostnih protokolov PROFIsafe / CIP Safety20+ let življenjska doba",
+          "benefits[3].electronic": "△ Zahteva dodatno programsko opremo",
+          "benefits[4].advantage": "Industrijska robustnost",
+          "benefits[4].description": "Rešitve, preizkušene v najzahtevnejših industrijskih okoljih",
+          "benefits[4].mGard": "✓ Kovinsko ohišje IP65+, ATEX opcije",
+          "benefits[4].electronic": "△ Pogosto plastična ohišja, manj zaščite",
+          "benefits[5].advantage": "Prilagodljivost aplikacij",
+          "benefits[5].description": "Primerno za eksplozijsko nevarna območja",
+          "benefits[5].mGard": "✓ Sekvenčni dostopi, LoTo, zakasnitve, prisilni izklop",
+          "benefits[5].electronic": "△ Omejena fleksibilnost",
+          "benefits[6].advantage": "Vzdrževanje",
+          "benefits[6].description": "Minimalne potrebe po vzdrževanju in servisiranju",
+          "benefits[6].mGard": "✓ Letni pregled zadostuje",
+          "benefits[6].electronic": "✗ Redni servis potreben",
+          "benefits[7].advantage": "Stroški lastništva",
+          "benefits[7].description": "Dolgoročni stroški skozi življenjsko dobo sistema",
+          "benefits[7].mGard": "✓ Nizki TCO",
+          "benefits[7].electronic": "✗ Visoki TCO",
+          "summaryCards[0].icon": "shield",
+          "summaryCards[0].title": "Maksimalna varnost",
+          "summaryCards[0].description": "SIL 3 certificirana mehanska varnost brez elektronskih komponent",
+          "summaryCards[1].icon": "clock",
+          "summaryCards[1].title": "Dolgotrajna rešitev",
+          "summaryCards[1].description": "20+ let življenjska doba z minimalnim vzdrževanjem",
+          "summaryCards[2].icon": "users",
+          "summaryCards[2].title": "Zaupanja vredno",
+          "summaryCards[2].description": "500+ uspešnih implementacij v kritičnih aplikacijah",
+          "bottomCTA.title": "Iščete zanesljivo varnostno rešitev?",
+          "bottomCTA.description": "mGard mehanski sistemi z ujetim ključem so preverjeni, robustni in logično zaporedni – brez možnosti napake. Idealna izbira za industrije, kjer elektronske rešitve niso dovolj zanesljive.",
+          "bottomCTA.primaryButtonText": "Kontaktirajte nas",
+          "bottomCTA.secondaryButtonText": "Prenesi dokumentacijo"
+        }
+      },
+      {
+        "blockType": "productGallery",
+        "id": "68cd0dfe524c8f2770bca232",
+        "translatable": {
+          "title": "amGardpro sistem v detajlih",
+          "downloadSection.title": "Potrebujete visoko-ločljivostne slike?",
+          "downloadSection.description": "Prenesite celotno galerijo produktnih slik v tiskarsko kakovosti za vašo dokumentacijo.",
+          "downloadSection.downloadButtonText": "Prenesi galerijo",
+          "downloadSection.requestButtonText": "Zahtevaj specifične slike"
+        }
+      },
+      {
+        "blockType": "productResources",
+        "id": "68cd0e10524c8f2770bca234",
+        "translatable": {
+          "title": "Dokumentacija in podporni materiali",
+          "resources[0].title": "Tehnična dokumentacija",
+          "resources[0].description": "Podrobne specifikacije, dimenzije in navodila za vgradnjo",
+          "resources[0].fileType": "PDF",
+          "resources[0].fileSize": "2.4 MB",
+          "resources[0].icon": "📋",
+          "resources[0].category": "Dokumentacija",
+          "resources[1].title": "Katalog produktov",
+          "resources[1].description": "Celovit pregled vseh mGard komponent in konfiguracij",
+          "resources[1].fileType": "PDF",
+          "resources[1].fileSize": "8.1 MB",
+          "resources[1].icon": "📖",
+          "resources[1].category": "Katalogi",
+          "resources[2].title": "Navodila za namestitev",
+          "resources[2].description": "Korak-za-korakom vodič za pravilno namestitev",
+          "resources[2].fileType": "PDF",
+          "resources[2].fileSize": "1.8 MB",
+          "resources[2].icon": "🔧",
+          "resources[2].category": "Dokumentacija",
+          "resources[3].title": "Video predstavitev",
+          "resources[3].description": "Kako deluje mGard trapped key sistem",
+          "resources[3].fileType": "VIDEO",
+          "resources[3].fileSize": "HD kvaliteta",
+          "resources[3].icon": "🎥",
+          "resources[3].category": "Video",
+          "resources[4].title": "Certifikati",
+          "resources[4].description": "SIL 3, TÜV in ATEX certifikati",
+          "resources[4].fileType": "PDF",
+          "resources[4].fileSize": "1.2 MB",
+          "resources[4].icon": "🏆",
+          "resources[4].category": "Certifikati",
+          "resources[5].title": "CAD modeli",
+          "resources[5].description": "3D modeli za načrtovanje (.dwg, .step)",
+          "resources[5].fileType": "ZIP",
+          "resources[5].fileSize": "5.6 MB",
+          "resources[5].icon": "📐",
+          "resources[5].category": "CAD",
+          "resources[6].title": "Aplikacijske študije",
+          "resources[6].description": "Primeri uporabe v različnih industrijah",
+          "resources[6].fileType": "PDF",
+          "resources[6].fileSize": "3.2 MB",
+          "resources[6].icon": "💼",
+          "resources[6].category": "Študije",
+          "resources[7].title": "Rezervni deli",
+          "resources[7].description": "Seznam rezervnih delov in naročilne kode",
+          "resources[7].fileType": "PDF",
+          "resources[7].fileSize": "0.8 MB",
+          "resources[7].icon": "⚙️",
+          "resources[7].category": "Dokumentacija",
+          "quickAccessItems[0].name": "Osnovni katalog",
+          "quickAccessItems[0].fileInfo": "PDF, 8.1 MB",
+          "quickAccessItems[1].name": "Tehnična dokumentacija",
+          "quickAccessItems[1].fileInfo": "PDF, 2.4 MB",
+          "quickAccessItems[2].name": "SIL 3 certifikat",
+          "quickAccessItems[2].fileInfo": "PDF, 0.5 MB",
+          "contactSection.title": "Potrebujete več?",
+          "contactSection.description": "Če potrebujete specifične dokumente, CAD modele ali tehnično podporo, nas kontaktirajte.",
+          "contactSection.phone": "+386 (3) 426 36 46",
+          "contactSection.email": "info@sinteh.pro",
+          "newsletterSection.title": "Ostanite obveščeni o novih dokumentih",
+          "newsletterSection.description": "Prijavite se na naše obvestilo in prejmite najnovejše tehnične dokumente, aplikacijske študije in posodobitve produktov.",
+          "newsletterSection.privacyText": "Spoštujemo vašo zasebnost. Odjava možna kadarkoli."
+        }
+      },
+      {
+        "blockType": "productCTA",
+        "id": "68cd0e17524c8f2770bca236",
+        "translatable": {
+          "title": "Izberite amGardpro – ko je varnost resnično na prvem mestu",
+          "description": "AmGard nudi široko paleto mehanskih, elektromehanskih in elektronskih komponen v industrijskem kovinskem ohišju ter možnostjo modularne zasnove.",
+          "formTitle": "Povpraševanje za sistem",
+          "privacyText": "Soglašam z politiko zasebnosti in obdelavo osebnih podatkov za namen odgovora na povpraševanje.",
+          "stats[0].value": "SIL 3",
+          "stats[0].label": "Najvišja varnost",
+          "stats[1].value": "20+",
+          "stats[1].label": "Let izkušenj",
+          "stats[2].value": "500+",
+          "stats[2].label": "Uspešnih projektov",
+          "whyUsPoints[0].text": "30+ let izkušenj v industrijski avtomatizaciji",
+          "whyUsPoints[1].text": "Certificiran partner za varnostne sisteme",
+          "whyUsPoints[2].text": "Celotna podpora od načrtovanja do servisa",
+          "whyUsPoints[3].text": "Lokalna podpora v slovenskem jeziku",
+          "applicationOptions[0].value": "procesna",
+          "applicationOptions[0].label": "Procesna industrija",
+          "applicationOptions[1].value": "energetika",
+          "applicationOptions[1].label": "Energetski sistemi",
+          "applicationOptions[2].value": "farmacija",
+          "applicationOptions[2].label": "Farmacija / Prehrambna",
+          "applicationOptions[3].value": "proizvodnja",
+          "applicationOptions[3].label": "Proizvodnja",
+          "applicationOptions[4].value": "atex",
+          "applicationOptions[4].label": "ATEX področja",
+          "applicationOptions[5].value": "drugo",
+          "applicationOptions[5].label": "Drugo",
+          "contactInfo.phone": "+386 (3) 426 36 46",
+          "contactInfo.email": "info@sinteh.si",
+          "contactInfo.responseTime": "24 ur (delovni dnevi)"
+        }
+      }
+    ],
+    "existingTranslations": {
+      "en": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress amGardpro\""
+      },
+      "de": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress amGardpro\""
+      },
+      "hr": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress amGardpro\""
+      }
+    },
+    "needsTranslation": [],
+    "originalData": {
+      "id": 6,
+      "title": "Fortress amGardpro",
+      "slug": "fortress-amgardpro",
+      "layout": [
+        {
+          "id": "68cd0a98524c8f2770bca222",
+          "badge": "Modularni varnostni zaklepi",
+          "title": "Fortress amGardpro",
+          "subtitle": "Modularni varnostni zaklepi za najzahtevnejše industrijske pogoje",
+          "description": "Zmogljiva linija varnostnih zaklepnih sistemov, zasnovana za uporabo v težkih industrijskih okoljih. Sistem je certificiran za najvišje varnostne standarde PLe / Category 4 in SIL 3, ter omogoča integracijo ključev, zaklepanja vrat, izhodov v sili, gumbov, signalnih lučk in nadzora dostopa preko RFID tehnologije.",
+          "backgroundImage": null,
+          "blockName": null,
+          "keyBenefits": [
+            {
+              "id": "68cd0a98f90a305c94a5d42e",
+              "title": "Enostavnost in učinkovitost",
+              "description": "Neposredna komunikacija S PLC-ji preko PROFINET ali EtherNet/IP"
+            },
+            {
+              "id": "68cd0a98f90a305c94a5d42f",
+              "title": "Široka paleta komponent",
+              "description": "Mehanske, elektromehanske in elektronske"
+            },
+            {
+              "id": "68cd0a98f90a305c94a5d430",
+              "title": "Modularna zasnova",
+              "description": "Konfiguracija sistema glede na stroj/proces"
+            },
+            {
+              "id": "68cd0a98f90a305c94a5d431",
+              "title": "Standard PLe/Category 4 in SIL 3",
+              "description": "Najvišji varnostni standardi"
+            },
+            {
+              "id": "68cd0ac5524c8f2770bca224",
+              "title": "RFID tehnologija",
+              "description": "Integracija ključev in zaklepanja"
+            },
+            {
+              "id": "68cd0acd524c8f2770bca226",
+              "title": "ProNet modul",
+              "description": "Povezljivost preko EtherNet/IP, PROFINET in EtherCAT"
+            }
+          ],
+          "ctaButtons": [
+            {
+              "id": "68cd0a98f90a305c94a5d432",
+              "label": "Zahtevaj ponudbo",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "kontakt",
+              "variant": "default"
+            },
+            {
+              "id": "68cd0a98f90a305c94a5d433",
+              "label": "Prenesi katalog",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "resources",
+              "variant": "outline"
+            }
+          ],
+          "blockType": "productHero"
+        },
+        {
+          "id": "68cd0ae3524c8f2770bca228",
+          "badge": "",
+          "title": "Zakaj izbrati amGardpro?",
+          "subtitle": "Primerjava mehanskih amGardpro sistemov z elektronskimi varnostnimi rešitvami.",
+          "blockName": null,
+          "features": [
+            {
+              "id": "68cd0ae4f90a305c94a5d434",
+              "icon": "mechanical",
+              "title": "Robustna zasnova",
+              "description": "Združene mehanske inelektronske varnostne funkcije v eni napravi."
+            },
+            {
+              "id": "68cd0ae4f90a305c94a5d435",
+              "icon": "shield",
+              "title": "Najvišji certifikati",
+              "description": "SIL 3, Category 4, PLe s TÜV potrditvijo. Najvišji varnostni standardi."
+            },
+            {
+              "id": "68cd0ae4f90a305c94a5d436",
+              "icon": "key",
+              "title": "proNet modul",
+              "description": "Omogoča povezljivost preko EtherNet/IP, PROFINET in EtherCAT, kar močno poenostavi ožičenje, izboljša diagnostiko ter fleksibilnost."
+            },
+            {
+              "id": "68cd0ae4f90a305c94a5d437",
+              "icon": "modular",
+              "title": "Fleksibilnost za inženiring",
+              "description": "Zaradi modularne zasnove lahko amGard konfigurirate glede na zahteve stroja ali procesa."
+            }
+          ],
+          "blockType": "keyFeatures",
+          "bottomHighlight": {
+            "title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+            "description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+          }
+        },
+        {
+          "id": "68cd0b7e524c8f2770bca22a",
+          "badge": null,
+          "title": "Kako deluje amGardpro sistem?",
+          "description": "amGardpro je zmogljiva linija varnostnih zaklepnih sistemov, zasnovana za uporabo v težkih\nindustrijskih okoljih. Ponuja popolnoma prilagodljivo rešitev, ki združuje mehanske in\nelektronske varnostne funkcije v eni robustni napravi. Integracija z ProNet modulom omogoča komunikacijo preko PROFINET, EtherNet/IP ali EtherCAT, kar zagotavlja hitro diagnostiko, zmanjšano ožičenje in fleksibilno razširljivost.",
+          "technicalImage": null,
+          "blockName": null,
+          "processSteps": [
+            {
+              "id": "68cd0b7ef90a305c94a5d43a",
+              "title": "Robustnost",
+              "description": "Mehanske in elektronske varnostne funkcije"
+            },
+            {
+              "id": "68cd0b7ef90a305c94a5d43b",
+              "title": "Nadzor dostopa z RFID tehnologijo",
+              "description": "Integracija ključev, zaklepanja vrat, izhodov v sili, gumbov itd."
+            },
+            {
+              "id": "68cd0b7ef90a305c94a5d43c",
+              "title": "Dodaten proNet modul",
+              "description": "Povezljivost prek EtherNet/IP, PROFINET in EtherCAT poenostavi ožičenje, omogoča diagnostiko in modularno razširljivost"
+            }
+          ],
+          "technicalBenefits": [],
+          "blockType": "technicalOverview"
+        },
+        {
+          "id": "68cd0bb3524c8f2770bca22c",
+          "badge": null,
+          "title": "Specifikacije in certifikati",
+          "subtitle": "Podrobne tehnične informacije in certificiranje za najvišjo stopnjo varnosti v industriji.",
+          "blockName": null,
+          "specifications": [
+            {
+              "id": "68cd0bb3f90a305c94a5d443",
+              "category": "Varnostni certifikati",
+              "items": [
+                {
+                  "id": "68cd0bb3f90a305c94a5d43f",
+                  "label": "Varnostna raven",
+                  "value": "SIL 3"
+                },
+                {
+                  "id": "68cd0bb3f90a305c94a5d440",
+                  "label": "Kategorija",
+                  "value": "Category 4"
+                },
+                {
+                  "id": "68cd0bb3f90a305c94a5d441",
+                  "label": "Performance Level",
+                  "value": "PLe"
+                },
+                {
+                  "id": "68cd0bb3f90a305c94a5d442",
+                  "label": "Certificiranje",
+                  "value": "TÜV potrjeno"
+                }
+              ]
+            },
+            {
+              "id": "68cd0bb3f90a305c94a5d448",
+              "category": "Materiali in konstrukcija",
+              "items": [
+                {
+                  "id": "68cd0bb3f90a305c94a5d444",
+                  "label": "Ohišje",
+                  "value": "Industrijsko kovinsko ohišje"
+                },
+                {
+                  "id": "68cd0bb3f90a305c94a5d445",
+                  "label": "Dostop",
+                  "value": "RFID tehnologija"
+                },
+                {
+                  "id": "68cd0bb3f90a305c94a5d446",
+                  "label": "Zaščitni razred",
+                  "value": "IP66/IP67"
+                }
+              ]
+            }
+          ],
+          "certificationBadges": [
+            {
+              "id": "68cd0bb3f90a305c94a5d453",
+              "name": "SIL 3",
+              "description": "Safety Integrity Level"
+            },
+            {
+              "id": "68cd0bb3f90a305c94a5d454",
+              "name": "TÜV",
+              "description": "Certificirano"
+            },
+            {
+              "id": "68cd0bb3f90a305c94a5d455",
+              "name": "PLe",
+              "description": "Performance Level"
+            }
+          ],
+          "blockType": "specifications",
+          "additionalInfo": {
+            "title": "",
+            "description": "",
+            "details": []
+          }
+        },
+        {
+          "id": "68cd0ca7524c8f2770bca22e",
+          "badge": null,
+          "title": "Kje uporabljamo amGardpro?",
+          "subtitle": "amGardpro sistemi se uporabljajo v težkih industrijskih okoljih, kjer se zahtevajo najviši varnostni standardi",
+          "blockName": null,
+          "applications": [
+            {
+              "id": "68cd0ca8f90a305c94a5d45d",
+              "icon": "manufacturing",
+              "title": "Avtomobilska proizvodnja",
+              "description": "Uporaba zaklepnih interlock sistemov",
+              "details": [
+                {
+                  "id": "68cd0ca8f90a305c94a5d459",
+                  "detail": "Zaščita pred nevarnimi premiki"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d45a",
+                  "detail": "Modularni varnostni zaklepi"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d45b",
+                  "detail": "Robustno kovinsko ohišje"
+                }
+              ]
+            },
+            {
+              "id": "68cd0ca8f90a305c94a5d462",
+              "icon": "pharm",
+              "title": "Živilsko-pijačna industrija",
+              "description": "Varnost in skladnost s higienskimi standardi",
+              "details": [
+                {
+                  "id": "68cd0ca8f90a305c94a5d45e",
+                  "detail": "Higienski varnostni standardi"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d45f",
+                  "detail": "Nujni izklopi in interlocki"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d460",
+                  "detail": "Preprečevanje kontaminacije"
+                }
+              ]
+            },
+            {
+              "id": "68cd0ca8f90a305c94a5d467",
+              "icon": "manufacturing",
+              "title": "ASRS in pametna logistika",
+              "description": "Varnost in učinkovitost v avtomatiziranih skladiščih",
+              "details": [
+                {
+                  "id": "68cd0ca8f90a305c94a5d463",
+                  "detail": "Varnost v skladiščih"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d464",
+                  "detail": "Povezani interlock sistemi"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d465",
+                  "detail": "Optimizacija prostora"
+                }
+              ]
+            },
+            {
+              "id": "68cd0ca8f90a305c94a5d46c",
+              "icon": "atex",
+              "title": "Elektronska in baterijska proizvodnja",
+              "description": "Varnost v nevarnih proizvodnih okoljih",
+              "details": [
+                {
+                  "id": "68cd0ca8f90a305c94a5d468",
+                  "detail": "Eksplozijsko varna izvedba"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d469",
+                  "detail": "Zaščita pred visoko napetostjo"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d46a",
+                  "detail": "Nerjaveča konstrukcija"
+                }
+              ]
+            },
+            {
+              "id": "68cd0ca8f90a305c94a5d471",
+              "icon": "manufacturing",
+              "title": "Težka industrija",
+              "description": "Robusten nadzor in zaščita v zahtevnih pogojih",
+              "details": [
+                {
+                  "id": "68cd0ca8f90a305c94a5d46d",
+                  "detail": "Preprečevanje poškodb"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d46e",
+                  "detail": "Zanesljivo delovanje strojev"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d46f",
+                  "detail": "Robusten nadzor"
+                }
+              ]
+            },
+            {
+              "id": "68cd0ca8f90a305c94a5d476",
+              "icon": "manufacturing",
+              "title": "Transportne linije z roboti",
+              "description": "Zaščita v robotiziranih transportnih sistemih",
+              "details": [
+                {
+                  "id": "68cd0ca8f90a305c94a5d472",
+                  "detail": "Zaščita robotskih celic"
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d473",
+                  "detail": "Avtomatski transport "
+                },
+                {
+                  "id": "68cd0ca8f90a305c94a5d474",
+                  "detail": "Povečana produktivnost"
+                }
+              ]
+            }
+          ],
+          "stats": [],
+          "blockType": "applications",
+          "caseStudy": {
+            "title": "Primer uporabe: Kemijska industrija",
+            "description": "V kemijski tovarni je mGard sistem omogočil varno vzdrževanje reaktorjev z mehanskim zaklepanjem vseh virov energije. Sistem zagotavlja, da se reaktor lahko odpre šele po popolni izolaciji vseh kemijskih dovoda.",
+            "stats": [
+              {
+                "id": "68cd0ca8f90a305c94a5d477",
+                "label": "Zmanjšanje nesreč",
+                "value": "100%"
+              },
+              {
+                "id": "68cd0ca8f90a305c94a5d478",
+                "label": "Čas za vzdrževanje",
+                "value": "-40%"
+              }
+            ],
+            "image": null
+          }
+        },
+        {
+          "id": "68cd0d6b524c8f2770bca230",
+          "badge": null,
+          "title": "Zakaj izbrati amGardpro?",
+          "subtitle": "Primerjava mehanskih mGard sistemov z elektronskimi varnostnimi rešitvami.",
+          "blockName": null,
+          "benefits": [
+            {
+              "id": "68cd0d6cf90a305c94a5d479",
+              "advantage": "Integracija z omrežjem",
+              "description": "Enostavna razširljivost",
+              "mGard": "✓ PROFINET, EtherNet/IP, EtherCAT (ProNet)",
+              "electronic": "✗ Pogosto omejena na en protokol"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d47a",
+              "advantage": "Najvišji certifikati",
+              "description": "SIL 3, Category 4, PLe – s TÜV potrditvijo",
+              "mGard": "✓ SIL 3 / PLe certificirano",
+              "electronic": "△ Do SIL 2 (tipično)"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d47b",
+              "advantage": "Modularna sestavljivost",
+              "description": "Enostavna integracija v obstoječe procese brez ožičenja",
+              "mGard": "✓ Mehanske + elektronske + RFID moduli",
+              "electronic": "✗ Omejene možnosti razširitve"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d47c",
+              "advantage": "Diagnostika in konfiguracija",
+              "description": "Sistem primeren za različne vrste aplikacij",
+              "mGard": "✓Hitro, preko varnostnih protokolov PROFIsafe / CIP Safety20+ let življenjska doba",
+              "electronic": "△ Zahteva dodatno programsko opremo"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d47d",
+              "advantage": "Industrijska robustnost",
+              "description": "Rešitve, preizkušene v najzahtevnejših industrijskih okoljih",
+              "mGard": "✓ Kovinsko ohišje IP65+, ATEX opcije",
+              "electronic": "△ Pogosto plastična ohišja, manj zaščite"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d47e",
+              "advantage": "Prilagodljivost aplikacij",
+              "description": "Primerno za eksplozijsko nevarna območja",
+              "mGard": "✓ Sekvenčni dostopi, LoTo, zakasnitve, prisilni izklop",
+              "electronic": "△ Omejena fleksibilnost"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d47f",
+              "advantage": "Vzdrževanje",
+              "description": "Minimalne potrebe po vzdrževanju in servisiranju",
+              "mGard": "✓ Letni pregled zadostuje",
+              "electronic": "✗ Redni servis potreben"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d480",
+              "advantage": "Stroški lastništva",
+              "description": "Dolgoročni stroški skozi življenjsko dobo sistema",
+              "mGard": "✓ Nizki TCO",
+              "electronic": "✗ Visoki TCO"
+            }
+          ],
+          "summaryCards": [
+            {
+              "id": "68cd0d6cf90a305c94a5d481",
+              "icon": "shield",
+              "title": "Maksimalna varnost",
+              "description": "SIL 3 certificirana mehanska varnost brez elektronskih komponent"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d482",
+              "icon": "clock",
+              "title": "Dolgotrajna rešitev",
+              "description": "20+ let življenjska doba z minimalnim vzdrževanjem"
+            },
+            {
+              "id": "68cd0d6cf90a305c94a5d483",
+              "icon": "users",
+              "title": "Zaupanja vredno",
+              "description": "500+ uspešnih implementacij v kritičnih aplikacijah"
+            }
+          ],
+          "blockType": "benefitsComparison",
+          "bottomCTA": {
+            "title": "Iščete zanesljivo varnostno rešitev?",
+            "description": "mGard mehanski sistemi z ujetim ključem so preverjeni, robustni in logično zaporedni – brez možnosti napake. Idealna izbira za industrije, kjer elektronske rešitve niso dovolj zanesljive.",
+            "primaryButtonText": "Kontaktirajte nas",
+            "secondaryButtonText": "Prenesi dokumentacijo"
+          }
+        },
+        {
+          "id": "68cd0dfe524c8f2770bca232",
+          "badge": null,
+          "title": "amGardpro sistem v detajlih",
+          "subtitle": null,
+          "blockName": null,
+          "images": [
+            {
+              "id": "68cd0dfef90a305c94a5d484",
+              "title": "mGard Osnovni modul",
+              "description": "Jedro sistema z trapped key mehanizmom",
+              "category": "Osnovni moduli",
+              "image": null
+            },
+            {
+              "id": "68cd0dfef90a305c94a5d485",
+              "title": "Ključavnica za ventile",
+              "description": "Specialna ključavnica za ball valve aplikacije",
+              "category": "Ključavnice",
+              "image": null
+            },
+            {
+              "id": "68cd0dfef90a305c94a5d486",
+              "title": "Električna ključavnica",
+              "description": "mGard ključavnica za električne prekinjalnike",
+              "category": "Ključavnice",
+              "image": null
+            },
+            {
+              "id": "68cd0dfef90a305c94a5d487",
+              "title": "Pneumatska ključavnica",
+              "description": "Za pnevmatske ventile in aktuatorje",
+              "category": "Ključavnice",
+              "image": null
+            },
+            {
+              "id": "68cd0dfef90a305c94a5d488",
+              "title": "Instalacija v procesu",
+              "description": "Primer implementacije v kemijski industriji",
+              "category": "Implementacije",
+              "image": null
+            },
+            {
+              "id": "68cd0dfef90a305c94a5d489",
+              "title": "ATEX certifkiran modul",
+              "description": "Za eksplozijsko nevarna območja",
+              "category": "Specialni moduli",
+              "image": null
+            },
+            {
+              "id": "68cd0dfef90a305c94a5d48a",
+              "title": "Kompletsna mGard postaja",
+              "description": "Večstopenjski varnostni sistem",
+              "category": "Implementacije",
+              "image": null
+            },
+            {
+              "id": "68cd0dfef90a305c94a5d48b",
+              "title": "Ključi in akcesoriji",
+              "description": "Različni tipi ključev in priključkov",
+              "category": "Akcesoriji",
+              "image": null
+            }
+          ],
+          "blockType": "productGallery",
+          "downloadSection": {
+            "title": "Potrebujete visoko-ločljivostne slike?",
+            "description": "Prenesite celotno galerijo produktnih slik v tiskarsko kakovosti za vašo dokumentacijo.",
+            "downloadButtonText": "Prenesi galerijo",
+            "requestButtonText": "Zahtevaj specifične slike"
+          }
+        },
+        {
+          "id": "68cd0e10524c8f2770bca234",
+          "badge": null,
+          "title": "Dokumentacija in podporni materiali",
+          "subtitle": null,
+          "blockName": null,
+          "resources": [
+            {
+              "id": "68cd0e11f90a305c94a5d48c",
+              "title": "Tehnična dokumentacija",
+              "description": "Podrobne specifikacije, dimenzije in navodila za vgradnjo",
+              "fileType": "PDF",
+              "fileSize": "2.4 MB",
+              "icon": "📋",
+              "category": "Dokumentacija",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d48d",
+              "title": "Katalog produktov",
+              "description": "Celovit pregled vseh mGard komponent in konfiguracij",
+              "fileType": "PDF",
+              "fileSize": "8.1 MB",
+              "icon": "📖",
+              "category": "Katalogi",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d48e",
+              "title": "Navodila za namestitev",
+              "description": "Korak-za-korakom vodič za pravilno namestitev",
+              "fileType": "PDF",
+              "fileSize": "1.8 MB",
+              "icon": "🔧",
+              "category": "Dokumentacija",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d48f",
+              "title": "Video predstavitev",
+              "description": "Kako deluje mGard trapped key sistem",
+              "fileType": "VIDEO",
+              "fileSize": "HD kvaliteta",
+              "icon": "🎥",
+              "category": "Video",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d490",
+              "title": "Certifikati",
+              "description": "SIL 3, TÜV in ATEX certifikati",
+              "fileType": "PDF",
+              "fileSize": "1.2 MB",
+              "icon": "🏆",
+              "category": "Certifikati",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d491",
+              "title": "CAD modeli",
+              "description": "3D modeli za načrtovanje (.dwg, .step)",
+              "fileType": "ZIP",
+              "fileSize": "5.6 MB",
+              "icon": "📐",
+              "category": "CAD",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d492",
+              "title": "Aplikacijske študije",
+              "description": "Primeri uporabe v različnih industrijah",
+              "fileType": "PDF",
+              "fileSize": "3.2 MB",
+              "icon": "💼",
+              "category": "Študije",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d493",
+              "title": "Rezervni deli",
+              "description": "Seznam rezervnih delov in naročilne kode",
+              "fileType": "PDF",
+              "fileSize": "0.8 MB",
+              "icon": "⚙️",
+              "category": "Dokumentacija",
+              "downloadUrl": null
+            }
+          ],
+          "quickAccessItems": [
+            {
+              "id": "68cd0e11f90a305c94a5d494",
+              "name": "Osnovni katalog",
+              "fileInfo": "PDF, 8.1 MB",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d495",
+              "name": "Tehnična dokumentacija",
+              "fileInfo": "PDF, 2.4 MB",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0e11f90a305c94a5d496",
+              "name": "SIL 3 certifikat",
+              "fileInfo": "PDF, 0.5 MB",
+              "downloadUrl": null
+            }
+          ],
+          "blockType": "productResources",
+          "contactSection": {
+            "title": "Potrebujete več?",
+            "description": "Če potrebujete specifične dokumente, CAD modele ali tehnično podporo, nas kontaktirajte.",
+            "phone": "+386 (3) 426 36 46",
+            "email": "info@sinteh.pro"
+          },
+          "newsletterSection": {
+            "title": "Ostanite obveščeni o novih dokumentih",
+            "description": "Prijavite se na naše obvestilo in prejmite najnovejše tehnične dokumente, aplikacijske študije in posodobitve produktov.",
+            "privacyText": "Spoštujemo vašo zasebnost. Odjava možna kadarkoli."
+          }
+        },
+        {
+          "id": "68cd0e17524c8f2770bca236",
+          "title": "Izberite amGardpro – ko je varnost resnično na prvem mestu",
+          "description": "AmGard nudi široko paleto mehanskih, elektromehanskih in elektronskih komponen v industrijskem kovinskem ohišju ter možnostjo modularne zasnove.",
+          "heroImage": null,
+          "formTitle": "Povpraševanje za sistem",
+          "privacyText": "Soglašam z politiko zasebnosti in obdelavo osebnih podatkov za namen odgovora na povpraševanje.",
+          "blockName": null,
+          "stats": [
+            {
+              "id": "68cd0e17f90a305c94a5d497",
+              "value": "SIL 3",
+              "label": "Najvišja varnost"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d498",
+              "value": "20+",
+              "label": "Let izkušenj"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d499",
+              "value": "500+",
+              "label": "Uspešnih projektov"
+            }
+          ],
+          "whyUsPoints": [
+            {
+              "id": "68cd0e17f90a305c94a5d49a",
+              "text": "30+ let izkušenj v industrijski avtomatizaciji"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d49b",
+              "text": "Certificiran partner za varnostne sisteme"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d49c",
+              "text": "Celotna podpora od načrtovanja do servisa"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d49d",
+              "text": "Lokalna podpora v slovenskem jeziku"
+            }
+          ],
+          "applicationOptions": [
+            {
+              "id": "68cd0e17f90a305c94a5d49e",
+              "value": "procesna",
+              "label": "Procesna industrija"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d49f",
+              "value": "energetika",
+              "label": "Energetski sistemi"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d4a0",
+              "value": "farmacija",
+              "label": "Farmacija / Prehrambna"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d4a1",
+              "value": "proizvodnja",
+              "label": "Proizvodnja"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d4a2",
+              "value": "atex",
+              "label": "ATEX področja"
+            },
+            {
+              "id": "68cd0e17f90a305c94a5d4a3",
+              "value": "drugo",
+              "label": "Drugo"
+            }
+          ],
+          "blockType": "productCTA",
+          "contactInfo": {
+            "phone": "+386 (3) 426 36 46",
+            "email": "info@sinteh.si",
+            "responseTime": "24 ur (delovni dnevi)"
+          }
+        }
+      ],
+      "meta": {
+        "title": null,
+        "description": null
+      },
+      "publishedAt": "2025-09-07T10:59:40.462Z",
+      "status": "draft",
+      "updatedAt": "2025-09-19T11:21:04.260Z",
+      "createdAt": "2025-09-07T11:00:19.989Z",
+      "_status": "published"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "avtomatizacija",
+    "title": "Avtomatizacija",
+    "meta": {
+      "title": null,
+      "description": null
+    },
+    "blocks": [
+      {
+        "blockType": "productHero",
+        "id": "68cd0e8f524c8f2770bca23a",
+        "translatable": {
+          "badge": "Industrijska avtomatizacija",
+          "title": "Avtomatizacija strojev in procesov",
+          "subtitle": "Od ideje do stabilnega delovanja",
+          "description": "30+ let izkušenj v projektiranju, programiranju in zagonu industrijskih sistemov. Specializirani smo za ABB, Schneider Electric, Siemens in druge vodilne tehnologije z dokazano uspešnostjo v različnih panogah.",
+          "keyBenefits[0].title": " Hitri zagoni",
+          "keyBenefits[0].description": "Minimalni izpadi proizvodnje",
+          "keyBenefits[1].title": "Celotna podpora",
+          "keyBenefits[1].description": "Od načrta do vzdrževanja",
+          "keyBenefits[2].title": "Preverjene tehnologije",
+          "keyBenefits[2].description": "ABB, Schneider, Siemens",
+          "keyBenefits[3].title": "24/7 podpora",
+          "keyBenefits[3].description": "Nujna pomoč in servis",
+          "ctaButtons[0].label": "Zahtevaj ponudbo",
+          "ctaButtons[0].type": "anchor",
+          "ctaButtons[0].anchor": "kontakt",
+          "ctaButtons[0].variant": "default",
+          "ctaButtons[1].label": "Pokličite nas",
+          "ctaButtons[1].type": "url",
+          "ctaButtons[1].url": "tel:0038634263646",
+          "ctaButtons[1].anchor": "resources",
+          "ctaButtons[1].variant": "outline"
+        }
+      },
+      {
+        "blockType": "keyFeatures",
+        "id": "68cd0edd524c8f2770bca23c",
+        "translatable": {
+          "badge": "Naše storitve",
+          "title": "Celotna podpora za vašo avtomatizacijo",
+          "subtitle": "Od ideje do stabilnega delovanja – pokrivamo vse faze projekta z eno ekipo, enim kontaktom in popolno odgovornostjo za rezultat.",
+          "features[0].icon": "shield",
+          "features[0].title": "Projektiranje v ePlanu",
+          "features[0].description": "Za idejne in izvedbene projekte pripravimo električne sheme in načrte, izdelamo dokumentacijo po standardih, modeliramo 3D elektro omare ter definiramo specifikacije komponent.",
+          "features[1].icon": "modular",
+          "features[1].title": "Elektro-krmilne omare",
+          "features[1].description": "Elektro-krmilne omare izdelamo in montiramo z opremo ABB, Schneider Electric in Siemens; uporabljamo Weidmüller priključno tehniko, poskrbimo za CE certificiranje ter izvedemo testiranja in celotno dokumentacijo.",
+          "features[2].icon": "retrofit",
+          "features[2].title": "Programiranje PLC-jev",
+          "features[2].description": "Programiramo krmilnike vseh vodilnih proizvajalcev: Siemens (TIA Portal, Step7), Schneider (Unity Pro, EcoStruxure), Beckhoff (TwinCAT) in Allen-Bradley (Studio 5000).",
+          "features[3].icon": "modular",
+          "features[3].title": "HMI vmesniki",
+          "features[3].description": "Načrtujemo uporabniške vmesnike v Siemens WinCC in na OP panelih ter razvijamo rešitve v Schneider Vijeo Designer, Beckhoff HMI in Weintek EasyBuilder.",
+          "features[4].icon": "modular",
+          "features[4].title": "Frekvenčni pretvorniki",
+          "features[4].description": "Parametriramo in nastavljamo frekvenčne pretvornike ABB ACS, Schneider Altivar, Allen-Bradley PowerFlex in Danfoss VLT.",
+          "features[5].icon": "key",
+          "features[5].title": "SCADA sistemi",
+          "features[5].description": "Vzpostavimo in vzdržujemo SCADA rešitve na platformah Siemens WinCC, Schneider Vijeo Citect, Copadata Zenon in GE iFIX.",
+          "bottomHighlight.title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+          "bottomHighlight.description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+        }
+      },
+      {
+        "blockType": "productCTA",
+        "id": "68cd0f28524c8f2770bca23e",
+        "translatable": {
+          "title": "Pripravite svoj projekt za uspeh",
+          "description": "Zaupajte nam svojo avtomatizacijo. 30 let izkušenj, certificirane tehnologije in sistematičen pristop zagotavljajo uspešne projekte z minimalnimi tveganji.",
+          "formTitle": "Povpraševanje za sistem",
+          "privacyText": "Soglašam z politiko zasebnosti in obdelavo osebnih podatkov za namen odgovora na povpraševanje.",
+          "stats[0].value": "/",
+          "stats[0].label": "Brezplačno svetovanje - Analiza potreb in predlog rešitve",
+          "stats[1].value": "/",
+          "stats[1].label": "Hitri odziv - Odgovorimo v 24 urah",
+          "stats[2].value": "/",
+          "stats[2].label": "Celotna podpora - Od ideje do vzdrževanja",
+          "whyUsPoints[0].text": "30+ let izkušenj v industrijski avtomatizaciji",
+          "whyUsPoints[1].text": "Certificiran partner za varnostne sisteme",
+          "whyUsPoints[2].text": "Celotna podpora od načrtovanja do servisa",
+          "whyUsPoints[3].text": "Lokalna podpora v slovenskem jeziku",
+          "applicationOptions[0].value": "procesna",
+          "applicationOptions[0].label": "Procesna industrija",
+          "applicationOptions[1].value": "energetika",
+          "applicationOptions[1].label": "Energetski sistemi",
+          "applicationOptions[2].value": "farmacija",
+          "applicationOptions[2].label": "Farmacija / Prehrambna",
+          "applicationOptions[3].value": "proizvodnja",
+          "applicationOptions[3].label": "Proizvodnja",
+          "applicationOptions[4].value": "atex",
+          "applicationOptions[4].label": "ATEX področja",
+          "applicationOptions[5].value": "drugo",
+          "applicationOptions[5].label": "Drugo",
+          "contactInfo.phone": "+386 (3) 426 36 46",
+          "contactInfo.email": "info@sinteh.si",
+          "contactInfo.responseTime": "24 ur (delovni dnevi)"
+        }
+      }
+    ],
+    "existingTranslations": {
+      "en": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "Automatisation"
+      },
+      "de": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Automatisierung\""
+      },
+      "hr": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Automatizacija\""
+      }
+    },
+    "needsTranslation": [],
+    "originalData": {
+      "id": 4,
+      "title": "Avtomatizacija",
+      "slug": "avtomatizacija",
+      "layout": [
+        {
+          "id": "68cd0e8f524c8f2770bca23a",
+          "badge": "Industrijska avtomatizacija",
+          "title": "Avtomatizacija strojev in procesov",
+          "subtitle": "Od ideje do stabilnega delovanja",
+          "description": "30+ let izkušenj v projektiranju, programiranju in zagonu industrijskih sistemov. Specializirani smo za ABB, Schneider Electric, Siemens in druge vodilne tehnologije z dokazano uspešnostjo v različnih panogah.",
+          "backgroundImage": null,
+          "blockName": null,
+          "keyBenefits": [
+            {
+              "id": "68cd0e8ff90a305c94a5d4a4",
+              "title": " Hitri zagoni",
+              "description": "Minimalni izpadi proizvodnje"
+            },
+            {
+              "id": "68cd0e8ff90a305c94a5d4a5",
+              "title": "Celotna podpora",
+              "description": "Od načrta do vzdrževanja"
+            },
+            {
+              "id": "68cd0e8ff90a305c94a5d4a6",
+              "title": "Preverjene tehnologije",
+              "description": "ABB, Schneider, Siemens"
+            },
+            {
+              "id": "68cd0e8ff90a305c94a5d4a7",
+              "title": "24/7 podpora",
+              "description": "Nujna pomoč in servis"
+            }
+          ],
+          "ctaButtons": [
+            {
+              "id": "68cd0e8ff90a305c94a5d4a8",
+              "label": "Zahtevaj ponudbo",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "kontakt",
+              "variant": "default"
+            },
+            {
+              "id": "68cd0e8ff90a305c94a5d4a9",
+              "label": "Pokličite nas",
+              "type": "url",
+              "page": null,
+              "post": null,
+              "url": "tel:0038634263646",
+              "anchor": "resources",
+              "variant": "outline"
+            }
+          ],
+          "blockType": "productHero"
+        },
+        {
+          "id": "68cd0edd524c8f2770bca23c",
+          "badge": "Naše storitve",
+          "title": "Celotna podpora za vašo avtomatizacijo",
+          "subtitle": "Od ideje do stabilnega delovanja – pokrivamo vse faze projekta z eno ekipo, enim kontaktom in popolno odgovornostjo za rezultat.",
+          "blockName": null,
+          "features": [
+            {
+              "id": "68cd0edef90a305c94a5d4aa",
+              "icon": "shield",
+              "title": "Projektiranje v ePlanu",
+              "description": "Za idejne in izvedbene projekte pripravimo električne sheme in načrte, izdelamo dokumentacijo po standardih, modeliramo 3D elektro omare ter definiramo specifikacije komponent."
+            },
+            {
+              "id": "68cd0edef90a305c94a5d4ab",
+              "icon": "modular",
+              "title": "Elektro-krmilne omare",
+              "description": "Elektro-krmilne omare izdelamo in montiramo z opremo ABB, Schneider Electric in Siemens; uporabljamo Weidmüller priključno tehniko, poskrbimo za CE certificiranje ter izvedemo testiranja in celotno dokumentacijo."
+            },
+            {
+              "id": "68cd0edef90a305c94a5d4ac",
+              "icon": "retrofit",
+              "title": "Programiranje PLC-jev",
+              "description": "Programiramo krmilnike vseh vodilnih proizvajalcev: Siemens (TIA Portal, Step7), Schneider (Unity Pro, EcoStruxure), Beckhoff (TwinCAT) in Allen-Bradley (Studio 5000)."
+            },
+            {
+              "id": "68cd0edef90a305c94a5d4ad",
+              "icon": "modular",
+              "title": "HMI vmesniki",
+              "description": "Načrtujemo uporabniške vmesnike v Siemens WinCC in na OP panelih ter razvijamo rešitve v Schneider Vijeo Designer, Beckhoff HMI in Weintek EasyBuilder."
+            },
+            {
+              "id": "68cd0edef90a305c94a5d4ae",
+              "icon": "modular",
+              "title": "Frekvenčni pretvorniki",
+              "description": "Parametriramo in nastavljamo frekvenčne pretvornike ABB ACS, Schneider Altivar, Allen-Bradley PowerFlex in Danfoss VLT."
+            },
+            {
+              "id": "68cd0edef90a305c94a5d4af",
+              "icon": "key",
+              "title": "SCADA sistemi",
+              "description": "Vzpostavimo in vzdržujemo SCADA rešitve na platformah Siemens WinCC, Schneider Vijeo Citect, Copadata Zenon in GE iFIX."
+            }
+          ],
+          "blockType": "keyFeatures",
+          "bottomHighlight": {
+            "title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+            "description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+          }
+        },
+        {
+          "id": "68cd0f28524c8f2770bca23e",
+          "title": "Pripravite svoj projekt za uspeh",
+          "description": "Zaupajte nam svojo avtomatizacijo. 30 let izkušenj, certificirane tehnologije in sistematičen pristop zagotavljajo uspešne projekte z minimalnimi tveganji.",
+          "heroImage": null,
+          "formTitle": "Povpraševanje za sistem",
+          "privacyText": "Soglašam z politiko zasebnosti in obdelavo osebnih podatkov za namen odgovora na povpraševanje.",
+          "blockName": null,
+          "stats": [
+            {
+              "id": "68cd0f28f90a305c94a5d4b0",
+              "value": "/",
+              "label": "Brezplačno svetovanje - Analiza potreb in predlog rešitve"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4b1",
+              "value": "/",
+              "label": "Hitri odziv - Odgovorimo v 24 urah"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4b2",
+              "value": "/",
+              "label": "Celotna podpora - Od ideje do vzdrževanja"
+            }
+          ],
+          "whyUsPoints": [
+            {
+              "id": "68cd0f28f90a305c94a5d4b3",
+              "text": "30+ let izkušenj v industrijski avtomatizaciji"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4b4",
+              "text": "Certificiran partner za varnostne sisteme"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4b5",
+              "text": "Celotna podpora od načrtovanja do servisa"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4b6",
+              "text": "Lokalna podpora v slovenskem jeziku"
+            }
+          ],
+          "applicationOptions": [
+            {
+              "id": "68cd0f28f90a305c94a5d4b7",
+              "value": "procesna",
+              "label": "Procesna industrija"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4b8",
+              "value": "energetika",
+              "label": "Energetski sistemi"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4b9",
+              "value": "farmacija",
+              "label": "Farmacija / Prehrambna"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4ba",
+              "value": "proizvodnja",
+              "label": "Proizvodnja"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4bb",
+              "value": "atex",
+              "label": "ATEX področja"
+            },
+            {
+              "id": "68cd0f28f90a305c94a5d4bc",
+              "value": "drugo",
+              "label": "Drugo"
+            }
+          ],
+          "blockType": "productCTA",
+          "contactInfo": {
+            "phone": "+386 (3) 426 36 46",
+            "email": "info@sinteh.si",
+            "responseTime": "24 ur (delovni dnevi)"
+          }
+        }
+      ],
+      "meta": {
+        "title": null,
+        "description": null
+      },
+      "publishedAt": "2025-09-07T10:00:22.710Z",
+      "status": "draft",
+      "updatedAt": "2025-09-19T11:21:12.596Z",
+      "createdAt": "2025-09-07T10:03:12.761Z",
+      "_status": "published"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "fotress-mgard",
+    "title": "Fortress mGard",
+    "meta": {
+      "title": null,
+      "description": null
+    },
+    "blocks": [
+      {
+        "blockType": "productHero",
+        "id": "68cd0f6f524c8f2770bca240",
+        "translatable": {
+          "badge": "Mehanska varnost",
+          "title": "Fortress mGard",
+          "subtitle": "Mehanska varnost brez kompromisov",
+          "description": "Popolnoma mehanska rešitev zaklepanja in medsebojnega zaklepanja komponent, ki ne zahteva električne povezave. Zasnovana za aplikacije, kjer je varnost potrebno zagotoviti fizično, neposredno in brez elektronskih tveganj.",
+          "keyBenefits[0].title": "100% Mehanska",
+          "keyBenefits[0].description": "Brez električne povezave",
+          "keyBenefits[1].title": "SIL 3 Certificiran",
+          "keyBenefits[1].description": "Najvišji varnostni standardi",
+          "keyBenefits[2].title": "Retrofit Prijazen",
+          "keyBenefits[2].description": "Enostavna integracija",
+          "keyBenefits[3].title": "Modularna Zasnova",
+          "keyBenefits[3].description": "Prilagoditve po meri",
+          "ctaButtons[0].label": "Zahtevaj ponudbo",
+          "ctaButtons[0].type": "anchor",
+          "ctaButtons[0].anchor": "kontakt",
+          "ctaButtons[0].variant": "default",
+          "ctaButtons[1].label": "Prenesi katalog",
+          "ctaButtons[1].type": "anchor",
+          "ctaButtons[1].anchor": "resources",
+          "ctaButtons[1].variant": "outline"
+        }
+      },
+      {
+        "blockType": "keyFeatures",
+        "id": "68cd0f75524c8f2770bca242",
+        "translatable": {
+          "title": "Zakaj izbrati mGard?",
+          "subtitle": "Primerjava mehanskih mGard sistemov z elektronskimi varnostnimi rešitvami.",
+          "features[0].icon": "mechanical",
+          "features[0].title": "100% Mehanska varnost",
+          "features[0].description": "Popolna varnost brez napajanja ali elektronskih komponent. Deluje na principu ujetih ključev za fizično prisiljeno zaporedje.",
+          "features[1].icon": "shield",
+          "features[1].title": "Najvišji certifikati",
+          "features[1].description": "SIL 3, Category 4, PLe s TÜV potrditvijo. Zagotovljena skladnost z najstrožjimi varnostnimi standardi.",
+          "features[2].icon": "retrofit",
+          "features[2].title": "Idealno za retrofit",
+          "features[2].description": "Enostavna integracija v obstoječe procese brez ožičenja. Minimalni posegi v trenutno infrastrukturo.",
+          "features[3].icon": "modular",
+          "features[3].title": "Modularno sestavljivo",
+          "features[3].description": "Prilagodite vsako aplikacijo s kombinacijo različnih ključavnic in aktuatorjev. Fleksibilne konfiguracije.",
+          "features[4].icon": "temperature",
+          "features[4].title": "Odporno na okolje",
+          "features[4].description": "Ohišja iz nerjavečega jekla ali ponikljane medenine. Visoka odpornost na mehanske vplive in korozijo.",
+          "features[5].icon": "key",
+          "features[5].title": "Trapped Key sistem",
+          "features[5].description": "Ključ ostane ujet v varnostni enoti, dokler je vir energije aktiven. Preprečuje prezgoden dostop do stroja.",
+          "bottomHighlight.title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+          "bottomHighlight.description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+        }
+      },
+      {
+        "blockType": "technicalOverview",
+        "id": "68cd0f7c524c8f2770bca244",
+        "translatable": {
+          "title": "Kako deluje mGard sistem?",
+          "description": "mGard deluje na principu ujetih ključev, kjer je možno izvesti naslednji korak šele, ko je prejšnji varen. Na primer: vrata se lahko odprejo šele, ko je stroj izklopljen, ključ pa sproščen.\n\nSistem omogoča medsebojno zaklepanje strojev, ventilov, vrat ali ventilacijskih loput. Ključ je mogoče odstraniti šele, ko je komponenta v varnem stanju (npr. ventil zaprt, napajanje izklopljeno).",
+          "processSteps[0].title": "Zaklepanje vira energije",
+          "processSteps[0].description": "Ključ se ujame v zaklepno enoto, dokler je napajanje aktivno",
+          "processSteps[1].title": "Fizično zaporedje",
+          "processSteps[1].description": "Ključ se sprosti šele po varnem izklopu vira energije",
+          "processSteps[2].title": "Dostop do stroja",
+          "processSteps[2].description": "Šele zdaj je možen varen dostop za vzdrževanje ali servis",
+          "technicalBenefits[0].title": "Fizična prisila",
+          "technicalBenefits[0].description": "Brez možnosti by-pass ali napačnega vrstnega reda operacij",
+          "technicalBenefits[1].title": "Logična sekvenca",
+          "technicalBenefits[1].description": "Zagotovljeno varno zaporedje delovanja brez napak"
+        }
+      },
+      {
+        "blockType": "specifications",
+        "id": "68cd0f81524c8f2770bca246",
+        "translatable": {
+          "title": "Specifikacije in certifikati",
+          "subtitle": "Podrobne tehnične informacije in certificiranje za najvišjo stopnjo varnosti v industriji.",
+          "specifications[0].category": "Varnostni certifikati",
+          "specifications[0].items[0].label": "Varnostna raven",
+          "specifications[0].items[0].value": "SIL 3",
+          "specifications[0].items[1].label": "Kategorija",
+          "specifications[0].items[1].value": "Category 4",
+          "specifications[0].items[2].label": "Performance Level",
+          "specifications[0].items[2].value": "PLe",
+          "specifications[0].items[3].label": "Certificiranje",
+          "specifications[0].items[3].value": "TÜV potrjeno",
+          "specifications[1].category": "Materiali in konstrukcija",
+          "specifications[1].items[0].label": "Ohišje",
+          "specifications[1].items[0].value": "Nerjaveče jeklo / Ponikljana medenina",
+          "specifications[1].items[1].label": "Ključi",
+          "specifications[1].items[1].value": "Nerjaveče jeklo",
+          "specifications[1].items[2].label": "Tesnila",
+          "specifications[1].items[2].value": "NBR/EPDM",
+          "specifications[1].items[3].label": "Zaščitni razred",
+          "specifications[1].items[3].value": "IP66/IP67",
+          "specifications[2].category": "Delovni pogoji",
+          "specifications[2].items[0].label": "Temperatura",
+          "specifications[2].items[0].value": "-40°C do +80°C",
+          "specifications[2].items[1].label": "Vlažnost",
+          "specifications[2].items[1].value": "Do 95% RH",
+          "specifications[2].items[2].label": "Vibracije",
+          "specifications[2].items[2].value": "IEC 60068-2-6",
+          "specifications[2].items[3].label": "Korozijska odpornost",
+          "specifications[2].items[3].value": "1000h salt spray test",
+          "specifications[3].category": "Standardi skladnosti",
+          "specifications[3].items[0].label": "Varnostni standardi",
+          "specifications[3].items[0].value": "EN ISO 13849-1",
+          "specifications[3].items[1].label": "ATEX direktiva",
+          "specifications[3].items[1].value": "2014/34/EU",
+          "specifications[3].items[2].label": "Machinery direktiva",
+          "specifications[3].items[2].value": "2006/42/EC",
+          "specifications[3].items[3].label": "EMC direktiva",
+          "specifications[3].items[3].value": "2014/30/EU",
+          "certificationBadges[0].name": "SIL 3",
+          "certificationBadges[0].description": "Safety Integrity Level",
+          "certificationBadges[1].name": "TÜV",
+          "certificationBadges[1].description": "Certificirano",
+          "certificationBadges[2].name": "PLe",
+          "certificationBadges[2].description": "Performance Level",
+          "certificationBadges[3].name": "ATEX",
+          "certificationBadges[3].description": "Ex zraky območja",
+          "additionalInfo.title": "Življenjska doba in vzdrževanje",
+          "additionalInfo.description": "mGard sistemi so zasnovani za dolgoletno delovanje v zahtevnih industrijskih okoljih. Mehansko delovanje zagotavlja minimalno potrebo po vzdrževanju.",
+          "additionalInfo.details[0].label": "Pričakovana življenjska doba",
+          "additionalInfo.details[0].value": "20+ let",
+          "additionalInfo.details[1].label": "Vzdrževalni interval",
+          "additionalInfo.details[1].value": "Letni pregled"
+        }
+      },
+      {
+        "blockType": "applications",
+        "id": "68cd0f8b524c8f2770bca248",
+        "translatable": {
+          "title": "Kje uporabljamo mGard?",
+          "subtitle": "mGard sistemi so uspešno implementirani v najzahtevnejših industrijskih okoljih, kjer je varnost ključnega pomena.",
+          "applications[0].icon": "oilgas",
+          "applications[0].title": "Procesna industrija",
+          "applications[0].description": "Nafta, plin, kemija",
+          "applications[0].details[0].detail": "Varno zapiranje ventilov na cevovodih",
+          "applications[0].details[1].detail": "Isolation procedures za vzdrževanje",
+          "applications[0].details[2].detail": "Lock-out/Tag-out sistemi",
+          "applications[0].details[3].detail": "Varnostno zapiranje kompressorjev",
+          "applications[1].icon": "energy",
+          "applications[1].title": "Energetski sistemi",
+          "applications[1].description": "Transformatorji, turbine, stikališča",
+          "applications[1].details[0].detail": "Electrical isolation procedures",
+          "applications[1].details[1].detail": "Turbinski varnostni sistemi",
+          "applications[1].details[2].detail": "Transformer maintenance safety",
+          "applications[1].details[3].detail": "Switchgear locking systems",
+          "applications[2].icon": "pharm",
+          "applications[2].title": "Farmacija in prehrambna industrija",
+          "applications[2].description": "ATEX področja",
+          "applications[2].details[0].detail": "Sterile area access control",
+          "applications[2].details[1].detail": "Clean room safety protocols",
+          "applications[2].details[2].detail": "Process vessel isolation",
+          "applications[2].details[3].detail": "Powder handling safety",
+          "applications[3].icon": "manufacturing",
+          "applications[3].title": "Proizvodnja",
+          "applications[3].description": "Tovarne brez električnega zaklepanja",
+          "applications[3].details[0].detail": "Machine guarding systems",
+          "applications[3].details[1].detail": "Pneumatic system isolation",
+          "applications[3].details[2].detail": "Press safety systems",
+          "applications[3].details[3].detail": "Conveyor belt safety",
+          "applications[4].icon": "atex",
+          "applications[4].title": "ATEX področja",
+          "applications[4].description": "Eksplozijska nevarna območja",
+          "applications[4].details[0].detail": "Zone 1 & Zone 2 applications",
+          "applications[4].details[1].detail": "Dust explosion prevention",
+          "applications[4].details[2].detail": "Gas isolation procedures",
+          "applications[4].details[3].detail": "Intrinsically safe systems",
+          "applications[5].icon": "water",
+          "applications[5].title": "Voda in kanalizacija",
+          "applications[5].description": "Komunalne storitve",
+          "applications[5].details[0].detail": "Pump station safety",
+          "applications[5].details[1].detail": "Valve isolation systems",
+          "applications[5].details[2].detail": "Treatment plant safety",
+          "applications[5].details[3].detail": "Distribution network safety",
+          "caseStudy.title": "Primer uporabe: Kemijska industrija",
+          "caseStudy.description": "V kemijski tovarni je mGard sistem omogočil varno vzdrževanje reaktorjev z mehanskim zaklepanjem vseh virov energije. Sistem zagotavlja, da se reaktor lahko odpre šele po popolni izolaciji vseh kemijskih dovoda.",
+          "caseStudy.stats[0].label": "Zmanjšanje nesreč",
+          "caseStudy.stats[0].value": "100%",
+          "caseStudy.stats[1].label": "Čas za vzdrževanje",
+          "caseStudy.stats[1].value": "-40%"
+        }
+      },
+      {
+        "blockType": "benefitsComparison",
+        "id": "68cd0f90524c8f2770bca24a",
+        "translatable": {
+          "title": "Zakaj izbrati mGard?",
+          "subtitle": "Primerjava mehanskih mGard sistemov z elektronskimi varnostnimi rešitvami.",
+          "benefits[0].advantage": "100% mehanska varnost",
+          "benefits[0].description": "Popolna varnost brez napajanja ali elektronskih komponent",
+          "benefits[0].mGard": "✓ Mehanski trapped key sistem",
+          "benefits[0].electronic": "✗ Odvisno od napajanja",
+          "benefits[1].advantage": "Najvišji certifikati",
+          "benefits[1].description": "SIL 3, Category 4, PLe – s TÜV potrditvijo",
+          "benefits[1].mGard": "✓ SIL 3 / PLe certificirano",
+          "benefits[1].electronic": "△ Do SIL 2 (tipično)",
+          "benefits[2].advantage": "Idealno za retrofit",
+          "benefits[2].description": "Enostavna integracija v obstoječe procese brez ožičenja",
+          "benefits[2].mGard": "✓ Brez električne povezave",
+          "benefits[2].electronic": "✗ Kompleksna integracija",
+          "benefits[3].advantage": "Dokazana zanesljivost",
+          "benefits[3].description": "Rešitve, preizkušene v najzahtevnejših industrijskih okoljih",
+          "benefits[3].mGard": "✓ 20+ let življenjska doba",
+          "benefits[3].electronic": "△ 5-10 let življenjska doba",
+          "benefits[4].advantage": "Modularno sestavljivo",
+          "benefits[4].description": "Prilagodite vsako aplikacijo s kombinacijo različnih ključavnic",
+          "benefits[4].mGard": "✓ Fleksibilne konfiguracije",
+          "benefits[4].electronic": "△ Omejene možnosti",
+          "benefits[5].advantage": "ATEX združljivost",
+          "benefits[5].description": "Primerno za eksplozijsko nevarna območja",
+          "benefits[5].mGard": "✓ Intrinsically safe",
+          "benefits[5].electronic": "△ Posebne Ex verzije potrebne",
+          "benefits[6].advantage": "Vzdrževanje",
+          "benefits[6].description": "Minimalne potrebe po vzdrževanju in servisiranju",
+          "benefits[6].mGard": "✓ Letni pregled zadostuje",
+          "benefits[6].electronic": "✗ Redni servis potreben",
+          "benefits[7].advantage": "Stroški lastništva",
+          "benefits[7].description": "Dolgoročni stroški skozi življenjsko dobo sistema",
+          "benefits[7].mGard": "✓ Nizki TCO",
+          "benefits[7].electronic": "✗ Visoki TCO",
+          "summaryCards[0].icon": "shield",
+          "summaryCards[0].title": "Maksimalna varnost",
+          "summaryCards[0].description": "SIL 3 certificirana mehanska varnost brez elektronskih komponent",
+          "summaryCards[1].icon": "clock",
+          "summaryCards[1].title": "Dolgotrajna rešitev",
+          "summaryCards[1].description": "20+ let življenjska doba z minimalnim vzdrževanjem",
+          "summaryCards[2].icon": "users",
+          "summaryCards[2].title": "Zaupanja vredno",
+          "summaryCards[2].description": "500+ uspešnih implementacij v kritičnih aplikacijah",
+          "bottomCTA.title": "Iščete zanesljivo varnostno rešitev?",
+          "bottomCTA.description": "mGard mehanski sistemi z ujetim ključem so preverjeni, robustni in logično zaporedni – brez možnosti napake. Idealna izbira za industrije, kjer elektronske rešitve niso dovolj zanesljive.",
+          "bottomCTA.primaryButtonText": "Kontaktirajte nas",
+          "bottomCTA.secondaryButtonText": "Prenesi dokumentacijo"
+        }
+      },
+      {
+        "blockType": "productGallery",
+        "id": "68cd0f96524c8f2770bca24c",
+        "translatable": {
+          "title": "mGard sistem v detajlih",
+          "subtitle": "Raziskajte različne komponente mGard sistema in njihove aplikacije v različnih industrijskih okoljih.",
+          "downloadSection.title": "Potrebujete visoko-ločljivostne slike?",
+          "downloadSection.description": "Prenesite celotno galerijo produktnih slik v tiskarsko kakovosti za vašo dokumentacijo.",
+          "downloadSection.downloadButtonText": "Prenesi galerijo",
+          "downloadSection.requestButtonText": "Zahtevaj specifične slike"
+        }
+      },
+      {
+        "blockType": "productResources",
+        "id": "68cd0fa7524c8f2770bca250",
+        "translatable": {
+          "title": "Dokumentacija in podporni materiali",
+          "subtitle": "Dostopite do tehničnih dokumentov, videojev, CAD modelov in drugih virov za uspešno implementacijo mGard sistemov.",
+          "resources[0].title": "Tehnična dokumentacija",
+          "resources[0].description": "Podrobne specifikacije, dimenzije in navodila za vgradnjo",
+          "resources[0].fileType": "PDF",
+          "resources[0].fileSize": "2.4 MB",
+          "resources[0].icon": "📋",
+          "resources[0].category": "Dokumentacija",
+          "resources[1].title": "Katalog produktov",
+          "resources[1].description": "Celovit pregled vseh mGard komponent in konfiguracij",
+          "resources[1].fileType": "PDF",
+          "resources[1].fileSize": "8.1 MB",
+          "resources[1].icon": "📖",
+          "resources[1].category": "Katalogi",
+          "resources[2].title": "Navodila za namestitev",
+          "resources[2].description": "Korak-za-korakom vodič za pravilno namestitev",
+          "resources[2].fileType": "PDF",
+          "resources[2].fileSize": "1.8 MB",
+          "resources[2].icon": "🔧",
+          "resources[2].category": "Dokumentacija",
+          "resources[3].title": "Video predstavitev",
+          "resources[3].description": "Kako deluje mGard trapped key sistem",
+          "resources[3].fileType": "VIDEO",
+          "resources[3].fileSize": "HD kvaliteta",
+          "resources[3].icon": "🎥",
+          "resources[3].category": "Video",
+          "resources[4].title": "Certifikati",
+          "resources[4].description": "SIL 3, TÜV in ATEX certifikati",
+          "resources[4].fileType": "PDF",
+          "resources[4].fileSize": "1.2 MB",
+          "resources[4].icon": "🏆",
+          "resources[4].category": "Certifikati",
+          "resources[5].title": "CAD modeli",
+          "resources[5].description": "3D modeli za načrtovanje (.dwg, .step)",
+          "resources[5].fileType": "ZIP",
+          "resources[5].fileSize": "5.6 MB",
+          "resources[5].icon": "📐",
+          "resources[5].category": "CAD",
+          "resources[6].title": "Aplikacijske študije",
+          "resources[6].description": "Primeri uporabe v različnih industrijah",
+          "resources[6].fileType": "PDF",
+          "resources[6].fileSize": "3.2 MB",
+          "resources[6].icon": "💼",
+          "resources[6].category": "Študije",
+          "resources[7].title": "Rezervni deli",
+          "resources[7].description": "Seznam rezervnih delov in naročilne kode",
+          "resources[7].fileType": "PDF",
+          "resources[7].fileSize": "0.8 MB",
+          "resources[7].icon": "⚙️",
+          "resources[7].category": "Dokumentacija",
+          "quickAccessItems[0].name": "Osnovni katalog",
+          "quickAccessItems[0].fileInfo": "PDF, 8.1 MB",
+          "quickAccessItems[1].name": "Tehnična dokumentacija",
+          "quickAccessItems[1].fileInfo": "PDF, 2.4 MB",
+          "quickAccessItems[2].name": "SIL 3 certifikat",
+          "quickAccessItems[2].fileInfo": "PDF, 0.5 MB",
+          "contactSection.title": "Potrebujete več?",
+          "contactSection.description": "Če potrebujete specifične dokumente, CAD modele ali tehnično podporo, nas kontaktirajte.",
+          "contactSection.phone": "+386 (3) 426 36 46",
+          "contactSection.email": "info@sinteh.pro",
+          "newsletterSection.title": "Ostanite obveščeni o novih dokumentih",
+          "newsletterSection.description": "Prijavite se na naše obvestilo in prejmite najnovejše tehnične dokumente, aplikacijske študije in posodobitve produktov.",
+          "newsletterSection.privacyText": "Spoštujemo vašo zasebnost. Odjava možna kadarkoli."
+        }
+      },
+      {
+        "blockType": "productCTA",
+        "id": "68cd0fad524c8f2770bca252",
+        "translatable": {
+          "title": "Izberite mGard – ko je varnost resnično na prvem mestu",
+          "description": "Mehanski sistemi z ujetim ključem so preverjeni, robustni in logično zaporedni – brez možnosti napake. Fortress mGard je odlična izbira za industrije, kjer elektronske rešitve niso dovolj zanesljive ali niso dovolj varne.",
+          "formTitle": "Povpraševanje za sistem",
+          "privacyText": "Soglašam z politiko zasebnosti in obdelavo osebnih podatkov za namen odgovora na povpraševanje.",
+          "stats[0].value": "SIL 3",
+          "stats[0].label": "Najvišja varnost",
+          "stats[1].value": "20+",
+          "stats[1].label": "Let izkušenj",
+          "stats[2].value": "500+",
+          "stats[2].label": "Uspešnih projektov",
+          "whyUsPoints[0].text": "30+ let izkušenj v industrijski avtomatizaciji",
+          "whyUsPoints[1].text": "Certificiran partner za varnostne sisteme",
+          "whyUsPoints[2].text": "Celotna podpora od načrtovanja do servisa",
+          "whyUsPoints[3].text": "Lokalna podpora v slovenskem jeziku",
+          "applicationOptions[0].value": "procesna",
+          "applicationOptions[0].label": "Procesna industrija",
+          "applicationOptions[1].value": "energetika",
+          "applicationOptions[1].label": "Energetski sistemi",
+          "applicationOptions[2].value": "farmacija",
+          "applicationOptions[2].label": "Farmacija / Prehrambna",
+          "applicationOptions[3].value": "proizvodnja",
+          "applicationOptions[3].label": "Proizvodnja",
+          "applicationOptions[4].value": "atex",
+          "applicationOptions[4].label": "ATEX področja",
+          "applicationOptions[5].value": "drugo",
+          "applicationOptions[5].label": "Drugo",
+          "contactInfo.phone": "+386 (3) 426 36 46",
+          "contactInfo.email": "info@sinteh.pro",
+          "contactInfo.responseTime": "24 ur (delovni dnevi)"
+        }
+      }
+    ],
+    "existingTranslations": {
+      "en": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress mGard\""
+      },
+      "de": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress mGard\""
+      },
+      "hr": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Fortress mGard\""
+      }
+    },
+    "needsTranslation": [],
+    "originalData": {
+      "id": 3,
+      "title": "Fortress mGard",
+      "slug": "fotress-mgard",
+      "layout": [
+        {
+          "id": "68cd0f6f524c8f2770bca240",
+          "badge": "Mehanska varnost",
+          "title": "Fortress mGard",
+          "subtitle": "Mehanska varnost brez kompromisov",
+          "description": "Popolnoma mehanska rešitev zaklepanja in medsebojnega zaklepanja komponent, ki ne zahteva električne povezave. Zasnovana za aplikacije, kjer je varnost potrebno zagotoviti fizično, neposredno in brez elektronskih tveganj.",
+          "backgroundImage": null,
+          "blockName": null,
+          "keyBenefits": [
+            {
+              "id": "68cd0f70f90a305c94a5d4bd",
+              "title": "100% Mehanska",
+              "description": "Brez električne povezave"
+            },
+            {
+              "id": "68cd0f70f90a305c94a5d4be",
+              "title": "SIL 3 Certificiran",
+              "description": "Najvišji varnostni standardi"
+            },
+            {
+              "id": "68cd0f70f90a305c94a5d4bf",
+              "title": "Retrofit Prijazen",
+              "description": "Enostavna integracija"
+            },
+            {
+              "id": "68cd0f70f90a305c94a5d4c0",
+              "title": "Modularna Zasnova",
+              "description": "Prilagoditve po meri"
+            }
+          ],
+          "ctaButtons": [
+            {
+              "id": "68cd0f70f90a305c94a5d4c1",
+              "label": "Zahtevaj ponudbo",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "kontakt",
+              "variant": "default"
+            },
+            {
+              "id": "68cd0f70f90a305c94a5d4c2",
+              "label": "Prenesi katalog",
+              "type": "anchor",
+              "page": null,
+              "post": null,
+              "url": null,
+              "anchor": "resources",
+              "variant": "outline"
+            }
+          ],
+          "blockType": "productHero"
+        },
+        {
+          "id": "68cd0f75524c8f2770bca242",
+          "badge": null,
+          "title": "Zakaj izbrati mGard?",
+          "subtitle": "Primerjava mehanskih mGard sistemov z elektronskimi varnostnimi rešitvami.",
+          "blockName": null,
+          "features": [
+            {
+              "id": "68cd0f75f90a305c94a5d4c3",
+              "icon": "mechanical",
+              "title": "100% Mehanska varnost",
+              "description": "Popolna varnost brez napajanja ali elektronskih komponent. Deluje na principu ujetih ključev za fizično prisiljeno zaporedje."
+            },
+            {
+              "id": "68cd0f75f90a305c94a5d4c4",
+              "icon": "shield",
+              "title": "Najvišji certifikati",
+              "description": "SIL 3, Category 4, PLe s TÜV potrditvijo. Zagotovljena skladnost z najstrožjimi varnostnimi standardi."
+            },
+            {
+              "id": "68cd0f75f90a305c94a5d4c5",
+              "icon": "retrofit",
+              "title": "Idealno za retrofit",
+              "description": "Enostavna integracija v obstoječe procese brez ožičenja. Minimalni posegi v trenutno infrastrukturo."
+            },
+            {
+              "id": "68cd0f75f90a305c94a5d4c6",
+              "icon": "modular",
+              "title": "Modularno sestavljivo",
+              "description": "Prilagodite vsako aplikacijo s kombinacijo različnih ključavnic in aktuatorjev. Fleksibilne konfiguracije."
+            },
+            {
+              "id": "68cd0f75f90a305c94a5d4c7",
+              "icon": "temperature",
+              "title": "Odporno na okolje",
+              "description": "Ohišja iz nerjavečega jekla ali ponikljane medenine. Visoka odpornost na mehanske vplive in korozijo."
+            },
+            {
+              "id": "68cd0f75f90a305c94a5d4c8",
+              "icon": "key",
+              "title": "Trapped Key sistem",
+              "description": "Ključ ostane ujet v varnostni enoti, dokler je vir energije aktiven. Preprečuje prezgoden dostop do stroja."
+            }
+          ],
+          "blockType": "keyFeatures",
+          "bottomHighlight": {
+            "title": "Rezultat? Varno zaporedje delovanja in zaščita osebja",
+            "description": "Brez napak ali improvizacij. Modularna zasnova omogoča konfiguracijo po meri – glede na proces, tehnologijo in vrsto izolacije."
+          }
+        },
+        {
+          "id": "68cd0f7c524c8f2770bca244",
+          "badge": null,
+          "title": "Kako deluje mGard sistem?",
+          "description": "mGard deluje na principu ujetih ključev, kjer je možno izvesti naslednji korak šele, ko je prejšnji varen. Na primer: vrata se lahko odprejo šele, ko je stroj izklopljen, ključ pa sproščen.\n\nSistem omogoča medsebojno zaklepanje strojev, ventilov, vrat ali ventilacijskih loput. Ključ je mogoče odstraniti šele, ko je komponenta v varnem stanju (npr. ventil zaprt, napajanje izklopljeno).",
+          "technicalImage": null,
+          "blockName": null,
+          "processSteps": [
+            {
+              "id": "68cd0f7cf90a305c94a5d4c9",
+              "title": "Zaklepanje vira energije",
+              "description": "Ključ se ujame v zaklepno enoto, dokler je napajanje aktivno"
+            },
+            {
+              "id": "68cd0f7cf90a305c94a5d4ca",
+              "title": "Fizično zaporedje",
+              "description": "Ključ se sprosti šele po varnem izklopu vira energije"
+            },
+            {
+              "id": "68cd0f7cf90a305c94a5d4cb",
+              "title": "Dostop do stroja",
+              "description": "Šele zdaj je možen varen dostop za vzdrževanje ali servis"
+            }
+          ],
+          "technicalBenefits": [
+            {
+              "id": "68cd0f7cf90a305c94a5d4cc",
+              "title": "Fizična prisila",
+              "description": "Brez možnosti by-pass ali napačnega vrstnega reda operacij"
+            },
+            {
+              "id": "68cd0f7cf90a305c94a5d4cd",
+              "title": "Logična sekvenca",
+              "description": "Zagotovljeno varno zaporedje delovanja brez napak"
+            }
+          ],
+          "blockType": "technicalOverview"
+        },
+        {
+          "id": "68cd0f81524c8f2770bca246",
+          "badge": null,
+          "title": "Specifikacije in certifikati",
+          "subtitle": "Podrobne tehnične informacije in certificiranje za najvišjo stopnjo varnosti v industriji.",
+          "blockName": null,
+          "specifications": [
+            {
+              "id": "68cd0f82f90a305c94a5d4d2",
+              "category": "Varnostni certifikati",
+              "items": [
+                {
+                  "id": "68cd0f82f90a305c94a5d4ce",
+                  "label": "Varnostna raven",
+                  "value": "SIL 3"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4cf",
+                  "label": "Kategorija",
+                  "value": "Category 4"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4d0",
+                  "label": "Performance Level",
+                  "value": "PLe"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4d1",
+                  "label": "Certificiranje",
+                  "value": "TÜV potrjeno"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f82f90a305c94a5d4d7",
+              "category": "Materiali in konstrukcija",
+              "items": [
+                {
+                  "id": "68cd0f82f90a305c94a5d4d3",
+                  "label": "Ohišje",
+                  "value": "Nerjaveče jeklo / Ponikljana medenina"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4d4",
+                  "label": "Ključi",
+                  "value": "Nerjaveče jeklo"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4d5",
+                  "label": "Tesnila",
+                  "value": "NBR/EPDM"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4d6",
+                  "label": "Zaščitni razred",
+                  "value": "IP66/IP67"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f82f90a305c94a5d4dc",
+              "category": "Delovni pogoji",
+              "items": [
+                {
+                  "id": "68cd0f82f90a305c94a5d4d8",
+                  "label": "Temperatura",
+                  "value": "-40°C do +80°C"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4d9",
+                  "label": "Vlažnost",
+                  "value": "Do 95% RH"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4da",
+                  "label": "Vibracije",
+                  "value": "IEC 60068-2-6"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4db",
+                  "label": "Korozijska odpornost",
+                  "value": "1000h salt spray test"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f82f90a305c94a5d4e1",
+              "category": "Standardi skladnosti",
+              "items": [
+                {
+                  "id": "68cd0f82f90a305c94a5d4dd",
+                  "label": "Varnostni standardi",
+                  "value": "EN ISO 13849-1"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4de",
+                  "label": "ATEX direktiva",
+                  "value": "2014/34/EU"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4df",
+                  "label": "Machinery direktiva",
+                  "value": "2006/42/EC"
+                },
+                {
+                  "id": "68cd0f82f90a305c94a5d4e0",
+                  "label": "EMC direktiva",
+                  "value": "2014/30/EU"
+                }
+              ]
+            }
+          ],
+          "certificationBadges": [
+            {
+              "id": "68cd0f82f90a305c94a5d4e2",
+              "name": "SIL 3",
+              "description": "Safety Integrity Level"
+            },
+            {
+              "id": "68cd0f82f90a305c94a5d4e3",
+              "name": "TÜV",
+              "description": "Certificirano"
+            },
+            {
+              "id": "68cd0f82f90a305c94a5d4e4",
+              "name": "PLe",
+              "description": "Performance Level"
+            },
+            {
+              "id": "68cd0f82f90a305c94a5d4e5",
+              "name": "ATEX",
+              "description": "Ex zraky območja"
+            }
+          ],
+          "blockType": "specifications",
+          "additionalInfo": {
+            "title": "Življenjska doba in vzdrževanje",
+            "description": "mGard sistemi so zasnovani za dolgoletno delovanje v zahtevnih industrijskih okoljih. Mehansko delovanje zagotavlja minimalno potrebo po vzdrževanju.",
+            "details": [
+              {
+                "id": "68cd0f82f90a305c94a5d4e6",
+                "label": "Pričakovana življenjska doba",
+                "value": "20+ let"
+              },
+              {
+                "id": "68cd0f82f90a305c94a5d4e7",
+                "label": "Vzdrževalni interval",
+                "value": "Letni pregled"
+              }
+            ]
+          }
+        },
+        {
+          "id": "68cd0f8b524c8f2770bca248",
+          "badge": null,
+          "title": "Kje uporabljamo mGard?",
+          "subtitle": "mGard sistemi so uspešno implementirani v najzahtevnejših industrijskih okoljih, kjer je varnost ključnega pomena.",
+          "blockName": null,
+          "applications": [
+            {
+              "id": "68cd0f8bf90a305c94a5d4ec",
+              "icon": "oilgas",
+              "title": "Procesna industrija",
+              "description": "Nafta, plin, kemija",
+              "details": [
+                {
+                  "id": "68cd0f8bf90a305c94a5d4e8",
+                  "detail": "Varno zapiranje ventilov na cevovodih"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4e9",
+                  "detail": "Isolation procedures za vzdrževanje"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4ea",
+                  "detail": "Lock-out/Tag-out sistemi"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4eb",
+                  "detail": "Varnostno zapiranje kompressorjev"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f8bf90a305c94a5d4f1",
+              "icon": "energy",
+              "title": "Energetski sistemi",
+              "description": "Transformatorji, turbine, stikališča",
+              "details": [
+                {
+                  "id": "68cd0f8bf90a305c94a5d4ed",
+                  "detail": "Electrical isolation procedures"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4ee",
+                  "detail": "Turbinski varnostni sistemi"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4ef",
+                  "detail": "Transformer maintenance safety"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f0",
+                  "detail": "Switchgear locking systems"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f8bf90a305c94a5d4f6",
+              "icon": "pharm",
+              "title": "Farmacija in prehrambna industrija",
+              "description": "ATEX področja",
+              "details": [
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f2",
+                  "detail": "Sterile area access control"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f3",
+                  "detail": "Clean room safety protocols"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f4",
+                  "detail": "Process vessel isolation"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f5",
+                  "detail": "Powder handling safety"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f8bf90a305c94a5d4fb",
+              "icon": "manufacturing",
+              "title": "Proizvodnja",
+              "description": "Tovarne brez električnega zaklepanja",
+              "details": [
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f7",
+                  "detail": "Machine guarding systems"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f8",
+                  "detail": "Pneumatic system isolation"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4f9",
+                  "detail": "Press safety systems"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4fa",
+                  "detail": "Conveyor belt safety"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f8bf90a305c94a5d500",
+              "icon": "atex",
+              "title": "ATEX področja",
+              "description": "Eksplozijska nevarna območja",
+              "details": [
+                {
+                  "id": "68cd0f8bf90a305c94a5d4fc",
+                  "detail": "Zone 1 & Zone 2 applications"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4fd",
+                  "detail": "Dust explosion prevention"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4fe",
+                  "detail": "Gas isolation procedures"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d4ff",
+                  "detail": "Intrinsically safe systems"
+                }
+              ]
+            },
+            {
+              "id": "68cd0f8bf90a305c94a5d505",
+              "icon": "water",
+              "title": "Voda in kanalizacija",
+              "description": "Komunalne storitve",
+              "details": [
+                {
+                  "id": "68cd0f8bf90a305c94a5d501",
+                  "detail": "Pump station safety"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d502",
+                  "detail": "Valve isolation systems"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d503",
+                  "detail": "Treatment plant safety"
+                },
+                {
+                  "id": "68cd0f8bf90a305c94a5d504",
+                  "detail": "Distribution network safety"
+                }
+              ]
+            }
+          ],
+          "stats": [],
+          "blockType": "applications",
+          "caseStudy": {
+            "title": "Primer uporabe: Kemijska industrija",
+            "description": "V kemijski tovarni je mGard sistem omogočil varno vzdrževanje reaktorjev z mehanskim zaklepanjem vseh virov energije. Sistem zagotavlja, da se reaktor lahko odpre šele po popolni izolaciji vseh kemijskih dovoda.",
+            "stats": [
+              {
+                "id": "68cd0f8bf90a305c94a5d506",
+                "label": "Zmanjšanje nesreč",
+                "value": "100%"
+              },
+              {
+                "id": "68cd0f8bf90a305c94a5d507",
+                "label": "Čas za vzdrževanje",
+                "value": "-40%"
+              }
+            ],
+            "image": null
+          }
+        },
+        {
+          "id": "68cd0f90524c8f2770bca24a",
+          "badge": null,
+          "title": "Zakaj izbrati mGard?",
+          "subtitle": "Primerjava mehanskih mGard sistemov z elektronskimi varnostnimi rešitvami.",
+          "blockName": null,
+          "benefits": [
+            {
+              "id": "68cd0f90f90a305c94a5d508",
+              "advantage": "100% mehanska varnost",
+              "description": "Popolna varnost brez napajanja ali elektronskih komponent",
+              "mGard": "✓ Mehanski trapped key sistem",
+              "electronic": "✗ Odvisno od napajanja"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d509",
+              "advantage": "Najvišji certifikati",
+              "description": "SIL 3, Category 4, PLe – s TÜV potrditvijo",
+              "mGard": "✓ SIL 3 / PLe certificirano",
+              "electronic": "△ Do SIL 2 (tipično)"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d50a",
+              "advantage": "Idealno za retrofit",
+              "description": "Enostavna integracija v obstoječe procese brez ožičenja",
+              "mGard": "✓ Brez električne povezave",
+              "electronic": "✗ Kompleksna integracija"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d50b",
+              "advantage": "Dokazana zanesljivost",
+              "description": "Rešitve, preizkušene v najzahtevnejših industrijskih okoljih",
+              "mGard": "✓ 20+ let življenjska doba",
+              "electronic": "△ 5-10 let življenjska doba"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d50c",
+              "advantage": "Modularno sestavljivo",
+              "description": "Prilagodite vsako aplikacijo s kombinacijo različnih ključavnic",
+              "mGard": "✓ Fleksibilne konfiguracije",
+              "electronic": "△ Omejene možnosti"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d50d",
+              "advantage": "ATEX združljivost",
+              "description": "Primerno za eksplozijsko nevarna območja",
+              "mGard": "✓ Intrinsically safe",
+              "electronic": "△ Posebne Ex verzije potrebne"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d50e",
+              "advantage": "Vzdrževanje",
+              "description": "Minimalne potrebe po vzdrževanju in servisiranju",
+              "mGard": "✓ Letni pregled zadostuje",
+              "electronic": "✗ Redni servis potreben"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d50f",
+              "advantage": "Stroški lastništva",
+              "description": "Dolgoročni stroški skozi življenjsko dobo sistema",
+              "mGard": "✓ Nizki TCO",
+              "electronic": "✗ Visoki TCO"
+            }
+          ],
+          "summaryCards": [
+            {
+              "id": "68cd0f90f90a305c94a5d510",
+              "icon": "shield",
+              "title": "Maksimalna varnost",
+              "description": "SIL 3 certificirana mehanska varnost brez elektronskih komponent"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d511",
+              "icon": "clock",
+              "title": "Dolgotrajna rešitev",
+              "description": "20+ let življenjska doba z minimalnim vzdrževanjem"
+            },
+            {
+              "id": "68cd0f90f90a305c94a5d512",
+              "icon": "users",
+              "title": "Zaupanja vredno",
+              "description": "500+ uspešnih implementacij v kritičnih aplikacijah"
+            }
+          ],
+          "blockType": "benefitsComparison",
+          "bottomCTA": {
+            "title": "Iščete zanesljivo varnostno rešitev?",
+            "description": "mGard mehanski sistemi z ujetim ključem so preverjeni, robustni in logično zaporedni – brez možnosti napake. Idealna izbira za industrije, kjer elektronske rešitve niso dovolj zanesljive.",
+            "primaryButtonText": "Kontaktirajte nas",
+            "secondaryButtonText": "Prenesi dokumentacijo"
+          }
+        },
+        {
+          "id": "68cd0f96524c8f2770bca24c",
+          "badge": null,
+          "title": "mGard sistem v detajlih",
+          "subtitle": "Raziskajte različne komponente mGard sistema in njihove aplikacije v različnih industrijskih okoljih.",
+          "blockName": null,
+          "images": [
+            {
+              "id": "68cd0f96f90a305c94a5d513",
+              "title": "mGard Osnovni modul",
+              "description": "Jedro sistema z trapped key mehanizmom",
+              "category": "Osnovni moduli",
+              "image": null
+            },
+            {
+              "id": "68cd0f96f90a305c94a5d514",
+              "title": "Ključavnica za ventile",
+              "description": "Specialna ključavnica za ball valve aplikacije",
+              "category": "Ključavnice",
+              "image": null
+            },
+            {
+              "id": "68cd0f96f90a305c94a5d515",
+              "title": "Električna ključavnica",
+              "description": "mGard ključavnica za električne prekinjalnike",
+              "category": "Ključavnice",
+              "image": null
+            },
+            {
+              "id": "68cd0f96f90a305c94a5d516",
+              "title": "Pneumatska ključavnica",
+              "description": "Za pnevmatske ventile in aktuatorje",
+              "category": "Ključavnice",
+              "image": null
+            },
+            {
+              "id": "68cd0f96f90a305c94a5d517",
+              "title": "Instalacija v procesu",
+              "description": "Primer implementacije v kemijski industriji",
+              "category": "Implementacije",
+              "image": null
+            },
+            {
+              "id": "68cd0f96f90a305c94a5d518",
+              "title": "ATEX certifkiran modul",
+              "description": "Za eksplozijsko nevarna območja",
+              "category": "Specialni moduli",
+              "image": null
+            },
+            {
+              "id": "68cd0f96f90a305c94a5d519",
+              "title": "Kompletsna mGard postaja",
+              "description": "Večstopenjski varnostni sistem",
+              "category": "Implementacije",
+              "image": null
+            },
+            {
+              "id": "68cd0f96f90a305c94a5d51a",
+              "title": "Ključi in akcesoriji",
+              "description": "Različni tipi ključev in priključkov",
+              "category": "Akcesoriji",
+              "image": null
+            }
+          ],
+          "blockType": "productGallery",
+          "downloadSection": {
+            "title": "Potrebujete visoko-ločljivostne slike?",
+            "description": "Prenesite celotno galerijo produktnih slik v tiskarsko kakovosti za vašo dokumentacijo.",
+            "downloadButtonText": "Prenesi galerijo",
+            "requestButtonText": "Zahtevaj specifične slike"
+          }
+        },
+        {
+          "id": "68cd0fa7524c8f2770bca250",
+          "badge": null,
+          "title": "Dokumentacija in podporni materiali",
+          "subtitle": "Dostopite do tehničnih dokumentov, videojev, CAD modelov in drugih virov za uspešno implementacijo mGard sistemov.",
+          "blockName": null,
+          "resources": [
+            {
+              "id": "68cd0fa7f90a305c94a5d523",
+              "title": "Tehnična dokumentacija",
+              "description": "Podrobne specifikacije, dimenzije in navodila za vgradnjo",
+              "fileType": "PDF",
+              "fileSize": "2.4 MB",
+              "icon": "📋",
+              "category": "Dokumentacija",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d524",
+              "title": "Katalog produktov",
+              "description": "Celovit pregled vseh mGard komponent in konfiguracij",
+              "fileType": "PDF",
+              "fileSize": "8.1 MB",
+              "icon": "📖",
+              "category": "Katalogi",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d525",
+              "title": "Navodila za namestitev",
+              "description": "Korak-za-korakom vodič za pravilno namestitev",
+              "fileType": "PDF",
+              "fileSize": "1.8 MB",
+              "icon": "🔧",
+              "category": "Dokumentacija",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d526",
+              "title": "Video predstavitev",
+              "description": "Kako deluje mGard trapped key sistem",
+              "fileType": "VIDEO",
+              "fileSize": "HD kvaliteta",
+              "icon": "🎥",
+              "category": "Video",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d527",
+              "title": "Certifikati",
+              "description": "SIL 3, TÜV in ATEX certifikati",
+              "fileType": "PDF",
+              "fileSize": "1.2 MB",
+              "icon": "🏆",
+              "category": "Certifikati",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d528",
+              "title": "CAD modeli",
+              "description": "3D modeli za načrtovanje (.dwg, .step)",
+              "fileType": "ZIP",
+              "fileSize": "5.6 MB",
+              "icon": "📐",
+              "category": "CAD",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d529",
+              "title": "Aplikacijske študije",
+              "description": "Primeri uporabe v različnih industrijah",
+              "fileType": "PDF",
+              "fileSize": "3.2 MB",
+              "icon": "💼",
+              "category": "Študije",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d52a",
+              "title": "Rezervni deli",
+              "description": "Seznam rezervnih delov in naročilne kode",
+              "fileType": "PDF",
+              "fileSize": "0.8 MB",
+              "icon": "⚙️",
+              "category": "Dokumentacija",
+              "downloadUrl": null
+            }
+          ],
+          "quickAccessItems": [
+            {
+              "id": "68cd0fa7f90a305c94a5d52b",
+              "name": "Osnovni katalog",
+              "fileInfo": "PDF, 8.1 MB",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d52c",
+              "name": "Tehnična dokumentacija",
+              "fileInfo": "PDF, 2.4 MB",
+              "downloadUrl": null
+            },
+            {
+              "id": "68cd0fa7f90a305c94a5d52d",
+              "name": "SIL 3 certifikat",
+              "fileInfo": "PDF, 0.5 MB",
+              "downloadUrl": null
+            }
+          ],
+          "blockType": "productResources",
+          "contactSection": {
+            "title": "Potrebujete več?",
+            "description": "Če potrebujete specifične dokumente, CAD modele ali tehnično podporo, nas kontaktirajte.",
+            "phone": "+386 (3) 426 36 46",
+            "email": "info@sinteh.pro"
+          },
+          "newsletterSection": {
+            "title": "Ostanite obveščeni o novih dokumentih",
+            "description": "Prijavite se na naše obvestilo in prejmite najnovejše tehnične dokumente, aplikacijske študije in posodobitve produktov.",
+            "privacyText": "Spoštujemo vašo zasebnost. Odjava možna kadarkoli."
+          }
+        },
+        {
+          "id": "68cd0fad524c8f2770bca252",
+          "title": "Izberite mGard – ko je varnost resnično na prvem mestu",
+          "description": "Mehanski sistemi z ujetim ključem so preverjeni, robustni in logično zaporedni – brez možnosti napake. Fortress mGard je odlična izbira za industrije, kjer elektronske rešitve niso dovolj zanesljive ali niso dovolj varne.",
+          "heroImage": null,
+          "formTitle": "Povpraševanje za sistem",
+          "privacyText": "Soglašam z politiko zasebnosti in obdelavo osebnih podatkov za namen odgovora na povpraševanje.",
+          "blockName": null,
+          "stats": [
+            {
+              "id": "68cd0fadf90a305c94a5d52e",
+              "value": "SIL 3",
+              "label": "Najvišja varnost"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d52f",
+              "value": "20+",
+              "label": "Let izkušenj"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d530",
+              "value": "500+",
+              "label": "Uspešnih projektov"
+            }
+          ],
+          "whyUsPoints": [
+            {
+              "id": "68cd0fadf90a305c94a5d531",
+              "text": "30+ let izkušenj v industrijski avtomatizaciji"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d532",
+              "text": "Certificiran partner za varnostne sisteme"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d533",
+              "text": "Celotna podpora od načrtovanja do servisa"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d534",
+              "text": "Lokalna podpora v slovenskem jeziku"
+            }
+          ],
+          "applicationOptions": [
+            {
+              "id": "68cd0fadf90a305c94a5d535",
+              "value": "procesna",
+              "label": "Procesna industrija"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d536",
+              "value": "energetika",
+              "label": "Energetski sistemi"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d537",
+              "value": "farmacija",
+              "label": "Farmacija / Prehrambna"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d538",
+              "value": "proizvodnja",
+              "label": "Proizvodnja"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d539",
+              "value": "atex",
+              "label": "ATEX področja"
+            },
+            {
+              "id": "68cd0fadf90a305c94a5d53a",
+              "value": "drugo",
+              "label": "Drugo"
+            }
+          ],
+          "blockType": "productCTA",
+          "contactInfo": {
+            "phone": "+386 (3) 426 36 46",
+            "email": "info@sinteh.pro",
+            "responseTime": "24 ur (delovni dnevi)"
+          }
+        }
+      ],
+      "meta": {
+        "title": null,
+        "description": null
+      },
+      "publishedAt": "2025-08-24T09:30:25.255Z",
+      "status": "published",
+      "updatedAt": "2025-09-19T11:21:25.103Z",
+      "createdAt": "2025-08-24T09:33:03.106Z",
+      "_status": "published"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "kontakt",
+    "title": "Kontakt",
+    "meta": {
+      "title": null,
+      "description": null
+    },
+    "blocks": [
+      {
+        "blockType": "contactHero",
+        "id": "68cd1034524c8f2770bca254",
+        "translatable": {
+          "title": "Kontakt",
+          "subtitle": "Odgovarjamo v 24h | Nujna podpora: 24/7",
+          "quickContactMethods[0].type": "phone",
+          "quickContactMethods[0].label": "Telefon",
+          "quickContactMethods[0].value": "+386 (3) 426 36 46",
+          "quickContactMethods[0].link": "tel:+38634263646",
+          "quickContactMethods[1].type": "email",
+          "quickContactMethods[1].label": "E-pošta",
+          "quickContactMethods[1].value": "info@sinteh.pro",
+          "quickContactMethods[1].link": "mailto:info@sinteh.pro",
+          "quickContactMethods[2].type": "location",
+          "quickContactMethods[2].label": "Lokacija",
+          "quickContactMethods[2].value": "Celje, Slovenija",
+          "quickContactMethods[2].link": "#location"
+        }
+      },
+      {
+        "blockType": "contactForm",
+        "id": "68cd1040524c8f2770bca256",
+        "translatable": {
+          "badge": "Povpraševanje",
+          "title": "Pošljite sporočilo",
+          "subtitle": "Odgovorimo v 24 urah.",
+          "formTitle": "Kontaktni obrazec",
+          "submitButtonText": "Pošlji povpraševanje",
+          "submitButtonLoadingText": "Pošiljam...",
+          "privacyText": "Soglašam z obdelavo osebnih podatkov in politiko zasebnosti. Podatki bodo uporabljeni izključno za obravnavo povpraševanja in pripravo ponudbe."
+        }
+      },
+      {
+        "blockType": "contactInfo",
+        "id": "68cd1046524c8f2770bca258",
+        "translatable": {
+          "badge": "Kontaktni podatki",
+          "title": "Direkten kontakt",
+          "subtitle": "Telefon in e-mail za hitrejši odziv.",
+          "contactMethods[0].title": "Splošne informacije",
+          "contactMethods[0].email": "info@sinteh.pro",
+          "contactMethods[0].phone": "+386 (3) 426 36 46",
+          "contactMethods[0].description": "Splošna vprašanja, informacije o podjetju in storitvah",
+          "contactMethods[0].hours": "Pon-Pet: 7:00-16:00",
+          "contactMethods[1].title": "Tehnična podpora",
+          "contactMethods[1].email": "servis@sinteh.pro",
+          "contactMethods[1].phone": "+386 (3) 426 36 46",
+          "contactMethods[1].description": "Servis, vzdrževanje, tehnična pomoč in nadomestni deli",
+          "contactMethods[1].hours": "24/7 dežurna služba",
+          "contactMethods[2].title": "Prodaja in projekti",
+          "contactMethods[2].email": "prodaja@sinteh.pro",
+          "contactMethods[2].phone": "+386 (3) 426 36 46",
+          "contactMethods[2].description": "Ponudbe, projekti, svetovanje in tehnični izračuni",
+          "contactMethods[2].hours": "Pon-Pet: 7:00-16:00"
+        }
+      },
+      {
+        "blockType": "contactFAQ",
+        "id": "68cd104e524c8f2770bca25a",
+        "translatable": {
+          "badge": "Pogosta vprašanja",
+          "title": "Pogosta vprašanja",
+          "subtitle": "Odgovori na najpogostejša vprašanja, ki nam jih zastavljajo stranke.",
+          "faqs[0].question": "Kako hitro lahko začnete z delom?",
+          "faqs[0].answer": "Manjše projekte v 1-2 tednih, večje v 4-6 tednih. Nujne posege v 24 urah.",
+          "faqs[1].question": "Garancija?",
+          "faqs[1].answer": "2 leti na naša dela, 1 leto na komponente.",
+          "faqs[2].question": "Plačilni pogoji?",
+          "faqs[2].answer": "30 dni od računa. Za večje projekte obročno plačilo.",
+          "faqs[3].question": "Delate tudi v tujini?",
+          "faqs[3].answer": "Da, v regiji (Hrvaška, Srbija, Avstrija)."
+        }
+      },
+      {
+        "blockType": "contactLocation",
+        "id": "68cd1054524c8f2770bca25c",
+        "translatable": {
+          "badge": "Lokacija",
+          "title": "Naš urad",
+          "subtitle": "V Celju, obisk po dogovoru.",
+          "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2751.8!2d15.2664!3d46.2396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f8a89d21ae0ad%3A0x4a5b0f1c78ae9a7f!2sCesta%20na%20Ostro%C5%BEno%208%2C%203000%20Celje%2C%20Slovenia!5e0!3m2!1sen!2ssi!4v1700000000000!5m2!1sen!2ssi",
+          "emergencyPhone": "+386 (3) 426 36 46",
+          "address.companyName": "SINTEH PRO d.o.o.",
+          "address.street": "Cesta na Ostrožno 8",
+          "address.city": "3000 Celje",
+          "address.country": "Slovenija - EU"
+        }
+      }
+    ],
+    "existingTranslations": {
+      "en": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Contact\""
+      },
+      "de": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Kontakt\""
+      },
+      "hr": {
+        "exists": true,
+        "hasContent": true,
+        "isTranslated": true,
+        "title": "\"Kontakt\""
+      }
+    },
+    "needsTranslation": [],
+    "originalData": {
+      "id": 2,
+      "title": "Kontakt",
+      "slug": "kontakt",
+      "layout": [
+        {
+          "id": "68cd1034524c8f2770bca254",
+          "title": "Kontakt",
+          "subtitle": "Odgovarjamo v 24h | Nujna podpora: 24/7",
+          "blockName": null,
+          "quickContactMethods": [
+            {
+              "id": "68cd1035f90a305c94a5d53b",
+              "type": "phone",
+              "label": "Telefon",
+              "value": "+386 (3) 426 36 46",
+              "link": "tel:+38634263646"
+            },
+            {
+              "id": "68cd1035f90a305c94a5d53c",
+              "type": "email",
+              "label": "E-pošta",
+              "value": "info@sinteh.pro",
+              "link": "mailto:info@sinteh.pro"
+            },
+            {
+              "id": "68cd1035f90a305c94a5d53d",
+              "type": "location",
+              "label": "Lokacija",
+              "value": "Celje, Slovenija",
+              "link": "#location"
+            }
+          ],
+          "blockType": "contactHero"
+        },
+        {
+          "id": "68cd1040524c8f2770bca256",
+          "badge": "Povpraševanje",
+          "title": "Pošljite sporočilo",
+          "subtitle": "Odgovorimo v 24 urah.",
+          "formTitle": "Kontaktni obrazec",
+          "submitButtonText": "Pošlji povpraševanje",
+          "submitButtonLoadingText": "Pošiljam...",
+          "privacyText": "Soglašam z obdelavo osebnih podatkov in politiko zasebnosti. Podatki bodo uporabljeni izključno za obravnavo povpraševanja in pripravo ponudbe.",
+          "blockName": null,
+          "blockType": "contactForm"
+        },
+        {
+          "id": "68cd1046524c8f2770bca258",
+          "badge": "Kontaktni podatki",
+          "title": "Direkten kontakt",
+          "subtitle": "Telefon in e-mail za hitrejši odziv.",
+          "blockName": null,
+          "contactMethods": [
+            {
+              "id": "68cd1047f90a305c94a5d53e",
+              "title": "Splošne informacije",
+              "email": "info@sinteh.pro",
+              "phone": "+386 (3) 426 36 46",
+              "description": "Splošna vprašanja, informacije o podjetju in storitvah",
+              "hours": "Pon-Pet: 7:00-16:00"
+            },
+            {
+              "id": "68cd1047f90a305c94a5d53f",
+              "title": "Tehnična podpora",
+              "email": "servis@sinteh.pro",
+              "phone": "+386 (3) 426 36 46",
+              "description": "Servis, vzdrževanje, tehnična pomoč in nadomestni deli",
+              "hours": "24/7 dežurna služba"
+            },
+            {
+              "id": "68cd1047f90a305c94a5d540",
+              "title": "Prodaja in projekti",
+              "email": "prodaja@sinteh.pro",
+              "phone": "+386 (3) 426 36 46",
+              "description": "Ponudbe, projekti, svetovanje in tehnični izračuni",
+              "hours": "Pon-Pet: 7:00-16:00"
+            }
+          ],
+          "blockType": "contactInfo"
+        },
+        {
+          "id": "68cd104e524c8f2770bca25a",
+          "badge": "Pogosta vprašanja",
+          "title": "Pogosta vprašanja",
+          "subtitle": "Odgovori na najpogostejša vprašanja, ki nam jih zastavljajo stranke.",
+          "blockName": null,
+          "faqs": [
+            {
+              "id": "68cd104ff90a305c94a5d541",
+              "question": "Kako hitro lahko začnete z delom?",
+              "answer": "Manjše projekte v 1-2 tednih, večje v 4-6 tednih. Nujne posege v 24 urah."
+            },
+            {
+              "id": "68cd104ff90a305c94a5d542",
+              "question": "Garancija?",
+              "answer": "2 leti na naša dela, 1 leto na komponente."
+            },
+            {
+              "id": "68cd104ff90a305c94a5d543",
+              "question": "Plačilni pogoji?",
+              "answer": "30 dni od računa. Za večje projekte obročno plačilo."
+            },
+            {
+              "id": "68cd104ff90a305c94a5d544",
+              "question": "Delate tudi v tujini?",
+              "answer": "Da, v regiji (Hrvaška, Srbija, Avstrija)."
+            }
+          ],
+          "blockType": "contactFAQ"
+        },
+        {
+          "id": "68cd1054524c8f2770bca25c",
+          "badge": "Lokacija",
+          "title": "Naš urad",
+          "subtitle": "V Celju, obisk po dogovoru.",
+          "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2751.8!2d15.2664!3d46.2396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f8a89d21ae0ad%3A0x4a5b0f1c78ae9a7f!2sCesta%20na%20Ostro%C5%BEno%208%2C%203000%20Celje%2C%20Slovenia!5e0!3m2!1sen!2ssi!4v1700000000000!5m2!1sen!2ssi",
+          "emergencyPhone": "+386 (3) 426 36 46",
+          "blockName": null,
+          "blockType": "contactLocation",
+          "address": {
+            "companyName": "SINTEH PRO d.o.o.",
+            "street": "Cesta na Ostrožno 8",
+            "city": "3000 Celje",
+            "country": "Slovenija - EU"
+          }
+        }
+      ],
+      "meta": {
+        "title": null,
+        "description": null
+      },
+      "publishedAt": "2025-08-23T18:31:47.492Z",
+      "status": "draft",
+      "updatedAt": "2025-09-19T11:33:46.558Z",
+      "createdAt": "2025-08-23T18:32:01.405Z",
+      "_status": "published"
+    }
+  }
+]

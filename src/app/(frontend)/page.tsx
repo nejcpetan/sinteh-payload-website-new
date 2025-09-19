@@ -1,21 +1,8 @@
-import { getPayload } from 'payload'
-import React from 'react'
-import { PageTemplate } from '@/components/PageTemplate'
+import { redirect } from 'next/navigation'
+import { defaultLocale } from '@/lib/i18n/config'
 
-import config from '@/payload.config'
-import type { Homepage } from '@/payload-types'
-
-// Enable ISR - revalidate when manually triggered via API
-export const revalidate = false // Use on-demand revalidation only
-
-export default async function HomePage() {
-  const payload = await getPayload({ config })
-
-  // Fetch homepage global
-  const homepage = (await payload.findGlobal({
-    slug: 'homepage',
-    depth: 2, // Include relationships for blocks
-  })) as Homepage
-
-  return <PageTemplate page={homepage} />
+// This page handles the root path and redirects to the default locale
+export default function HomePage() {
+  // Redirect to the default locale
+  redirect(`/${defaultLocale}`)
 }

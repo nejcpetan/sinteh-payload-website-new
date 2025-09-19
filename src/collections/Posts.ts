@@ -26,6 +26,7 @@ export const Posts: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+      localized: true, // Localize title for different languages
     },
     {
       name: 'slug',
@@ -52,6 +53,7 @@ export const Posts: CollectionConfig = {
     {
       name: 'excerpt',
       type: 'textarea',
+      localized: true, // Localize excerpt for different languages
       admin: {
         description: 'Brief description of the post for previews and SEO',
       },
@@ -60,13 +62,15 @@ export const Posts: CollectionConfig = {
       name: 'content',
       type: 'richText',
       required: true,
+      localized: true, // Localize content for different languages
     },
     {
       name: 'featuredImage',
       type: 'upload',
       relationTo: 'media',
+      required: false,
       admin: {
-        description: 'Main image for the post',
+        description: 'Main image for the post (optional)',
       },
     },
     {
@@ -157,8 +161,19 @@ export const Posts: CollectionConfig = {
       },
     },
     {
+      name: 'published',
+      type: 'checkbox',
+      localized: true, // Per-locale publishing control
+      defaultValue: false,
+      admin: {
+        position: 'sidebar',
+        description: 'Publish this post in the current locale',
+      },
+    },
+    {
       name: 'meta',
       type: 'group',
+      localized: true, // Localize SEO meta fields
       fields: [
         {
           name: 'title',

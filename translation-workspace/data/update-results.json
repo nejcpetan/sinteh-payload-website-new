@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-09-19T12:59:41.400Z",
+  "dryRun": false,
+  "summary": {
+    "totalPages": 2,
+    "successfulPages": 1,
+    "partiallySuccessfulPages": 0,
+    "failedPages": 1,
+    "totalErrors": 2
+  },
+  "updatedPages": [
+    {
+      "pageId": 7,
+      "title": "Fortress Alfred",
+      "successful": [],
+      "failed": [
+        {
+          "language": "de",
+          "error": "Request failed with status code 400"
+        },
+        {
+          "language": "hr",
+          "error": "Request failed with status code 400"
+        }
+      ]
+    },
+    {
+      "pageId": 2,
+      "title": "Kontakt",
+      "successful": [
+        "hr"
+      ],
+      "failed": []
+    }
+  ],
+  "errors": [
+    {
+      "success": false,
+      "language": "de",
+      "pageId": 7,
+      "error": "Request failed with status code 400"
+    },
+    {
+      "success": false,
+      "language": "hr",
+      "pageId": 7,
+      "error": "Request failed with status code 400"
+    }
+  ]
+}

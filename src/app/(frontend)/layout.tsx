@@ -5,6 +5,7 @@ import config from '@/payload.config'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import type { Seo as SEOType, Media } from '@/payload-types'
+import { defaultLocale } from '@/lib/i18n/config'
 import './styles.css'
 
 const geistSans = Geist({
@@ -115,9 +116,9 @@ export default function RootLayout({
   return (
     <html lang="sl">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}>
-        <Navigation />
+        <Navigation locale={defaultLocale} />
         <main>{children}</main>
-        <Footer />
+        <Footer locale={defaultLocale} />
       </body>
     </html>
   )

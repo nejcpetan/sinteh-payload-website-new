@@ -3,21 +3,10 @@ import Image from 'next/image'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import type { Footer as FooterType, Media } from '@/payload-types'
+import type { Locale } from '@/lib/i18n/config'
+import { getNavigationHref } from '@/lib/linkUtils'
 
-function getLinkHref(link: any) {
-  switch (link.type) {
-    case 'page':
-      return link.page?.slug ? `/${link.page.slug === '/' ? '' : link.page.slug}` : '#'
-    case 'url':
-      return link.url || '#'
-    case 'anchor':
-      return link.anchor || '#'
-    default:
-      return '#'
-  }
-}
-
-export default async function Footer() {
+export default async function Footer({ locale }: { locale?: Locale }) {
   const payload = await getPayload({ config })
 
   let footerData: FooterType | null = null
@@ -25,6 +14,8 @@ export default async function Footer() {
   try {
     footerData = await payload.findGlobal({
       slug: 'footer',
+      locale: locale || 'sl',
+      fallbackLocale: 'en',
       depth: 2,
     })
   } catch (error) {
@@ -136,7 +127,7 @@ export default async function Footer() {
                 </h4>
                 <ul className="space-y-3">
                   {column.links?.map((link, linkIndex) => {
-                    const href = getLinkHref(link)
+                    const href = getNavigationHref(link, locale)
                     const isExternal =
                       link.type === 'url' && 'url' in link && link.url?.startsWith('http')
                     const hasNewTab = 'newTab' in link && link.newTab
@@ -170,7 +161,7 @@ export default async function Footer() {
           {data.bottomLinks && data.bottomLinks.length > 0 && (
             <div className="flex items-center gap-6">
               {data.bottomLinks.map((link, index) => {
-                const href = getLinkHref(link)
+                const href = getNavigationHref(link, locale)
                 const isExternal = link.type === 'url' && link.url?.startsWith('http')
 
                 return (

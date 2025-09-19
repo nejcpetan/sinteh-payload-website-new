@@ -33,12 +33,36 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
+  // Admin panel translations (keep existing)
   i18n: {
     supportedLanguages: {
       en: en as any,
       de: de as any,
       sl: sl as any,
     },
+  },
+  // Content localization for frontend
+  localization: {
+    locales: [
+      {
+        label: 'Slovenščina',
+        code: 'sl',
+      },
+      {
+        label: 'English',
+        code: 'en',
+      },
+      {
+        label: 'Deutsch',
+        code: 'de',
+      },
+      {
+        label: 'Hrvatski',
+        code: 'hr',
+      },
+    ],
+    defaultLocale: 'sl',
+    fallback: true,
   },
   collections: [Users, Media, Pages, Posts, Categories, ContactSubmissions],
   globals: [Header, Footer, SEO, Homepage, EmailAdmin],
