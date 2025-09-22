@@ -8,7 +8,7 @@
 const axios = require('axios')
 const { OpenAI } = require('openai')
 const chalk = require('chalk')
-require('dotenv').config()
+require('dotenv').config({ path: '.env.local' })
 
 class SimpleHomepageTranslator {
   constructor() {
@@ -200,6 +200,24 @@ ${JSON.stringify(textsToTranslate, null, 2)}`
     return obj
   }
 
+  // Build localized update object for Payload CMS
+  buildLocalizedUpdate(originalData, translations) {
+    console.log(chalk.blue('🔧 Building localized update object for homepage...'))
+
+    const localizedUpdate = {}
+
+    // Handle layout blocks (localized) - homepage only has layout field that's localized
+    if (originalData.layout && Array.isArray(originalData.layout)) {
+      localizedUpdate.layout = this.applyTranslations(originalData.layout, translations, 'layout')
+      console.log(chalk.green(`✓ Layout: ${originalData.layout.length} blocks translated`))
+    }
+
+    console.log(
+      chalk.blue(`📦 Localized update contains: ${Object.keys(localizedUpdate).join(', ')}`),
+    )
+    return localizedUpdate
+  }
+
   // Recursively clean ALL media objects in the entire structure
   deepCleanMediaObjects(obj) {
     if (Array.isArray(obj)) {
@@ -249,20 +267,30 @@ ${JSON.stringify(textsToTranslate, null, 2)}`
     return obj
   }
 
-  async updateHomepage(translatedData, targetLanguage) {
+  async updateHomepage(originalData, localizedUpdate, targetLanguage) {
     console.log(chalk.blue(`📝 Updating homepage for ${targetLanguage}...`))
 
-    const response = await axios.post(`${this.baseUrl}/api/globals/homepage`, translatedData, {
-      headers: this.headers,
-      params: { locale: targetLanguage },
-    })
+    try {
+      // Use POST for globals with only localized fields
+      const response = await axios.post(`${this.baseUrl}/api/globals/homepage`, localizedUpdate, {
+        headers: this.headers,
+        params: { locale: targetLanguage },
+      })
 
-    if (response.status === 200) {
-      console.log(chalk.green(`✅ Homepage updated for ${targetLanguage}`))
-      return true
+      if (response.status === 200) {
+        console.log(chalk.green(`✅ Homepage updated for ${targetLanguage}`))
+        console.log(chalk.gray(`   Updated fields: ${Object.keys(localizedUpdate).join(', ')}`))
+        return true
+      }
+
+      throw new Error(`Update failed: ${response.status}`)
+    } catch (error) {
+      console.error(chalk.red(`❌ Failed to update homepage for ${targetLanguage}:`), error.message)
+      if (error.response?.data) {
+        console.error(chalk.red('   API Response:'), JSON.stringify(error.response.data, null, 2))
+      }
+      throw error
     }
-
-    throw new Error(`Update failed: ${response.status}`)
   }
 
   async translateHomepage() {
@@ -290,11 +318,11 @@ ${JSON.stringify(textsToTranslate, null, 2)}`
         // Translate texts
         const translations = await this.translateTexts(allTexts, languageNames[lang])
 
-        // Apply translations to cleaned original structure
-        const translatedHomepage = this.applyTranslations(cleanedOriginal, translations)
+        // Build localized update object for Payload CMS
+        const localizedUpdate = this.buildLocalizedUpdate(cleanedOriginal, translations)
 
-        // Update in database (already clean)
-        await this.updateHomepage(translatedHomepage, lang)
+        // Update in database with only localized fields
+        await this.updateHomepage(cleanedOriginal, localizedUpdate, lang)
       }
 
       console.log(chalk.green('\n🎉 Homepage translation completed!'))

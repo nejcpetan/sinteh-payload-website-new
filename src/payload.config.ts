@@ -75,11 +75,10 @@ export default buildConfig({
     pool: {
       connectionString: process.env.POSTGRES_URL || '',
     },
-    // 2025 Payload CMS Best Practice:
-    // - Development: Use push=true for fast schema iteration
-    // - Production: Use push=false to enforce proper migrations
-    // - Vercel: Automatically detected as production environment
-    push: process.env.NODE_ENV === 'development' && !process.env.VERCEL,
+    // 2025 Configuration: Enable push mode for both dev and production
+    // Since we're using the same database for both environments,
+    // push=true allows automatic content sync without migrations
+    push: true,
   }),
   plugins: [
     vercelBlobStorage({

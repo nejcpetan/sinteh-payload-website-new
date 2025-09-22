@@ -9,7 +9,7 @@
 const axios = require('axios')
 const { OpenAI } = require('openai')
 const chalk = require('chalk')
-require('dotenv').config()
+require('dotenv').config({ path: '.env.local' })
 
 class SimplePagesTranslator {
   constructor() {
@@ -195,6 +195,47 @@ ${JSON.stringify(textsToTranslate, null, 2)}`
     return obj
   }
 
+  // Build localized update object for Payload CMS
+  buildLocalizedUpdate(originalData, translations) {
+    console.log(chalk.blue('🔧 Building localized update object...'))
+
+    const localizedUpdate = {}
+
+    // Handle title field (localized)
+    if (translations['title']) {
+      localizedUpdate.title = translations['title']
+      console.log(chalk.green(`✓ Title: "${translations['title']}"`))
+    }
+
+    // Handle layout blocks (localized)
+    if (originalData.layout && Array.isArray(originalData.layout)) {
+      localizedUpdate.layout = this.applyTranslations(originalData.layout, translations, 'layout')
+      console.log(chalk.green(`✓ Layout: ${originalData.layout.length} blocks translated`))
+    }
+
+    // Handle meta fields (localized group)
+    const metaTranslations = {}
+    Object.keys(translations).forEach((path) => {
+      if (path.startsWith('meta.')) {
+        const metaField = path.replace('meta.', '')
+        metaTranslations[metaField] = translations[path]
+      }
+    })
+
+    if (Object.keys(metaTranslations).length > 0) {
+      localizedUpdate.meta = {
+        ...originalData.meta,
+        ...metaTranslations,
+      }
+      console.log(chalk.green(`✓ Meta: ${Object.keys(metaTranslations).length} fields translated`))
+    }
+
+    console.log(
+      chalk.blue(`📦 Localized update contains: ${Object.keys(localizedUpdate).join(', ')}`),
+    )
+    return localizedUpdate
+  }
+
   // Recursively clean ALL media objects in the entire structure (same as homepage translator)
   deepCleanMediaObjects(obj) {
     if (Array.isArray(obj)) {
@@ -244,21 +285,34 @@ ${JSON.stringify(textsToTranslate, null, 2)}`
     return obj
   }
 
-  async updatePage(pageData, targetLanguage) {
-    console.log(chalk.blue(`📝 Updating ${pageData.title} for ${targetLanguage}...`))
+  async updatePage(originalPageData, localizedUpdate, targetLanguage) {
+    console.log(chalk.blue(`📝 Updating ${originalPageData.title} for ${targetLanguage}...`))
 
-    // Use PATCH for pages (not POST like globals)
-    const response = await axios.patch(`${this.baseUrl}/api/pages/${pageData.id}`, pageData, {
-      headers: this.headers,
-      params: { locale: targetLanguage },
-    })
+    try {
+      // Use PATCH for pages with only localized fields
+      const response = await axios.patch(
+        `${this.baseUrl}/api/pages/${originalPageData.id}`,
+        localizedUpdate,
+        {
+          headers: this.headers,
+          params: { locale: targetLanguage },
+        },
+      )
 
-    if (response.status === 200) {
-      console.log(chalk.green(`✅ ${pageData.title} updated for ${targetLanguage}`))
-      return true
+      if (response.status === 200) {
+        console.log(chalk.green(`✅ Page updated for ${targetLanguage}`))
+        console.log(chalk.gray(`   Updated fields: ${Object.keys(localizedUpdate).join(', ')}`))
+        return true
+      }
+
+      throw new Error(`Update failed: ${response.status}`)
+    } catch (error) {
+      console.error(chalk.red(`❌ Failed to update page for ${targetLanguage}:`), error.message)
+      if (error.response?.data) {
+        console.error(chalk.red('   API Response:'), JSON.stringify(error.response.data, null, 2))
+      }
+      throw error
     }
-
-    throw new Error(`Update failed: ${response.status}`)
   }
 
   async translatePage(page) {
@@ -293,11 +347,11 @@ ${JSON.stringify(textsToTranslate, null, 2)}`
           // Translate texts
           const translations = await this.translateTexts(allTexts, languageNames[lang])
 
-          // Apply translations to cleaned page structure
-          const translatedPage = this.applyTranslations(cleanedPage, translations)
+          // Build localized update object for Payload CMS
+          const localizedUpdate = this.buildLocalizedUpdate(cleanedPage, translations)
 
-          // Update in database (already clean)
-          await this.updatePage(translatedPage, lang)
+          // Update in database with only localized fields
+          await this.updatePage(cleanedPage, localizedUpdate, lang)
         } catch (error) {
           console.error(chalk.red(`    ❌ Failed to translate to ${lang}:`), error.message)
           if (error.response?.data) {
