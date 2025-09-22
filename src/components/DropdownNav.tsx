@@ -253,6 +253,7 @@ interface MobileDropdownNavProps {
   items: DropdownItem[]
   isOpen: boolean
   onToggle: () => void
+  onItemClick?: () => void
   locale?: Locale
 }
 
@@ -261,6 +262,7 @@ export function MobileDropdownNav({
   items,
   isOpen,
   onToggle,
+  onItemClick,
   locale,
 }: MobileDropdownNavProps) {
   const getItemHref = (item: DropdownItem): string => {
@@ -296,6 +298,7 @@ export function MobileDropdownNav({
               <Link
                 key={index}
                 href={href}
+                onClick={onItemClick}
                 target={isExternal || item.newTab ? '_blank' : undefined}
                 rel={isExternal ? 'noopener noreferrer' : undefined}
                 className={cn(

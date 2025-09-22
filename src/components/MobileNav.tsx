@@ -154,6 +154,7 @@ export function MobileNav({ headerData, fallbackNavItems, locale }: MobileNavPro
                         items={item.dropdownItems}
                         isOpen={openDropdowns.has(index)}
                         onToggle={() => toggleDropdown(index)}
+                        onItemClick={closeMenu}
                         locale={locale}
                       />
                     )
